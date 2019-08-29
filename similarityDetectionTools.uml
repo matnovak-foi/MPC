@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="812.8711956521739" y="170.0">org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneAdapter</node>
+    <node x="476.375" y="170.0">org.foi.mpc.executiontools.detectionTools.JPlag.JPlagAdapter</node>
+    <node x="406.0" y="250.0">org.foi.mpc.executiontools.detectionTools.JPlag.JPlagJavaAdapter</node>
+    <node x="724.0" y="250.0">org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneTextAdapter</node>
+    <node x="565.0" y="250.0">org.foi.mpc.executiontools.detectionTools.JPlag.JPlagTextAdapter</node>
+    <node x="97.66322463768108" y="170.0">org.foi.mpc.executiontools.detectionTools.sherlock.SherlockAdapter</node>
+    <node x="908.0" y="250.0">org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneJavaAdapter</node>
+    <node x="497.5145833333334" y="0.0">org.foi.mpc.phases.executionphases.ExecutionTool</node>
+    <node x="583.9132246376811" y="350.0">org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory</node>
+    <node x="209.0" y="250.0">org.foi.mpc.executiontools.detectionTools.sherlock.SherlockOriginalAdapter</node>
+    <node x="1043.0378623188406" y="430.0">org.foi.mpc.abstractfactories.FactoryProvider</node>
+    <node x="1093.0" y="250.0">org.foi.mpc.abstractfactories.ExecutionToolFactory</node>
+    <node x="0.0" y="250.0">org.foi.mpc.executiontools.detectionTools.sherlock.SherlockTokenisedAdapter</node>
+    <node x="473.0145833333334" y="80.0">org.foi.mpc.executiontools.factories.SimilarityDetectionTool</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.foi.mpc.executiontools.detectionTools.JPlag.JPlagTextAdapter" target="org.foi.mpc.executiontools.detectionTools.JPlag.JPlagAdapter">
+      <point x="-34.75" y="-15.0" />
+      <point x="599.75" y="230.0" />
+      <point x="549.5" y="230.0" />
+      <point x="14.625" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneAdapter" target="org.foi.mpc.executiontools.factories.SimilarityDetectionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="883.8711956521739" y="150.0" />
+      <point x="593.4145833333334" y="150.0" />
+      <point x="34.39999999999998" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory" target="org.foi.mpc.executiontools.factories.SimilarityDetectionTool">
+      <point x="65.9375" y="-15.0" />
+      <point x="755.3507246376811" y="320.0" />
+      <point x="1082.5" y="320.0" />
+      <point x="1082.5" y="140.0" />
+      <point x="627.8145833333333" y="140.0" />
+      <point x="68.79999999999995" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.FactoryProvider" target="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory">
+      <point x="-43.66666666666674" y="-15.0" />
+      <point x="1064.8711956521738" y="410.0" />
+      <point x="689.4132246376811" y="410.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneTextAdapter" target="org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneAdapter">
+      <point x="41.0" y="-15.0" />
+      <point x="847.0" y="230.0" />
+      <point x="866.1211956521739" y="230.0" />
+      <point x="-17.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.JPlag.JPlagJavaAdapter" target="org.foi.mpc.executiontools.detectionTools.JPlag.JPlagAdapter">
+      <point x="34.75" y="-15.0" />
+      <point x="510.25" y="230.0" />
+      <point x="520.25" y="230.0" />
+      <point x="-14.625" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory" target="org.foi.mpc.executiontools.detectionTools.JPlag.JPlagJavaAdapter">
+      <point x="-39.5625" y="-15.0" />
+      <point x="649.8507246376811" y="310.0" />
+      <point x="475.5" y="310.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockAdapter" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="165.16322463768108" y="130.0" />
+      <point x="139.99619565217392" y="130.0" />
+      <point x="139.99619565217392" y="55.0" />
+      <point x="518.0145833333333" y="55.0" />
+      <point x="-41.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.JPlag.JPlagAdapter" target="org.foi.mpc.executiontools.factories.SimilarityDetectionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="534.875" y="150.0" />
+      <point x="559.0145833333333" y="150.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory" target="org.foi.mpc.executiontools.detectionTools.JPlag.JPlagTextAdapter">
+      <point x="-13.1875" y="-15.0" />
+      <point x="676.2257246376811" y="300.0" />
+      <point x="634.5" y="300.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockTokenisedAdapter" target="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockAdapter">
+      <point x="63.0" y="-15.0" />
+      <point x="157.5" y="230.0" />
+      <point x="148.28822463768108" y="230.0" />
+      <point x="-16.875" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockTokenisedAdapter" target="org.foi.mpc.executiontools.factories.SimilarityDetectionTool">
+      <point x="-63.0" y="-15.0" />
+      <point x="31.5" y="230.0" />
+      <point x="73.36530797101454" y="230.0" />
+      <point x="73.36530797101454" y="140.0" />
+      <point x="490.21458333333345" y="140.0" />
+      <point x="-68.79999999999995" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory" target="org.foi.mpc.abstractfactories.ExecutionToolFactory">
+      <point x="92.3125" y="-15.0" />
+      <point x="781.7257246376811" y="330.0" />
+      <point x="1120.0" y="330.0" />
+      <point x="-54.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory" target="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockTokenisedAdapter">
+      <point x="-92.3125" y="-15.0" />
+      <point x="597.1007246376811" y="330.0" />
+      <point x="94.5" y="330.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory" target="org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneTextAdapter">
+      <point x="13.1875" y="-15.0" />
+      <point x="702.6007246376811" y="300.0" />
+      <point x="806.0" y="300.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneJavaAdapter" target="org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneAdapter">
+      <point x="-41.0" y="-15.0" />
+      <point x="949.0" y="230.0" />
+      <point x="901.6211956521739" y="230.0" />
+      <point x="17.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory" target="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockOriginalAdapter">
+      <point x="-65.9375" y="-15.0" />
+      <point x="623.4757246376811" y="320.0" />
+      <point x="297.5" y="320.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.ExecutionToolFactory" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="1174.0" y="55.0" />
+      <point x="600.0145833333333" y="55.0" />
+      <point x="41.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory" target="org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneJavaAdapter">
+      <point x="39.5625" y="-15.0" />
+      <point x="728.9757246376811" y="310.0" />
+      <point x="990.0" y="310.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockOriginalAdapter" target="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockAdapter">
+      <point x="0.0" y="-15.0" />
+      <point x="297.5" y="220.0" />
+      <point x="215.78822463768108" y="220.0" />
+      <point x="50.625" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockOriginalAdapter" target="org.foi.mpc.executiontools.factories.SimilarityDetectionTool">
+      <point x="59.0" y="-15.0" />
+      <point x="356.5" y="230.0" />
+      <point x="332.0770833333334" y="230.0" />
+      <point x="332.0770833333334" y="150.0" />
+      <point x="524.6145833333335" y="150.0" />
+      <point x="-34.39999999999998" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.FactoryProvider" target="org.foi.mpc.abstractfactories.ExecutionToolFactory">
+      <point x="43.66666666666674" y="-15.0" />
+      <point x="1152.2045289855073" y="410.0" />
+      <point x="1185.0" y="410.0" />
+      <point x="1185.0" y="330.0" />
+      <point x="1228.0" y="330.0" />
+      <point x="54.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.SimilarityDetectionTool" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.3258488499452357" x="687.4712928541924" y="223.3758777364725" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

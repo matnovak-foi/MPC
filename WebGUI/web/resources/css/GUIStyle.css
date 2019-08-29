@@ -1,0 +1,31 @@
+.topAligned {
+    vertical-align: top;
+}
+.removePadding {
+    padding: 0px;
+}
+.sideBySideCell {
+    overflow: auto;
+    max-height: 430px;
+    width: 48%;
+    vertical-align: top;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: left;
+}
+
+.bad, .change, .IRQ3 {
+    background-color:#ffc7ce;
+}
+
+.IRQ2 {
+    background-color:#ffffcc;
+}
+
+.neutral, .IRQ2p5 {
+    background-color:#ffeb9c;
+}
+
+.good {
+    background-color:#c6efce;
+}

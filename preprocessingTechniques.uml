@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="314.43315095398424" y="180.0">org.foi.mpc.executiontools.techniques.sherlock.SherlockPreprocessingTechnique</node>
+    <node x="985.0581509539843" y="80.0">org.foi.mpc.executiontools.factories.PreprocessingTechnique</node>
+    <node x="1307.75" y="180.0">org.foi.mpc.executiontools.techniques.TemplateExclusionTechnique</node>
+    <node x="425.00000000000006" y="260.0">org.foi.mpc.executiontools.techniques.sherlock.SherlockNoWhiteSpacesPPTechnique</node>
+    <node x="810.5566778900115" y="450.0">org.foi.mpc.executiontools.factories.ComboTechiniquesLoader</node>
+    <node x="188.0" y="260.0">org.foi.mpc.executiontools.techniques.sherlock.SherlockNormalisePPTechnique</node>
+    <node x="321.26648428731755" y="80.0">org.foi.mpc.executiontools.detectionTools.sherlock.SherlockAdapter</node>
+    <node x="759.8900112233448" y="370.0">org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory</node>
+    <node x="399.55052232090037" y="8.031559781509202">org.foi.mpc.phases.executionphases.ExecutionTool</node>
+    <node x="0.0" y="450.0">org.foi.mpc.abstractfactories.FactoryProvider</node>
+    <node x="6.0" y="260.0">org.foi.mpc.abstractfactories.ExecutionToolFactory</node>
+    <node x="1081.75" y="180.0">org.foi.mpc.executiontools.techniques.RemoveCommentsTechnique</node>
+    <node x="691.0" y="260.0">org.foi.mpc.executiontools.factories.ComboPreprocessingTechnique</node>
+    <node x="835.75" y="180.0">org.foi.mpc.executiontools.techniques.CommonCodeRemoveTechnique</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.foi.mpc.executiontools.techniques.CommonCodeRemoveTechnique" target="org.foi.mpc.executiontools.factories.PreprocessingTechnique">
+      <point x="0.0" y="-15.0" />
+      <point x="948.75" y="160.0" />
+      <point x="1062.9331509539843" y="160.0" />
+      <point x="-11.125" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.techniques.sherlock.SherlockPreprocessingTechnique" target="org.foi.mpc.executiontools.factories.PreprocessingTechnique">
+      <point x="74.33333333333331" y="-15.0" />
+      <point x="500.26648428731755" y="130.0" />
+      <point x="996.1831509539843" y="130.0" />
+      <point x="-77.875" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory" target="org.foi.mpc.executiontools.techniques.sherlock.SherlockNormalisePPTechnique">
+      <point x="-78.90909090909088" y="-15.0" />
+      <point x="789.4809203142539" y="340.0" />
+      <point x="296.5" y="340.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.techniques.RemoveCommentsTechnique" target="org.foi.mpc.executiontools.factories.PreprocessingTechnique">
+      <point x="0.0" y="-15.0" />
+      <point x="1184.75" y="160.0" />
+      <point x="1085.1831509539843" y="160.0" />
+      <point x="11.125" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.ComboPreprocessingTechnique" target="org.foi.mpc.executiontools.factories.PreprocessingTechnique">
+      <point x="54.5" y="-15.0" />
+      <point x="854.5" y="235.0" />
+      <point x="805.5" y="235.0" />
+      <point x="805.5" y="150.0" />
+      <point x="1040.6831509539843" y="150.0" />
+      <point x="-33.375" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.techniques.sherlock.SherlockPreprocessingTechnique" target="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockAdapter">
+      <point x="-74.33333333333331" y="-15.0" />
+      <point x="351.5998176206509" y="160.0" />
+      <point x="355.01648428731755" y="160.0" />
+      <point x="-33.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory" target="org.foi.mpc.executiontools.techniques.sherlock.SherlockNoWhiteSpacesPPTechnique">
+      <point x="-59.18181818181813" y="-15.0" />
+      <point x="809.2081930415267" y="330.0" />
+      <point x="548.0" y="330.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.FactoryProvider" target="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory">
+      <point x="43.66666666666674" y="-15.0" />
+      <point x="109.16666666666674" y="425.0" />
+      <point x="796.0566778900114" y="425.0" />
+      <point x="-72.33333333333337" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory" target="org.foi.mpc.abstractfactories.ExecutionToolFactory">
+      <point x="-98.63636363636363" y="-15.0" />
+      <point x="769.7536475869812" y="350.0" />
+      <point x="141.0" y="350.0" />
+      <point x="54.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.techniques.sherlock.SherlockNoWhiteSpacesPPTechnique" target="org.foi.mpc.executiontools.techniques.sherlock.SherlockPreprocessingTechnique">
+      <point x="61.5" y="-15.0" />
+      <point x="609.5" y="235.0" />
+      <point x="509.55815095398424" y="235.0" />
+      <point x="83.625" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.detectionTools.sherlock.SherlockAdapter" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory" target="org.foi.mpc.executiontools.factories.PreprocessingTechnique">
+      <point x="98.63636363636374" y="-15.0" />
+      <point x="967.0263748597085" y="350.0" />
+      <point x="1532.25" y="350.0" />
+      <point x="1532.25" y="130.0" />
+      <point x="1151.9331509539843" y="130.0" />
+      <point x="77.875" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.techniques.sherlock.SherlockNormalisePPTechnique" target="org.foi.mpc.executiontools.techniques.sherlock.SherlockPreprocessingTechnique">
+      <point x="-54.25" y="-15.0" />
+      <point x="242.25" y="235.0" />
+      <point x="342.30815095398424" y="235.0" />
+      <point x="-83.625" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.techniques.TemplateExclusionTechnique" target="org.foi.mpc.executiontools.factories.PreprocessingTechnique">
+      <point x="0.0" y="-15.0" />
+      <point x="1409.25" y="150.0" />
+      <point x="1107.4331509539843" y="150.0" />
+      <point x="33.375" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechnique" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="1074.0581509539843" y="55.0" />
+      <point x="429.76648428731755" y="55.0" />
+      <point x="41.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory" target="org.foi.mpc.executiontools.techniques.RemoveCommentsTechnique">
+      <point x="39.454545454545496" y="-15.0" />
+      <point x="907.8445566778903" y="320.0" />
+      <point x="1184.75" y="320.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory" target="org.foi.mpc.executiontools.techniques.CommonCodeRemoveTechnique">
+      <point x="19.727272727272748" y="-15.0" />
+      <point x="888.1172839506175" y="310.0" />
+      <point x="948.75" y="310.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory" target="org.foi.mpc.executiontools.factories.ComboPreprocessingTechnique">
+      <point x="0.0" y="-15.0" />
+      <point x="868.3900112233448" y="350.0" />
+      <point x="872.6666666666667" y="350.0" />
+      <point x="72.66666666666674" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.ExecutionToolFactory" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="87.0" y="55.0" />
+      <point x="347.76648428731755" y="55.0" />
+      <point x="-41.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory" target="org.foi.mpc.executiontools.techniques.TemplateExclusionTechnique">
+      <point x="59.181818181818244" y="-15.0" />
+      <point x="927.571829405163" y="330.0" />
+      <point x="1409.25" y="330.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.FactoryProvider" target="org.foi.mpc.abstractfactories.ExecutionToolFactory">
+      <point x="-43.66666666666674" y="-15.0" />
+      <point x="21.833333333333258" y="425.0" />
+      <point x="54.5" y="425.0" />
+      <point x="54.5" y="350.0" />
+      <point x="33.0" y="350.0" />
+      <point x="-54.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.ComboTechiniquesLoader" target="org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory">
+      <point x="46.999999999999886" y="-15.0" />
+      <point x="951.5566778900114" y="425.0" />
+      <point x="940.7233445566781" y="425.0" />
+      <point x="72.33333333333326" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.2450881612090683" x="785.3603075055632" y="225.31375283249076" />
+  <SelectedNodes>
+    <node>org.foi.mpc.phases.executionphases.ExecutionTool</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

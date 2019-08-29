@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="153.0" y="320.0">org.foi.mpc.phases.PhaseFactory</node>
+    <node x="10.5" y="240.0">org.foi.mpc.executiontools.prepareTools.ArchiveExtractor</node>
+    <node x="164.5" y="240.0">org.foi.mpc.executiontools.prepareTools.Renamer</node>
+    <node x="117.53787878787877" y="160.0">org.foi.mpc.executiontools.prepareTools.AssignementDirectoryIterator</node>
+    <node x="279.5" y="240.0">org.foi.mpc.executiontools.prepareTools.SubmissionFilesUnifier</node>
+    <node x="62.287878787878796" y="0.0">org.foi.mpc.phases.executionphases.ExecutionTool</node>
+    <node x="146.5" y="400.0">org.foi.mpc.abstractfactories.FactoryProvider</node>
+    <node x="160.53787878787878" y="80.0">org.foi.mpc.executiontools.factories.PrepareTools</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.foi.mpc.executiontools.prepareTools.AssignementDirectoryIterator" target="org.foi.mpc.executiontools.factories.PrepareTools">
+      <point x="50.75000000000003" y="-15.0" />
+      <point x="269.7878787878788" y="135.0" />
+      <point x="248.2878787878788" y="135.0" />
+      <point x="29.25000000000003" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.prepareTools.Renamer" target="org.foi.mpc.executiontools.prepareTools.AssignementDirectoryIterator">
+      <point x="0.0" y="-15.0" />
+      <point x="212.0" y="215.0" />
+      <point x="219.0378787878788" y="215.0" />
+      <point x="2.8421709430404007E-14" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.phases.PhaseFactory" target="org.foi.mpc.executiontools.prepareTools.Renamer">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.factories.PrepareTools" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="2.8421709430404007E-14" y="-15.0" />
+      <point x="219.0378787878788" y="55.0" />
+      <point x="154.5378787878788" y="55.0" />
+      <point x="30.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.phases.PhaseFactory" target="org.foi.mpc.executiontools.prepareTools.SubmissionFilesUnifier">
+      <point x="23.599999999999994" y="-15.0" />
+      <point x="235.6" y="290.0" />
+      <point x="321.25" y="290.0" />
+      <point x="-41.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.FactoryProvider" target="org.foi.mpc.phases.PhaseFactory">
+      <point x="43.66666666666666" y="-15.0" />
+      <point x="255.66666666666666" y="375.0" />
+      <point x="251.33333333333334" y="375.0" />
+      <point x="39.33333333333334" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.phases.PhaseFactory" target="org.foi.mpc.executiontools.prepareTools.ArchiveExtractor">
+      <point x="-23.599999999999994" y="-15.0" />
+      <point x="188.4" y="290.0" />
+      <point x="77.5" y="290.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.phases.PhaseFactory" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="-47.19999999999999" y="-15.0" />
+      <point x="164.8" y="300.0" />
+      <point x="0.0" y="300.0" />
+      <point x="0.0" y="55.0" />
+      <point x="93.0378787878788" y="55.0" />
+      <point x="-30.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.prepareTools.ArchiveExtractor" target="org.foi.mpc.executiontools.prepareTools.AssignementDirectoryIterator">
+      <point x="0.0" y="-15.0" />
+      <point x="77.5" y="215.0" />
+      <point x="151.37121212121212" y="215.0" />
+      <point x="-67.66666666666666" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.executiontools.prepareTools.SubmissionFilesUnifier" target="org.foi.mpc.executiontools.prepareTools.AssignementDirectoryIterator">
+      <point x="0.0" y="-15.0" />
+      <point x="363.0" y="215.0" />
+      <point x="286.70454545454544" y="215.0" />
+      <point x="67.66666666666666" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.6000000000000005" x="605.3333333333331" y="239.3333333333333" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MPC.iml" filepath="$PROJECT_DIR$/MPC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MPCCommons/MPCCommons.iml" filepath="$PROJECT_DIR$/MPCCommons/MPCCommons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MPCMatches/MPCMatches.iml" filepath="$PROJECT_DIR$/MPCMatches/MPCMatches.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/Spector/Spector.iml" filepath="$PROJECT_DIR$/../tools/Spector/Spector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/TemplateExclusionTechnique/TemplateExclusionTechnique.iml" filepath="$PROJECT_DIR$/../tools/TemplateExclusionTechnique/TemplateExclusionTechnique.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebGUI/WebGUI.iml" filepath="$PROJECT_DIR$/WebGUI/WebGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/sherlock/sherlock.iml" filepath="$PROJECT_DIR$/../tools/sherlock/sherlock.iml" />
+    </modules>
+  </component>
+</project>

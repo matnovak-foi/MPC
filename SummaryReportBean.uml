@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="280.6617965367965" y="0.0">org.foi.mpc.usecases.reports.summaryReport.SummaryReportOutputBoundary</node>
+    <node x="14.518939393939348" y="0.0">org.foi.mpc.usecases.reports.summaryReport.view.models.SummaryReportViewModel</node>
+    <node x="186.38663419913416" y="170.0">org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportControler</node>
+    <node x="548.3033008658008" y="170.0">org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase</node>
+    <node x="275.91666666666663" y="90.0">org.foi.mpc.usecases.reports.summaryReport.SummaryReportInputBoundary</node>
+    <node x="58.5" y="90.0">org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportPresenter</node>
+    <node x="508.9166666666667" y="90.0">org.foi.mpc.abstractfactories.FactoryProvider</node>
+    <node x="149.25000000000003" y="300.0">org.foi.mpc.summaryReport.view.SummaryReportBean</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.foi.mpc.summaryReport.view.SummaryReportBean" target="org.foi.mpc.abstractfactories.FactoryProvider">
+      <point x="40.0" y="-15.0" />
+      <point x="269.25" y="250.0" />
+      <point x="537.8033008658008" y="250.0" />
+      <point x="537.8033008658008" y="150.0" />
+      <point x="558.0416666666667" y="150.0" />
+      <point x="-16.375" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportInputBoundary" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportOutputBoundary">
+      <point x="0.0" y="-15.0" />
+      <point x="382.41666666666663" y="70.0" />
+      <point x="392.1617965367965" y="70.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.summaryReport.view.SummaryReportBean" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase">
+      <point x="62.85714285714289" y="-15.0" />
+      <point x="292.1071428571429" y="270.0" />
+      <point x="637.3033008658008" y="270.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportInputBoundary">
+      <point x="-66.75" y="-15.0" />
+      <point x="570.5533008658008" y="140.0" />
+      <point x="453.41666666666663" y="140.0" />
+      <point x="71.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportPresenter" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportOutputBoundary">
+      <point x="61.0" y="-15.0" />
+      <point x="211.0" y="70.0" />
+      <point x="317.82846320346323" y="70.0" />
+      <point x="-74.33333333333331" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportOutputBoundary">
+      <point x="66.75" y="-15.0" />
+      <point x="704.0533008658008" y="150.0" />
+      <point x="677.9908008658008" y="150.0" />
+      <point x="677.9908008658008" y="70.0" />
+      <point x="466.49512987012986" y="70.0" />
+      <point x="74.33333333333331" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportControler" target="org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportPresenter">
+      <point x="-76.66666666666674" y="-15.0" />
+      <point x="201.71996753246742" y="150.0" />
+      <point x="186.5999999999999" y="150.0" />
+      <point x="36.59999999999991" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.summaryReport.view.SummaryReportBean" target="org.foi.mpc.usecases.reports.summaryReport.view.models.SummaryReportViewModel">
+      <point x="-51.428571428571445" y="-15.0" />
+      <point x="177.82142857142858" y="260.0" />
+      <point x="48.0" y="260.0" />
+      <point x="48.0" y="70.0" />
+      <point x="83.4475108225108" y="70.0" />
+      <point x="-27.571428571428555" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.summaryReport.view.SummaryReportBean" target="org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportControler">
+      <point x="5.714285714285722" y="-15.0" />
+      <point x="234.96428571428575" y="220.0" />
+      <point x="278.38663419913416" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.summaryReport.view.SummaryReportBean" target="org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportPresenter">
+      <point x="-28.571428571428555" y="-15.0" />
+      <point x="200.67857142857147" y="240.0" />
+      <point x="106.4533008658008" y="240.0" />
+      <point x="106.4533008658008" y="150.0" />
+      <point x="113.39999999999998" y="150.0" />
+      <point x="-36.60000000000002" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportPresenter" target="org.foi.mpc.usecases.reports.summaryReport.view.models.SummaryReportViewModel">
+      <point x="0.0" y="-15.0" />
+      <point x="150.0" y="70.0" />
+      <point x="138.5903679653679" y="70.0" />
+      <point x="27.571428571428555" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportControler" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportInputBoundary">
+      <point x="76.66666666666663" y="-15.0" />
+      <point x="355.0533008658008" y="150.0" />
+      <point x="382.41666666666663" y="150.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase" target="org.foi.mpc.abstractfactories.FactoryProvider">
+      <point x="22.25" y="-15.0" />
+      <point x="659.5533008658008" y="150.0" />
+      <point x="623.5416666666667" y="150.0" />
+      <point x="49.125" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.view.SummaryReportControler" target="org.foi.mpc.usecases.reports.summaryReport.view.models.SummaryReportViewModel">
+      <point x="-15.333333333333371" y="-15.0" />
+      <point x="263.0533008658008" y="150.0" />
+      <point x="254.41666666666666" y="150.0" />
+      <point x="254.41666666666666" y="60.0" />
+      <point x="166.16179653679646" y="60.0" />
+      <point x="55.14285714285711" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="2.200000000000001" x="363.50000000000006" y="165.0" />
+  <SelectedNodes>
+    <node>org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

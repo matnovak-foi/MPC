@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="tar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../tools/sherlock/lib/tar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

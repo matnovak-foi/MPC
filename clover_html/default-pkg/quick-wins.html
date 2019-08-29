@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    
+    
+    <link rel="SHORTCUT ICON" href="../img/clover.ico" />
+
+    <link rel="stylesheet" href="../aui/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="../aui/css/aui-experimental.min.css" media="all"/>
+    <!--[if IE 9]><link rel="stylesheet" href="../aui/css/aui-ie9.min.css" media="all"/><![endif]-->
+
+    <style type="text/css" media="all">
+        @import url('../style.css');
+        @import url('../tree.css');
+        
+    </style>
+
+    <script src="../jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../aui/js/aui.min.js" type="text/javascript"></script>
+    <script src="../aui/js/aui-experimental.min.js" type="text/javascript"></script>
+    <script src="../aui/js/aui-soy.min.js" type="text/javascript"></script>
+
+    <script src="../package-nodes-tree.js" type="text/javascript"></script>
+    <script src="../clover-tree.js" type="text/javascript"></script>
+    <script src="../clover.js" type="text/javascript"></script>
+    <script src="../clover-descriptions.js" type="text/javascript"></script>
+    <script src="../cloud.js" type="text/javascript"></script>
+
+            <title>Clover</title>
+    </head>
+
+<body  >
+    <div id="page">
+        
+        
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+        <div class="aui-header-inner">
+            <div class="aui-header-primary">
+                <h1 id="logo" class="aui-header-logo aui-header-logo-clover">
+                    <a href="http://openclover.org" title="Visit OpenClover home page"><span class="aui-header-logo-device">OpenClover</span></a>
+                </h1>
+                                <ul class="aui-nav">
+                    <li>
+                        <a href="#dropdown2-jira3" aria-owns="dropdown2-jira3" aria-haspopup="true"
+                           class="aui-dropdown2-trigger" aria-controls="dropdown2-header7">
+                            Linked reports
+                            <span class="aui-icon-dropdown"></span>
+                        </a>
+
+                        <div class="aui-dropdown2 aui-style-default aui-dropdown2-in-header" id="dropdown2-jira3"
+                             style="display: none; top: 40px; min-width: 160px; left: 1213px; " aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                                <ul>
+                                                                                                                <li><a href="../../clover_current.pdf">Coverage</a></li>
+                                                                            <li><a href="../../clover_historical.pdf">Historical</a></li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                            </div>
+            <div class="aui-header-secondary">
+                <ul class="aui-nav">
+                    <li id="system-help-menu">
+                        <a class="aui-nav-link" title="Open online documentation" target="_blank"
+                           href="http://openclover.org/documentation">
+                            <span class="aui-icon aui-icon-small aui-iconfont-help">&#160;Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        
+        <div class="aui-page-panel">
+            <div class="aui-page-panel-inner">
+                <div class="aui-page-panel-nav aui-page-panel-nav-clover">
+                    
+
+<div class="aui-page-header-inner" style="margin-bottom: 20px;">
+    <div class="aui-page-header-image">
+                <div class="aui-avatar aui-avatar-large aui-avatar-project">
+            <div class="aui-avatar-inner">
+                                    <img src="../img/clover_logo_large.png" alt="Clover icon"/>
+                            </div>
+        </div>
+            </div>
+    <div class="aui-page-header-main" >
+        <h1>
+                                        Coverage Report
+                                </h1>
+    </div>
+</div>
+
+<nav class="aui-navgroup aui-navgroup-vertical">
+    <div class="aui-navgroup-inner">
+                                            <ul class="aui-nav">
+                <li class="">
+                    <a href="../dashboard.html">Project overview</a>
+                </li>
+            </ul>
+        
+                <div class="aui-nav-heading packages-nav-heading">
+            <strong>Packages</strong>
+        </div>
+        <div class="aui-nav project-packages">
+            <form method="get" action="#" class="aui package-filter-container">
+                <input type="text" autocomplete="off" class="package-filter text"
+                       placeholder="Type to filter packages..." name="package-filter" id="package-filter"
+                       title="Start typing package name (or part of the name) to search through the tree. Use arrow keys and the Enter key to navigate."/>
+            </form>
+            <p class="package-filter-no-results-message hidden">
+                <small>No results found.</small>
+            </p>
+                                                <div class="packages-tree-wrapper" data-root-relative="../" data-package-name="default-pkg">
+                <div class="packages-tree-container"></div>
+                <div class="clover-packages-lozenges"></div>
+            </div>
+        </div>
+        
+            </div>
+</nav>                </div>
+                <section class="aui-page-panel-content">
+                    <div class="aui-page-panel-content-clover">
+
+                    
+                    <ol class="aui-nav aui-nav-breadcrumbs">
+            
+        <li><a href="../dashboard.html">Project Clover database čet lis 4 2018 23:29:25 CEST</a></li> 
+    </ol>
+    
+<h1 class="aui-h2-clover">
+            Package default-pkg
+    </h1>
+<div class="aui-tabs horizontal-tabs">
+            <ul class="tabs-menu">
+                <li class="menu-item ">
+            <a href="pkg-summary.html"><strong>Application code</strong></a>
+        </li>
+                    <li class="menu-item ">
+            <a href="top-risks.html"><strong>Top risks</strong></a>
+        </li>
+        <li class="menu-item active-tab">
+            <a href="quick-wins.html"><strong>Quick wins</strong></a>
+        </li>
+                            </ul>
+    <div class="tabs-pane active-pane" id="tabs-first">
+
+        <div>&#160;</div>
+
+        
+
+
+                        <div style="text-align: right; margin-bottom: 10px">
+            
+                            <button id="cloudDepthCheckbox" class="aui-button active"
+                        onclick="showDeepPackageCloud(this)">Include classes from sub-packages</button>
+            
+                                    <button class="aui-button aui-button-subtle" id="popupHelp">
+    <span class="aui-icon aui-icon-small aui-iconfont-help"></span>&#160;How to read this chart
+</button>
+<script>
+    AJS.InlineDialog(AJS.$("#popupHelp"), "helpDialog",
+            function (content, trigger, showPopup) {
+                var description = quickWinsDescription();
+                var title = 'Quick Wins';
+                content.css({"padding": "20px"}).html(
+                        '<h2>' + title + '</h2>' + description);
+                showPopup();
+                return false;
+            },
+            {
+                width: 600
+            }
+    );
+</script>
+        </div>
+
+        
+
+<div style="padding: 20px; border: 1px solid #cccccc; background-color: #f5f5f5; border-radius: 3px">
+          <div id="deepPackageCloud"  >
+                          
+    
+        
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html" class="tag"
+            style="font-size: 20px;color:#d9695f"
+            title="# Elements - 39 , # Elements Covered - 36 ">ArchiveExtractor</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 8 , # Elements Covered - 8 ">ArchiveExtractor.CheckExtractedArchive</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">ArchiveExtractor.ExtractException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/AssignementDirectoryIterator.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">AssignementDirectoryIterator</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/models/AvailableTechniquesResponseModel.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 13 , # Elements Covered - 7 ">AvailableTechniquesResponseModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/avalibleTools/models/AvailableToolsResponseModel.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 13 , # Elements Covered - 7 ">AvailableToolsResponseModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/avalibleTools/AvalibleToolsUseCase.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 16 , # Elements Covered - 16 ">AvalibleToolsUseCase</a>
+            
+    
+            <a href="../org/foi/common/CollectionHelper.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">CollectionHelper</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/ComboPreprocessingTechnique.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">ComboPreprocessingTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/ComboTechiniquesLoader.html" class="tag"
+            style="font-size: 20px;color:#d9695f"
+            title="# Elements - 42 , # Elements Covered - 41 ">ComboTechiniquesLoader</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/view/ComboTechniqueControler.html" class="tag"
+            style="font-size: 16px;color:#d5584c"
+            title="# Elements - 22 , # Elements Covered - 22 ">ComboTechniqueControler</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/view/ComboTechniquePresenter.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 13 , # Elements Covered - 13 ">ComboTechniquePresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/models/ComboTechniqueResponseModel.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 17 , # Elements Covered - 9 ">ComboTechniqueResponseModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/ComboTechniqueUseCase.html" class="tag"
+            style="font-size: 28px;color:#e28e87"
+            title="# Elements - 76 , # Elements Covered - 76 ">ComboTechniqueUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/view/models/ComboTechniqueViewModel.html" class="tag"
+            style="font-size: 21px;color:#d9695f"
+            title="# Elements - 45 , # Elements Covered - 32 ">ComboTechniqueViewModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/view/models/ComboTechniqueViewModelBuilder.html" class="tag"
+            style="font-size: 22px;color:#d9695f"
+            title="# Elements - 49 , # Elements Covered - 41 ">ComboTechniqueViewModelBuilder</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/CommonCodeRemoveTechnique.html" class="tag"
+            style="font-size: 24px;color:#de7b72"
+            title="# Elements - 60 , # Elements Covered - 57 ">CommonCodeRemoveTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/ContextListener.html" class="tag"
+            style="font-size: 17px;color:#d5584c"
+            title="# Elements - 24 , # Elements Covered - 23 ">ContextListener</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportControler.html" class="tag"
+            style="font-size: 29px;color:#e28e87"
+            title="# Elements - 80 , # Elements Covered - 80 ">DetailsReportControler</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportPresenter.html" class="tag"
+            style="font-size: 29px;color:#e28e87"
+            title="# Elements - 82 , # Elements Covered - 80 ">DetailsReportPresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html" class="tag"
+            style="font-size: 13px;color:#d5584c"
+            title="# Elements - 9 , # Elements Covered - 9 ">DetailsReportUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html" class="tag"
+            style="font-size: 36px;color:#f6c342"
+            title="# Elements - 116 , # Elements Covered - 110 ">DetailsReportUseCase.DetailsInfo</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html" class="tag"
+            style="font-size: 48px;color:#89c495"
+            title="# Elements - 169 , # Elements Covered - 162 ">DetailsReportUseCase.SideBySideInfo</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/DetailsReportViewModel.html" class="tag"
+            style="font-size: 25px;color:#de7b72"
+            title="# Elements - 65 , # Elements Covered - 52 ">DetailsReportViewModel</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryCreator.html" class="tag"
+            style="font-size: 26px;color:#e28e87"
+            title="# Elements - 66 , # Elements Covered - 66 ">DirectoryCreator</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryCreator.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 7 , # Elements Covered - 7 ">DirectoryCreator.DirTypes</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 26px;color:#e28e87"
+            title="# Elements - 67 , # Elements Covered - 66 ">DirectoryFileUtility</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">DirectoryFileUtility.DirAleradyExistsException</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">DirectoryFileUtility.DirCopyException</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">DirectoryFileUtility.DirDoesNotExistException</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 18 , # Elements Covered - 18 ">DirectoryFileUtility.DirectoryTreeCopier</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 6 , # Elements Covered - 6 ">DirectoryFileUtility.DirectoryTreeDeleter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/multipleDetecion/DirectoryPreparer.html" class="tag"
+            style="font-size: 17px;color:#d5584c"
+            title="# Elements - 24 , # Elements Covered - 23 ">DirectoryPreparer</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/DirectoryPreparerSpy.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 5 , # Elements Covered - 5 ">DirectoryPreparerSpy</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/DirectoryToolIterator.html" class="tag"
+            style="font-size: 26px;color:#e28e87"
+            title="# Elements - 67 , # Elements Covered - 67 ">DirectoryToolIterator</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryTreeWalker.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 6 , # Elements Covered - 6 ">DirectoryTreeWalker</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/ExecutionLogger.html" class="tag"
+            style="font-size: 23px;color:#d5584c"
+            title="# Elements - 54 , # Elements Covered - 13 ">ExecutionLogger</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/ExecutionPhase.html" class="tag"
+            style="font-size: 18px;color:#d9695f"
+            title="# Elements - 32 , # Elements Covered - 32 ">ExecutionPhase</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/ExecutionToolAssertHelper.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">ExecutionToolAssertHelper</a>
+            
+    
+            <a href="../org/foi/mpc/abstractfactories/ExecutionToolFactory.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">ExecutionToolFactory.ClassNameException</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/spies/ExecutionToolSpy.html" class="tag"
+            style="font-size: 16px;color:#d5584c"
+            title="# Elements - 20 , # Elements Covered - 20 ">ExecutionToolSpy</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/spies/ExecutionToolWithFileSpy.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 9 , # Elements Covered - 8 ">ExecutionToolWithFileSpy</a>
+            
+    
+            <a href="../org/foi/mpc/abstractfactories/FactoryProvider.html" class="tag"
+            style="font-size: 16px;color:#d5584c"
+            title="# Elements - 21 , # Elements Covered - 21 ">FactoryProvider</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/InMemoryDir.html" class="tag"
+            style="font-size: 24px;color:#de7b72"
+            title="# Elements - 58 , # Elements Covered - 46 ">InMemoryDir</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/InMemoryDirectoryFileUtility.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 8 , # Elements Covered - 6 ">InMemoryDirectoryFileUtility</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/InMemoryFile.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 16 , # Elements Covered - 14 ">InMemoryFile</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/InMemoryObjectFileUtility.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 3 , # Elements Covered - 2 ">InMemoryObjectFileUtility</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/InMemoryTextFileUtility.html" class="tag"
+            style="font-size: 18px;color:#d9695f"
+            title="# Elements - 30 , # Elements Covered - 27 ">InMemoryTextFileUtility</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html" class="tag"
+            style="font-size: 20px;color:#d9695f"
+            title="# Elements - 41 , # Elements Covered - 40 ">JPlagAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">JPlagAdapter.JPlagException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">JPlagAdapter.JPlagLanguage</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 11 , # Elements Covered - 10 ">JPlagAdapter.ProgramWraper</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/JPlagCalibrator.html" class="tag"
+            style="font-size: 16px;color:#d5584c"
+            title="# Elements - 21 , # Elements Covered - 21 ">JPlagCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagJavaAdapter.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 6 , # Elements Covered - 6 ">JPlagJavaAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagTextAdapter.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 6 , # Elements Covered - 6 ">JPlagTextAdapter</a>
+            
+    
+            <a href="../org/foi/common/JavaCodePartsRemover.html" class="tag"
+            style="font-size: 33px;color:#f6c342"
+            title="# Elements - 100 , # Elements Covered - 100 ">JavaCodePartsRemover</a>
+            
+    
+            <a href="../org/foi/common/JavaCodePartsRemover.html" class="tag"
+            style="font-size: 33px;color:#f6c342"
+            title="# Elements - 102 , # Elements Covered - 102 ">JavaCodePartsRemover.CommentsRemover</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JplagMatchesWriter.html" class="tag"
+            style="font-size: 26px;color:#e28e87"
+            title="# Elements - 66 , # Elements Covered - 65 ">JplagMatchesWriter</a>
+            
+    
+            <a href="../org/foi/mpc/matches/models/MPCMatchBuilder.html" class="tag"
+            style="font-size: 25px;color:#e28e87"
+            title="# Elements - 64 , # Elements Covered - 64 ">MPCMatchBuilder</a>
+            
+    
+            <a href="../org/foi/mpc/matches/MPCMatchFileUtility.html" class="tag"
+            style="font-size: 45px;color:#f6c342"
+            title="# Elements - 155 , # Elements Covered - 108 ">MPCMatchFileUtility</a>
+            
+    
+            <a href="../org/foi/mpc/phases/readerphase/MPCMatchReaderPhase.html" class="tag"
+            style="font-size: 24px;color:#de7b72"
+            title="# Elements - 61 , # Elements Covered - 56 ">MPCMatchReaderPhase</a>
+            
+    
+            <a href="../org/foi/mpc/phases/readerphase/MPCMatchReaderPhase.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">MPCMatchReaderPhase.ReadFileThread</a>
+            
+    
+            <a href="../org/foi/mpc/phases/readerphase/MPCMatchReaderPhaseSpy.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 8 , # Elements Covered - 6 ">MPCMatchReaderPhaseSpy</a>
+            
+    
+            <a href="../org/foi/mpc/matches/MPCPlagMatch.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 13 , # Elements Covered - 7 ">MPCPlagMatch</a>
+            
+    
+            <a href="../org/foi/common/MPCexcpetions.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 2 ">MPCexcpetions.IsNullException</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleDetectionConfigReader.html" class="tag"
+            style="font-size: 16px;color:#d5584c"
+            title="# Elements - 23 , # Elements Covered - 23 ">MultipleDetectionConfigReader</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleDetectionConfiguration.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 13 , # Elements Covered - 7 ">MultipleDetectionConfiguration</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleDetectionMain.html" class="tag"
+            style="font-size: 22px;color:#de7b72"
+            title="# Elements - 50 , # Elements Covered - 46 ">MultipleDetectionMain</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleDetectionMain.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 1 ">MultipleDetectionMain.ComboTechniquePresenterDummy</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/multipleDetecion/models/MultipleDetectionRequestModel.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 13 , # Elements Covered - 7 ">MultipleDetectionRequestModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/multipleDetecion/MultipleDetectionUseCase.html" class="tag"
+            style="font-size: 25px;color:#de7b72"
+            title="# Elements - 62 , # Elements Covered - 62 ">MultipleDetectionUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleParamsCalibrator.html" class="tag"
+            style="font-size: 19px;color:#d5584c"
+            title="# Elements - 34 , # Elements Covered - 23 ">MultipleParamsCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/NoTechniqueOriginal.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 17 , # Elements Covered - 16 ">NoTechniqueOriginal</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/NoTechniqueOriginal.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">NoTechniqueOriginal.NoTechniqueRunException</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/ObjectFileUtility.html" class="tag"
+            style="font-size: 16px;color:#d5584c"
+            title="# Elements - 21 , # Elements Covered - 19 ">ObjectFileUtility</a>
+            
+    
+            <a href="../org/foi/mpc/pptestreport/view/PPTestReportBean.html" class="tag"
+            style="font-size: 20px;color:#d9695f"
+            title="# Elements - 39 , # Elements Covered - 32 ">PPTestReportBean</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/PPTestReportController.html" class="tag"
+            style="font-size: 17px;color:#d9695f"
+            title="# Elements - 28 , # Elements Covered - 28 ">PPTestReportController</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/PPTestReportPresenter.html" class="tag"
+            style="font-size: 17px;color:#d5584c"
+            title="# Elements - 25 , # Elements Covered - 25 ">PPTestReportPresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/PPTestReportUseCase.html" class="tag"
+            style="font-size: 30px;color:#e7a19b"
+            title="# Elements - 87 , # Elements Covered - 87 ">PPTestReportUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/models/PPTestReportViewModel.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 8 , # Elements Covered - 6 ">PPTestReportViewModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/models/PPTestReportViewModelBuilder.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 18 , # Elements Covered - 18 ">PPTestReportViewModelBuilder</a>
+            
+    
+            <a href="../org/foi/mpc/phases/PhaseFactory.html" class="tag"
+            style="font-size: 17px;color:#d9695f"
+            title="# Elements - 27 , # Elements Covered - 27 ">PhaseFactory</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseRunner.html" class="tag"
+            style="font-size: 23px;color:#de7b72"
+            title="# Elements - 56 , # Elements Covered - 56 ">PhaseRunner</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseRunnerBuilder.html" class="tag"
+            style="font-size: 31px;color:#e7a19b"
+            title="# Elements - 92 , # Elements Covered - 92 ">PhaseRunnerBuilder</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseRunnerBuilderDummy.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">PhaseRunnerBuilderDummy</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseRunnerBuilderStub.html" class="tag"
+            style="font-size: 18px;color:#d9695f"
+            title="# Elements - 30 , # Elements Covered - 30 ">PhaseRunnerBuilderStub</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseSpy.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 8 , # Elements Covered - 8 ">PhaseSpy</a>
+            
+    
+            <a href="../org/foi/mpc/matches/PlagMatchesReader.html" class="tag"
+            style="font-size: 38px;color:#fae1a0"
+            title="# Elements - 125 , # Elements Covered - 121 ">PlagMatchesReader</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/spies/PrepareToolSpy.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 6 , # Elements Covered - 6 ">PrepareToolSpy</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/spies/PrepareToolWithFileSpy.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 9 , # Elements Covered - 8 ">PrepareToolWithFileSpy</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/PreprocessDirectoryCleaner.html" class="tag"
+            style="font-size: 18px;color:#d9695f"
+            title="# Elements - 29 , # Elements Covered - 28 ">PreprocessDirectoryCleaner</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/PreprocessingTechniqueFactory.html" class="tag"
+            style="font-size: 27px;color:#e28e87"
+            title="# Elements - 74 , # Elements Covered - 73 ">PreprocessingTechniqueFactory</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/PreprocessingTechniqueFactory.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">PreprocessingTechniqueFactory.TechniqueCreationParametersException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/spies/PreprocessingTechniqueSpy.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 6 , # Elements Covered - 6 ">PreprocessingTechniqueSpy</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableDetailSimilarityTable.html" class="tag"
+            style="font-size: 22px;color:#de7b72"
+            title="# Elements - 48 , # Elements Covered - 48 ">PresentableDetailSimilarityTable</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableDetailsMatchPart.html" class="tag"
+            style="font-size: 20px;color:#d9695f"
+            title="# Elements - 42 , # Elements Covered - 40 ">PresentableDetailsMatchPart</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/models/PresentableReport.html" class="tag"
+            style="font-size: 18px;color:#d5584c"
+            title="# Elements - 29 , # Elements Covered - 16 ">PresentableReport</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/models/PresentableReportPPTechnique.html" class="tag"
+            style="font-size: 18px;color:#d5584c"
+            title="# Elements - 29 , # Elements Covered - 16 ">PresentableReportPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableReportSummary.html" class="tag"
+            style="font-size: 19px;color:#d5584c"
+            title="# Elements - 33 , # Elements Covered - 20 ">PresentableReportSummary</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableReportSummaryTableRow.html" class="tag"
+            style="font-size: 26px;color:#e28e87"
+            title="# Elements - 69 , # Elements Covered - 63 ">PresentableReportSummaryTableRow</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableSideBySide.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 12 , # Elements Covered - 12 ">PresentableSideBySide</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/PropertiesFileUtility.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 15 , # Elements Covered - 13 ">PropertiesFileUtility</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/RemoveCommentsTechnique.html" class="tag"
+            style="font-size: 21px;color:#d9695f"
+            title="# Elements - 43 , # Elements Covered - 40 ">RemoveCommentsTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/Renamer.html" class="tag"
+            style="font-size: 18px;color:#d9695f"
+            title="# Elements - 32 , # Elements Covered - 32 ">Renamer</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html" class="tag"
+            style="font-size: 16px;color:#d5584c"
+            title="# Elements - 21 , # Elements Covered - 21 ">SIMGruneCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/view/models/SelectOption.html" class="tag"
+            style="font-size: 17px;color:#d5584c"
+            title="# Elements - 26 , # Elements Covered - 10 ">SelectOption</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockAdapter.html" class="tag"
+            style="font-size: 36px;color:#f6c342"
+            title="# Elements - 114 , # Elements Covered - 107 ">SherlockAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockAdapter.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">SherlockAdapter.SherlockFileType</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SherlockCalibrator.html" class="tag"
+            style="font-size: 22px;color:#de7b72"
+            title="# Elements - 51 , # Elements Covered - 51 ">SherlockCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockMatchesWriter.html" class="tag"
+            style="font-size: 29px;color:#e28e87"
+            title="# Elements - 81 , # Elements Covered - 78 ">SherlockMatchesWriter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockMatchesWriter.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">SherlockMatchesWriter.MatchPartsFilter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNoCommentsNoWhiteSpacesPPTechnique.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">SherlockNoCommentsNoWhiteSpacesPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNoCommentsNormalisedPPTechnique.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">SherlockNoCommentsNormalisedPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNoCommentsPPTechnique.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">SherlockNoCommentsPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNoWhiteSpacesPPTechnique.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">SherlockNoWhiteSpacesPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNormalisePPTechnique.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">SherlockNormalisePPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockOriginalAdapter.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 10 , # Elements Covered - 10 ">SherlockOriginalAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockPreprocessingTechnique.html" class="tag"
+            style="font-size: 18px;color:#d9695f"
+            title="# Elements - 29 , # Elements Covered - 27 ">SherlockPreprocessingTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockTokenisedAdapter.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 16 , # Elements Covered - 16 ">SherlockTokenisedAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneAdapter.html" class="tag"
+            style="font-size: 28px;color:#e28e87"
+            title="# Elements - 77 , # Elements Covered - 67 ">SimGruneAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneJavaAdapter.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 8 , # Elements Covered - 8 ">SimGruneJavaAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneMatchesWriter.html" class="tag"
+            style="font-size: 38px;color:#fae1a0"
+            title="# Elements - 126 , # Elements Covered - 126 ">SimGruneMatchesWriter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneResultParser.html" class="tag"
+            style="font-size: 30px;color:#e7a19b"
+            title="# Elements - 88 , # Elements Covered - 83 ">SimGruneResultParser</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneResultParser.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">SimGruneResultParser.SimGruneException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneTextAdapter.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 8 , # Elements Covered - 8 ">SimGruneTextAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibrator.html" class="tag"
+            style="font-size: 38px;color:#fae1a0"
+            title="# Elements - 125 , # Elements Covered - 122 ">SimilarityDetectionToolCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibrator.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">SimilarityDetectionToolCalibrator.CasesMismatchException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibratorFactory.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 14 , # Elements Covered - 4 ">SimilarityDetectionToolCalibratorFactory</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/SimilarityDetectionToolFactory.html" class="tag"
+            style="font-size: 18px;color:#d9695f"
+            title="# Elements - 32 , # Elements Covered - 30 ">SimilarityDetectionToolFactory</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolSettingFactory.html" class="tag"
+            style="font-size: 33px;color:#e7a19b"
+            title="# Elements - 101 , # Elements Covered - 96 ">SimilarityDetectionToolSettingFactory</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolSettingFactory.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">SimilarityDetectionToolSettingFactory.InvalidSimilarityToolParamException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/spies/SimilarityDetectionToolSpy.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 10 , # Elements Covered - 6 ">SimilarityDetectionToolSpy</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapter.html" class="tag"
+            style="font-size: 20px;color:#d9695f"
+            title="# Elements - 38 , # Elements Covered - 34 ">SpectorAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapter.html" class="tag"
+            style="font-size: 13px;color:#d04437"
+            title="# Elements - 9 , # Elements Covered - 8 ">SpectorAdapter.PresenterWrapper</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapterSettings.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">SpectorAdapterSettings.SpectorInputOption</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapterSettings.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">SpectorAdapterSettings.SpectorOrderOption</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapterSettings.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 4 , # Elements Covered - 4 ">SpectorAdapterSettings.SpectorOutputOption</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorMatchesWriter.html" class="tag"
+            style="font-size: 24px;color:#de7b72"
+            title="# Elements - 61 , # Elements Covered - 59 ">SpectorMatchesWriter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/view/models/StandardReportInputData.html" class="tag"
+            style="font-size: 18px;color:#d5584c"
+            title="# Elements - 30 , # Elements Covered - 26 ">StandardReportInputData</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 12 , # Elements Covered - 12 ">StandardReportInputListData</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/view/models/StandradReportDescriptiveStatistics.html" class="tag"
+            style="font-size: 23px;color:#de7b72"
+            title="# Elements - 52 , # Elements Covered - 52 ">StandradReportDescriptiveStatistics</a>
+            
+    
+            <a href="../org/foi/mpc/statisticsReport/view/StatisticsReportBean.html" class="tag"
+            style="font-size: 23px;color:#de7b72"
+            title="# Elements - 54 , # Elements Covered - 51 ">StatisticsReportBean</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/view/StatisticsReportControler.html" class="tag"
+            style="font-size: 17px;color:#d9695f"
+            title="# Elements - 27 , # Elements Covered - 27 ">StatisticsReportControler</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/view/StatisticsReportPresenter.html" class="tag"
+            style="font-size: 23px;color:#de7b72"
+            title="# Elements - 55 , # Elements Covered - 54 ">StatisticsReportPresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 15 , # Elements Covered - 15 ">StatisticsReportUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html" class="tag"
+            style="font-size: 41px;color:#14892c"
+            title="# Elements - 139 , # Elements Covered - 137 ">StatisticsReportUseCase.StatisticsReportGenerator</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html" class="tag"
+            style="font-size: 15px;color:#d04437"
+            title="# Elements - 18 , # Elements Covered - 5 ">StatisticsReportUseCase.StatisticsReportGenerator.MatchesDirKey</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 16 , # Elements Covered - 12 ">StatisticsReportViewModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html" class="tag"
+            style="font-size: 20px;color:#d9695f"
+            title="# Elements - 40 , # Elements Covered - 40 ">StatisticsReportViewModel.PresentableStatisticsReportTableRow</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html" class="tag"
+            style="font-size: 25px;color:#de7b72"
+            title="# Elements - 62 , # Elements Covered - 60 ">SubmissionFilesUnifier</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 13 , # Elements Covered - 13 ">SubmissionFilesUnifier.FileExtensionFilter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 13 , # Elements Covered - 11 ">SubmissionFilesUnifier.FileExtensionFilterInversed</a>
+            
+    
+            <a href="../org/foi/mpc/summaryReport/view/SummaryReportBean.html" class="tag"
+            style="font-size: 35px;color:#de7b72"
+            title="# Elements - 112 , # Elements Covered - 50 ">SummaryReportBean</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportControler.html" class="tag"
+            style="font-size: 22px;color:#de7b72"
+            title="# Elements - 47 , # Elements Covered - 47 ">SummaryReportControler</a>
+            
+    
+            <a href="../org/foi/mpc/summaryReport/view/SummaryReportDetailBean.html" class="tag"
+            style="font-size: 19px;color:#d5584c"
+            title="# Elements - 37 , # Elements Covered - 13 ">SummaryReportDetailBean</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportPresenter.html" class="tag"
+            style="font-size: 33px;color:#e7a19b"
+            title="# Elements - 100 , # Elements Covered - 98 ">SummaryReportPresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html" class="tag"
+            style="font-size: 17px;color:#d5584c"
+            title="# Elements - 25 , # Elements Covered - 25 ">SummaryReportUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html" class="tag"
+            style="font-size: 37px;color:#fae1a0"
+            title="# Elements - 119 , # Elements Covered - 119 ">SummaryReportUseCase.SummaryReportInfo</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html" class="tag"
+            style="font-size: 26px;color:#e28e87"
+            title="# Elements - 67 , # Elements Covered - 67 ">SummaryReportUseCase.UpdatePlagInfo</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/SummaryReportViewModel.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 10 , # Elements Covered - 8 ">SummaryReportViewModel</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/TemplateExclusionConfigurationReader.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 13 , # Elements Covered - 13 ">TemplateExclusionConfigurationReader</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/TemplateExclusionTechnique.html" class="tag"
+            style="font-size: 28px;color:#e28e87"
+            title="# Elements - 76 , # Elements Covered - 74 ">TemplateExclusionTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/TemplateExclusionTechnique.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">TemplateExclusionTechnique.TemplateDirEmptyException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/TemplateExclusionTechnique.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">TemplateExclusionTechnique.TemplateDirectoyCopyException</a>
+            
+    
+            <a href="../org/foi/mpc/TestContext.html" class="tag"
+            style="font-size: 18px;color:#d5584c"
+            title="# Elements - 30 , # Elements Covered - 26 ">TestContext</a>
+            
+    
+            <a href="../org/foi/mpc/TestContext.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 12 , # Elements Covered - 12 ">TestContext.PhaseFactorySpy</a>
+            
+    
+            <a href="../org/foi/mpc/TestServletContext.html" class="tag"
+            style="font-size: 42px;color:#de7b72"
+            title="# Elements - 142 , # Elements Covered - 46 ">TestServletContext</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/TextCreator.html" class="tag"
+            style="font-size: 14px;color:#d04437"
+            title="# Elements - 12 , # Elements Covered - 8 ">TextCreator</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/TextFileUtility.html" class="tag"
+            style="font-size: 37px;color:#f6c342"
+            title="# Elements - 118 , # Elements Covered - 111 ">TextFileUtility</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/TextFileUtility.html" class="tag"
+            style="font-size: 12px;color:#d04437"
+            title="# Elements - 2 , # Elements Covered - 2 ">TextFileUtility.FileCreateException</a>
+            
+    
+            <a href="../org/foi/mpc/main/ToolCalibration.html" class="tag"
+            style="font-size: 23px;color:#de7b72"
+            title="# Elements - 56 , # Elements Covered - 49 ">ToolCalibration</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/toolCalibration/view/ToolCalibrationPresenterCMD.html" class="tag"
+            style="font-size: 21px;color:#de7b72"
+            title="# Elements - 45 , # Elements Covered - 45 ">ToolCalibrationPresenterCMD</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/toolCalibration/models/ToolCalibrationRequestModel.html" class="tag"
+            style="font-size: 18px;color:#d5584c"
+            title="# Elements - 29 , # Elements Covered - 15 ">ToolCalibrationRequestModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/toolCalibration/ToolCalibratorUseCase.html" class="tag"
+            style="font-size: 42px;color:#14892c"
+            title="# Elements - 145 , # Elements Covered - 145 ">ToolCalibratorUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/ToolConfigurationReader.html" class="tag"
+            style="font-size: 16px;color:#d5584c"
+            title="# Elements - 20 , # Elements Covered - 20 ">ToolConfigurationReader</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/toolCalibration/models/ToolParam.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 17 , # Elements Covered - 9 ">ToolParam</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/ZipArchive.html" class="tag"
+            style="font-size: 15px;color:#d5584c"
+            title="# Elements - 17 , # Elements Covered - 16 ">ZipArchive</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/ZipArchive.html" class="tag"
+            style="font-size: 14px;color:#d5584c"
+            title="# Elements - 10 , # Elements Covered - 10 ">ZipArchive.ExtractZipFileVisitor</a>
+           </div>
+   
+          <div id="shallowPackageCloud"  style="display: none"  >
+                          
+    
+       </div>
+   </div>
+    </div> <!-- tabs-pane active-pane -->
+</div> <!-- aui-tabs horizontal-tabs -->
+
+                        </div> <!-- class="aui-page-panel-content-clover" -->
+                    <footer id="footer" role="contentinfo">
+    <section class="footer-body">
+        <ul>
+            <li>
+                Report generated by <a target="_new" href="http://openclover.org">OpenClover</a> v 4.2.0
+                on čet lis 4 2018 23:33:28 CEST using coverage data from čet lis 4 2018 23:32:51 CEST.
+            </li>
+        </ul>
+        <ul>
+            <li>Clover free edition. </li>
+        </ul>
+    </section>
+</footer>                </section> <!-- class="aui-page-panel-content" -->
+            </div> <!-- class="aui-page-panel-inner" -->
+        </div> <!-- class="aui-page-panel" -->
+    </div> <!-- id="page" -->
+</body>
+</html>

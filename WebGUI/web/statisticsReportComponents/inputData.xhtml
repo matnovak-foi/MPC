@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <p:panelGrid columns="2" rowClasses="topAligned">
+        <p:panel rowClasses="topAligned">
+            <f:facet name="header">
+                <p:outputLabel value="Standard input Data"/>
+            </f:facet>
+            <ui:include src="../standardComponents/standardInputData.xhtml">
+                <ui:param name="bean" value="#{statisticsReportBean}"/>
+            </ui:include>
+        </p:panel>
+        <p:panel rowClasses="topAligned">
+            <f:facet name="header">
+                <p:outputLabel value="InputDir input Data"/>
+            </f:facet>
+
+            <ui:include src="../standardComponents/inputDirList.xhtml">
+                <ui:param name="bean" value="#{statisticsReportBean}"/>
+            </ui:include>
+
+            <p:panelGrid columns="2" columnClasses="label,value">
+                <p:outputLabel for="thresholdType" value="Threshold type:"/>
+                <p:selectOneRadio id="thresholdType" value="#{statisticsReportBean.reportViewModel.thresholdType}"
+                                  layout="grid" columns="1">
+                    <f:selectItem itemValue="plagMatchesBased" itemLabel="Based on plagiarized matches (automatic)"/>
+                    <f:selectItem itemValue="calculatedPrecentageBased"
+                                  itemLabel="Based on calculated precentage (Meidan+N*IRQ N€[0.0-5.0])"/>
+                    <f:selectItem itemValue="topNBased"
+                                  itemLabel="Based on fixed top N matches (0 - number of matches)"/>
+                    <f:selectItem itemValue="fixedPrecentageBased" itemLabel="Based on fixed precentage (0.0 - 100.0)"/>
+                </p:selectOneRadio>
+
+                <p:outputLabel for="thresholdValue" value="Threshold value:"/>
+                <p:inputText id="thresholdValue" value="#{statisticsReportBean.reportViewModel.thresholdValue}"/>
+            </p:panelGrid>
+
+            <p:commandButton value="Calculate F1 measure" id="generateReport"
+                             update="statInfo"
+                             actionListener="#{statisticsReportBean.controller.generateReport}"
+                             styleClass="ui-priority-primary"/>
+            <p:blockUI block="generateReport" trigger="generateReport">
+                LOADING
+                <p:graphicImage name="/images/ajaxloadingbar.gif"/>
+            </p:blockUI>
+        </p:panel>
+
+    </p:panelGrid>
+    <h:inputHidden id="existingCombos"/>
+</f:view>
+</html>

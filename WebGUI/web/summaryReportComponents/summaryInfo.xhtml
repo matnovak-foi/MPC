@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <p:outputPanel id="summaryInfo">
+
+        <ui:include src="../standardComponents/mainErrorMessageBox.xhtml" >
+            <ui:param name="viewModel" value="#{summaryReportBean.reportViewModel}"/>
+        </ui:include>
+
+
+        <p:panelGrid columns="2" columnClasses="label,value"
+                     rendered="#{not empty summaryReportBean.reportViewModel.summaryReport.resultToolName}">
+            <f:facet name="header">
+                Summary report
+            </f:facet>
+
+            <h:outputText value="Tool:"/>
+            <h:outputText id="toolReport"
+                          value="#{summaryReportBean.reportViewModel.summaryReport.resultToolName}"/>
+            <h:outputText value="Technique:"/>
+            <h:outputText id="techniqueReport"
+                          value="#{summaryReportBean.reportViewModel.summaryReport.resultTechniqueName}"/>
+            <h:outputText value="Assignment dir:"/>
+            <h:outputText id="assignemntReport"
+                          value="#{summaryReportBean.reportViewModel.summaryReport.selectedInputDirPath}"/>
+            <h:outputText value="Matches dir:"/>
+            <h:outputText id="mathcesDir"
+                          value="#{summaryReportBean.reportViewModel.summaryReport.matchesDirPath}"/>
+        </p:panelGrid>
+
+        <p:panelGrid columns="2" columnClasses="label,value"
+                     rendered="#{not empty summaryReportBean.reportViewModel.summaryReport.resultToolName}">
+            <f:facet name="header">
+                Similarity statistics
+            </f:facet>
+            <h:outputText value="Average:"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.mean}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+            <h:outputText value="Standard deviation:"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.STD}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+            <h:outputText value="Min:"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.min}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+            <h:outputText value="Q1(25%):"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.q1}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+            <h:outputText value="Median(50%):"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.median}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+            <h:outputText value="Q3(75%):"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.q3}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+            <h:outputText value="Percentile(99%):"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.percentile99}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+            <h:outputText value="Max:"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.max}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+            <h:outputText value="IRQ:"/>
+            <h:outputText value="#{summaryReportBean.reportViewModel.summaryReport.IRQ}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:panelGrid>
+
+        <p:growl id="msgs" showDetail="true"/>
+
+        <p:dataTable id="report" var="pairs"
+                     value="#{summaryReportBean.reportViewModel.summaryReport.reportTable}"
+                     selectionMode="single" rowKey="#{pairs.studentA}-#{pairs.studentB}"
+                     paginator="true" rows="10"
+                     sortBy="#{pairs.similarity}" sortOrder="descending"
+                     selection="#{summaryReportDetail.reportViewModel.selectedPair}"
+                     rendered="#{not empty summaryReportBean.reportViewModel.summaryReport.resultToolName}"
+                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     rowsPerPageTemplate="5,10,15,20,30,50,100"
+                     rowStyleClass="#{pairs.similarity >= summaryReportBean.reportViewModel.summaryReport.medianPlus3IRQ ? 'IRQ3' : pairs.similarity >= summaryReportBean.reportViewModel.summaryReport.medianPlus2p5IRQ ? 'IRQ2p5' : pairs.similarity >= summaryReportBean.reportViewModel.summaryReport.medianPlus2IRQ ? 'IRQ2' : null } ">
+
+            <f:attribute name="workingDir" value="#{summaryReportBean.reportViewModel.workingDirPath}" />
+            <p:ajax event="rowSelect"  listener="#{summaryReportDetail.onPairSelect}"
+                    update=":form:msgs :form:detailsSummaryInput :form:pairDetail" />
+            <p:ajax event="rowSelect"  listener="#{summaryReportBean.onPairSelect}"
+                    update="report" />
+
+            <f:facet name="header">
+                Summary report
+                <p:commandButton id="togglerSummaryInfoTable" type="button" value="Columns" style="float:right" icon="ui-icon-calculator" />
+                <p:columnToggler datasource="report" trigger="togglerSummaryInfoTable" />
+            </f:facet>
+
+            <p:column headerText="Processed" sortBy="#{pairs.processed}">
+                <p:inputSwitch value="#{pairs.processed}" onLabel="YES" offLabel="NO" disabled="#{pairs.processedDisabled}"  >
+                    <p:ajax listener="#{summaryReportBean.onChangeProcessed}" update=":form:msgs report :form:errorMessage" />
+                </p:inputSwitch>
+            </p:column>
+
+            <p:column headerText="Plagiarized" sortBy="#{pairs.plagiarized}">
+                <p:inputSwitch value="#{pairs.plagiarized}" onLabel="YES" offLabel="NO" disabled="#{pairs.plagiarizedDisabled}">
+                    <p:ajax listener="#{summaryReportBean.onChangePlagiarized}" update=":form:msgs report :form:errorMessage" />
+                </p:inputSwitch>
+            </p:column>
+
+            <p:column headerText="Student A" sortBy="#{pairs.studentA}">
+                <h:outputText value="#{pairs.studentA}"/>
+            </p:column>
+
+            <p:column headerText="Student B" sortBy="#{pairs.studentB}">
+                <h:outputText value="#{pairs.studentB}"/>
+            </p:column>
+
+            <p:column headerText="Similarity" sortBy="#{pairs.similarity}">
+                <h:outputText value="#{pairs.similarity}">
+                    <f:convertNumber pattern="#0.0" />
+                </h:outputText>
+            </p:column>
+
+            <p:column headerText="Calculated similarity" sortBy="#{pairs.calculatedSimilarity}" visible="false">
+                <h:outputText value="#{pairs.calculatedSimilarity}">
+                    <f:convertNumber pattern="#0.0" />
+                </h:outputText>
+            </p:column>
+
+            <p:column headerText="Similarity A" sortBy="#{pairs.similarityA}">
+                <h:outputText value="#{pairs.similarityA}">
+                    <f:convertNumber pattern="#0.0" />
+                </h:outputText>
+            </p:column>
+
+            <p:column headerText="Similarity B" sortBy="#{pairs.similarityB}">
+                <h:outputText value="#{pairs.similarityB}">
+                    <f:convertNumber pattern="#0.0" />
+                </h:outputText>
+            </p:column>
+
+            <p:column headerText="Calculated similarity A" sortBy="#{pairs.calculatedSimilarityA}" visible="false">
+                <h:outputText value="#{pairs.calculatedSimilarityA}" >
+                    <f:convertNumber pattern="#0.0" />
+                </h:outputText>
+            </p:column>
+
+            <p:column headerText="Calculated similarity B" sortBy="#{pairs.calculatedSimilarityB}" visible="false">
+                <h:outputText value="#{pairs.calculatedSimilarityB}"  >
+                    <f:convertNumber pattern="#0.0" />
+                </h:outputText>
+            </p:column>
+
+
+            <f:facet name="footer">
+                Total: #{summaryReportBean.reportViewModel.summaryReport.reportTable.size()} matches
+                <p:commandButton id="showDetailsButton" process="report :form:detailToolList :form:detailTechniquesList"
+                                 action="#{summaryReportDetail.controller.generateDetailInfoForMatch()}"
+                                 update=":form:pairDetail" icon="ui-icon-search" value="View">
+                    <f:setPropertyActionListener target="#{summaryReportDetail.reportViewModel.resultToolName}"
+                                                 value="#{summaryReportBean.reportViewModel.summaryReport.resultToolName}"/>
+                    <f:setPropertyActionListener
+                            target="#{summaryReportDetail.reportViewModel.resultTechniqueName}"
+                            value="#{summaryReportBean.reportViewModel.summaryReport.resultTechniqueName}"/>
+                    <f:setPropertyActionListener
+                            target="#{summaryReportDetail.reportViewModel.selectedWorkingDirPath}"
+                            value="#{summaryReportBean.reportViewModel.workingDirPath}"/>
+                    <f:setPropertyActionListener target="#{summaryReportDetail.reportViewModel.matchesDirPath}"
+                                                 value="#{summaryReportBean.reportViewModel.summaryReport.matchesDirPath}"/>
+                </p:commandButton>
+                <p:blockUI block="showDetailsButton" trigger="showDetailsButton">
+                    LOADING
+                    <p:graphicImage name="/images/ajaxloadingbar.gif"/>
+                </p:blockUI>
+            </f:facet>
+
+        </p:dataTable>
+    </p:outputPanel>
+</f:view>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <p:dataTable id="matchPartTable" widgetVar="matchPartTableWV" var="matchPart"
+                 value="#{similarities.matchParts}"
+                 selectionMode="single" rowKey="#{matchPart}"
+                 paginator="true" rows="10"
+                 sortBy="#{matchPart.similarity}" sortOrder="descending"
+                 selection="#{summaryReportDetail.reportViewModel.selectedMatchPart}"
+                 rendered="#{not empty summaryReportDetail.reportViewModel.selectedPair.studentA}"
+                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                 rowsPerPageTemplate="5,10,15,20,30,50,100"
+
+                 rowStyleClass="#{matchPart.similarity le 1.5 ? 'good' : matchPart.similarity lt 5.0 ? 'neutral' : 'bad'}"
+    >
+        <f:facet name="header">
+            <p:commandButton id="columnsMatchPartTable" type="button" value="Columns" style="float:right" icon="ui-icon-calculator" />
+            <p:columnToggler datasource="matchPartTable" trigger="columnsMatchPartTable" />
+        </f:facet>
+
+        <p:columnGroup type="header">
+            <p:row>
+                <p:column rowspan="2" headerText="Matches dir" sortBy="#{matchPart.matchesDir}"  visible="false" />
+                <p:column rowspan="2" headerText="Similarty" sortBy="#{matchPart.similarity}"  />
+                <p:column colspan="4" headerText="Student A : #{summaryReportDetail.reportViewModel.selectedPair.studentA}" />
+                <p:column colspan="4" headerText="Student B : #{summaryReportDetail.reportViewModel.selectedPair.studentB}" />
+            </p:row>
+            <p:row>
+                <p:column headerText="Similarty" sortBy="#{matchPart.similarityA}" />
+                <p:column headerText="Star line" sortBy="#{matchPart.startLineNumberA}"/>
+                <p:column headerText="End line" sortBy="#{matchPart.endLineNumberA}"/>
+                <p:column headerText="Line count" sortBy="#{matchPart.lineCountA}"/>
+                <p:column headerText="Similarty" sortBy="#{matchPart.similarityB}" />
+                <p:column headerText="Star line" sortBy="#{matchPart.startLineNumberB}"/>
+                <p:column headerText="End line" sortBy="#{matchPart.endLineNumberB}"/>
+                <p:column headerText="Line count" sortBy="#{matchPart.lineCountB}"/>
+            </p:row>
+        </p:columnGroup>
+
+        <p:column headerText="Matches dir" visible="false">
+            <h:outputText value="#{matchPart.matchesDir}"/>
+        </p:column>
+
+        <p:column headerText="Similarty" sortBy="#{matchPart.similarity}">
+            <h:outputText value="#{matchPart.similarity}" >
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+        <p:column headerText="Similarty A" sortBy="#{matchPart.similarityA}">
+            <h:outputText value="#{matchPart.similarityA}" >
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+        <p:column headerText="Star line A" sortBy="#{matchPart.startLineNumberA}">
+            <h:outputText value="#{matchPart.startLineNumberA}" />
+        </p:column>
+
+        <p:column headerText="End line A" sortBy="#{matchPart.endLineNumberA}">
+            <h:outputText value="#{matchPart.endLineNumberA}" />
+        </p:column>
+
+        <p:column headerText="Line count A" sortBy="#{matchPart.lineCountA}">
+            <h:outputText value="#{matchPart.lineCountA}" />
+        </p:column>
+
+        <p:column headerText="Similarty B" sortBy="#{matchPart.similarityB}">
+            <h:outputText value="#{matchPart.similarityB}" >
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+        <p:column headerText="Star line B" sortBy="#{matchPart.startLineNumberB}">
+            <h:outputText value="#{matchPart.startLineNumberB}"/>
+        </p:column>
+
+        <p:column headerText="End line B" sortBy="#{matchPart.endLineNumberB}">
+            <h:outputText value="#{matchPart.endLineNumberB}" />
+        </p:column>
+
+        <p:column headerText="Line count B" sortBy="#{matchPart.lineCountB}">
+            <h:outputText value="#{matchPart.lineCountB}" />
+        </p:column>
+
+        <f:facet name="footer">
+            Total: #{similarities.matchParts.size()} match parts
+            <p:commandButton process="matchPartTable :form:detailSideBySideMarking"
+                             action="#{summaryReportDetail.controller.generateMatchPartSideBySideComaprisonView()}"
+                             update=":form:sideBySideComparison  :form:pairDetail" icon="ui-icon-search" value="View" oncomplete="PF('sideBySideDialog').show()">
+            </p:commandButton>
+        </f:facet>
+    </p:dataTable>
+</f:view>
+</html>

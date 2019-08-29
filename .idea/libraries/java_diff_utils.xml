@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="java-diff-utils">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../lib/java-diff-utils-jycr/out/artifacts/java_diff_utils_jycr/java-diff-utils-jycr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java-diff-utils/out/artifacts/java_diff_utils/java-diff-utils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

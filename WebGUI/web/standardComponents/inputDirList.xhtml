@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <p:panelGrid columns="2" columnClasses="label,value">
+        <p:outputLabel for="inputDirDepth" value="Input dir depth:" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+        <p:inputText id="inputDirDepth" value="#{bean.reportViewModel.inputDirDepth}" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+        <p:outputLabel for="inputDirList" value="Directory list:" />
+        <p:selectOneMenu style="width:200px;" id="inputDirList"
+                         value="#{bean.reportViewModel.selectedInputDirPath}">
+            <f:selectItems value="#{bean.reportViewModel.inputDirList}" var="o" itemValue="#{o.value}" itemLabel="#{o.name}"/>
+        </p:selectOneMenu>
+
+        <p:outputLabel for="loadDirList" value=""/>
+        <p:commandButton value="Load dir list" id="loadDirList" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"
+                         update="inputDirList"
+                         action="#{bean.controller.loadDirList}"
+                         styleClass="ui-priority-primary"/>
+
+    </p:panelGrid>
+</f:view>
+</html>

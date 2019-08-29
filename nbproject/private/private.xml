@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <fileA>
+            <url>src/org/foi/mpc/phases/execution/detection/tools/spector/SpectorAdapterSettings.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>59</line>
+                <key/>
+            </bookmark>
+        </fileA>
+        <fileA>
+            <url>src/org/foi/mpc/phases/execution/detection/tools/JPlag/JPlagAdapter.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>123</line>
+                <key/>
+            </bookmark>
+        </fileA>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="Gephi">
+            <fileA>fileA:/D:/java/doktorski_rad/MPC/test/org/foi/mpc/DatasetFilePrepererTest.java</fileA>
+            <fileA>fileA:/D:/java/doktorski_rad/MPC/src/org/foi/mpc/DatasetFilesPreparer.java</fileA>
+            <fileA>fileA:/D:/java/doktorski_rad/MPC/test/org/foi/mpc/helper/FileUtilityTest.java</fileA>
+            <fileA>fileA:/D:/java/doktorski_rad/MPC/src/org/foi/mpc/helper/FileUtility.java</fileA>
+        </group>
+        <group name="Doktorski rad"/>
+    </open-files>
+</project-private>

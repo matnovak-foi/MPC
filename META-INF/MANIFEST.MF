@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Class-Path: Spector.jar jplag-2.11.9-SNAPSHOT-jar-with-dependencies.ja
+ r junrar-0.8-SNAPSHOT-jar-with-dependencies.jar junit-4.12.jar junit-
+ hierarchicalcontextrunner-4.12.1.jar hamcrest-core-1.3.jar hamcrest-l
+ ibrary-1.3.jar sherlock.jar MPCMatches.jar MPCCommons.jar TemplateExc
+ lusionTechnique.jar
+Main-Class: org.foi.mpc.main.MultipleDetectionMain
+

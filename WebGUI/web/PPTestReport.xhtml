@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="reportTemplate.xhtml">
+    <ui:define name="reportTitle">
+        <p:outputLabel value="PPTestReport"/>
+    </ui:define>
+
+    <ui:define name="report">
+        <h:form enctype="multipart/form-data">
+            <h:panelGrid columns="2" rowClasses="topAligned">
+                <p:outputLabel value="Report Input Data"/>
+                <p:outputLabel value="Combo Techniques"/>
+                <h:panelGrid columns="1">
+                    <ui:include src="standardComponents/standardInputData.xhtml">
+                        <ui:param name="bean" value="#{ppTestReportBean}"/>
+                    </ui:include>
+                    <p:commandButton value="Generate report" id="generateReport"
+                                     update="report errorMessage toolReport student1 student2"
+                                     actionListener="#{ppTestReportBean.controller.generateReport}"
+                                     styleClass="ui-priority-primary"/>
+                </h:panelGrid>
+                <h:panelGrid columns="1">
+                    <ui:include src="standardComponents/comboTechniques.xhtml">
+                        <ui:param name="bean" value="#{ppTestReportBean}"/>
+                    </ui:include>
+                </h:panelGrid>
+            </h:panelGrid>
+        </h:form>
+
+        <ui:include src="standardComponents/mainErrorMessageBox.xhtml" >
+            <ui:param name="viewModel" value="#{ppTestReportBean.reportViewModel}"/>
+        </ui:include>
+
+        Tool:<h:outputText id="toolReport" value="#{ppTestReportBean.reportViewModel.report.toolName}"/><br/>
+        Student 1:<h:outputText id="student1" value="#{ppTestReportBean.reportViewModel.report.usernameA}"/><br/>
+        Student 2:<h:outputText id="student2" value="#{ppTestReportBean.reportViewModel.report.usernameB}"/><br/>
+        <p:dataTable id="report" var="ppTechniques" value="#{ppTestReportBean.reportViewModel.report.ppTechniques}">
+            <p:column headerText="PP Technique">
+                <h:outputText value="#{ppTechniques.name}"/>
+            </p:column>
+
+            <p:column headerText="Similarity">
+                <h:outputText value="#{ppTechniques.similarity}"/>
+            </p:column>
+
+            <p:column headerText="Similarity A">
+                <h:outputText value="#{ppTechniques.similarityA}"/>
+            </p:column>
+
+            <p:column headerText="Similarity B">
+                <h:outputText value="#{ppTechniques.similarityB}"/>
+            </p:column>
+        </p:dataTable>
+    </ui:define>
+</ui:composition>
+</html>

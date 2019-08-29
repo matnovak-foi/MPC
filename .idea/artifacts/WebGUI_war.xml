@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="WebGUI:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/WebGUI_war</output-path>
+    <root id="archive" name="WebGUI_war.war">
+      <element id="artifact" artifact-name="WebGUI:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="java-diff-utils" />
+          <element id="library" level="application" name="poi-4.0.0" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../lib/ApacheCommons/poi-bin/poi-4.0.0/poi-4.0.0.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

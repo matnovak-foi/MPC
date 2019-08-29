@@ -1,0 +1,10 @@
+var clover = new Object();
+
+// JSON: {classes : [{name, id, sl, el,  methods : [{sl, el}, ...]}, ...]}
+clover.pageData = {"classes":[{"el":36,"id":5469,"methods":[{"el":15,"sc":5,"sl":13},{"el":20,"sc":5,"sl":17},{"el":25,"sc":5,"sl":22},{"el":30,"sc":5,"sl":27},{"el":35,"sc":5,"sl":32}],"name":"SherlockOriginalAdapter","sl":9}]}
+
+// JSON: {test_ID : {"methods": [ID1, ID2, ID3...], "name" : "testXXX() void"}, ...};
+clover.testTargets = {"test_136":{"methods":[{"sl":13}],"name":"preprocessIsRunOkWhenNewInstanceOfSherlockIsCreated","pass":true,"statements":[{"sl":14}]},"test_147":{"methods":[{"sl":22}],"name":"programIsCreatedAndRunedWithRunToolMethod","pass":true,"statements":[{"sl":24}]},"test_327":{"methods":[{"sl":13}],"name":"preprocessIsRunOkWhenNewInstanceOfSherlockIsCreated","pass":true,"statements":[{"sl":14}]},"test_407":{"methods":[{"sl":13},{"sl":27},{"sl":32}],"name":"createsSherlockTextWithConfigFromFile","pass":true,"statements":[{"sl":14},{"sl":29},{"sl":34}]},"test_445":{"methods":[{"sl":17}],"name":"isExecutionPhaseAndHasCorrectGetName","pass":true,"statements":[{"sl":19}]},"test_549":{"methods":[{"sl":13}],"name":"preprocessIsRunOkWhenNewInstanceOfSherlockIsCreated","pass":true,"statements":[{"sl":14}]},"test_583":{"methods":[{"sl":13}],"name":"preprocessIsRunOkWhenNewInstanceOfSherlockIsCreated","pass":true,"statements":[{"sl":14}]},"test_597":{"methods":[{"sl":13}],"name":"preprocessIsRunOkWhenNewInstanceOfSherlockIsCreated","pass":true,"statements":[{"sl":14}]},"test_636":{"methods":[{"sl":13},{"sl":17},{"sl":22}],"name":"canRunAllToolsOnAllTehcniques","pass":true,"statements":[{"sl":14},{"sl":19},{"sl":24}]},"test_663":{"methods":[{"sl":13}],"name":"createsToolObjectBasedOnName","pass":true,"statements":[{"sl":14}]}}
+
+// JSON: { lines : [{tests : [testid1, testid2, testid3, ...]}, ...]};
+clover.srcFileLines = [[], [], [], [], [], [], [], [], [], [], [], [], [], [597, 327, 136, 549, 636, 583, 407, 663], [597, 327, 136, 549, 636, 583, 407, 663], [], [], [445, 636], [], [445, 636], [], [], [636, 147], [], [636, 147], [], [], [407], [], [407], [], [], [407], [], [407], [], []]

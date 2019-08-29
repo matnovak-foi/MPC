@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <p:dataTable id="detailsReport" var="similarities" stickyHeader="true"
+                 value="#{summaryReportDetail.reportViewModel.similarityTable}"
+                 selectionMode="single" rowKey="#{similarities.tool}-#{similarities.technique}"
+                 paginator="true" rows="36"
+                 selection="#{summaryReportDetail.reportViewModel.selectedSimilarity}"
+                 rendered="#{summaryReportBean.reportViewModel.selectedPair != null}"
+                 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                 rowsPerPageTemplate="5,10,15,20,30,36,50,100"
+                 rowStyleClass="#{similarities.tool eq summaryReportDetail.reportViewModel.resultToolName and similarities.technique eq summaryReportDetail.reportViewModel.resultTechniqueName ? 'bad' : similarities.technique eq summaryReportDetail.reportViewModel.resultTechniqueName ?  'neutral' : similarities.tool eq summaryReportDetail.reportViewModel.resultToolName ?  'good' : null}"
+    >
+
+        <f:facet name="header">
+            Detail report: #{summaryReportDetail.reportViewModel.selectedPair.studentA} -  #{summaryReportDetail.reportViewModel.selectedPair.studentB}
+            <p:commandButton type="button" onclick="toggleExpansion()" value="Expand All" style="float:right"  />
+            <p:commandButton id="toggler" type="button" value="Columns" style="float:right" icon="ui-icon-calculator" />
+            <p:columnToggler datasource="detailsReport" trigger="toggler" />
+            <p:commandButton process="detailsReport"
+                             action="#{summaryReportDetail.controller.generateFullFileSideBySideComaprisonView()}"
+                             update=":form:sideBySideComparison" icon="ui-icon-search" value="View" oncomplete="PF('sideBySideDialog').show()">
+            </p:commandButton>
+        </f:facet>
+
+        <p:ajax event="rowSelect" listener="#{summaryReportDetail.onSimilarityTableRowSelect}" update=":form:msgs"
+        />
+
+        <p:column style="width:16px">
+            <p:rowToggler />
+        </p:column>
+
+        <p:column headerText="Tool" sortBy="#{similarities.tool}">
+            <h:outputText value="#{similarities.tool}"/>
+        </p:column>
+
+        <p:column headerText="Technique" sortBy="#{similarities.technique}">
+            <h:outputText value="#{similarities.technique}"/>
+        </p:column>
+
+        <p:column headerText="Matches dir" visible="false">
+            <h:outputText value="#{similarities.matchesDir}"/>
+        </p:column>
+
+        <p:column headerText="Similarity" sortBy="#{similarities.similarity}">
+            <h:outputText value="#{similarities.similarity}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+        <p:column headerText="Calculated Similarity " visible="false">
+            <h:outputText value="#{similarities.calculatedSimilarity}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+        <p:column headerText="Match pairs" sortBy="#{similarities.matchParts.size()}">
+            <h:outputText value="#{similarities.matchParts.size()}" />
+        </p:column>
+
+        <p:column headerText="Line count A" sortBy="#{similarities.totalLineCountA}">
+            <h:outputText value="#{similarities.totalLineCountA}" />
+        </p:column>
+
+        <p:column headerText="Line count B" sortBy="#{similarities.totalLineCountB}">
+            <h:outputText value="#{similarities.totalLineCountB}" />
+        </p:column>
+
+        <p:column headerText="Similarity A">
+            <h:outputText value="#{similarities.similarityA}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+        <p:column headerText="Similarity B">
+            <h:outputText value="#{similarities.similarityB}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+
+
+        <p:column headerText="Calculated Similarity A" visible="false">
+            <h:outputText value="#{similarities.calculatedSimilarityA}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+        <p:column headerText="Calculated Similarity B" visible="false">
+            <h:outputText value="#{similarities.calculatedSimilarityB}">
+                <f:convertNumber pattern="#0.0" />
+            </h:outputText>
+        </p:column>
+
+        <p:rowExpansion>
+            <ui:include src="matchPartsTable.xhtml" />
+        </p:rowExpansion>
+    </p:dataTable>
+</f:view>
+</html>

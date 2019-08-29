@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="TemplateExclusionTechnique:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TemplateExclusionTechnique_jar</output-path>
+    <root id="root">
+      <element id="archive" name="TemplateExclusionTechnique.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/../tools/TemplateExclusionTechnique/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="TemplateExclusionTechnique" />
+      </element>
+      <element id="library" level="project" name="sherlock" />
+      <element id="artifact" artifact-name="MPCCommons:jar" />
+    </root>
+  </artifact>
+</component>

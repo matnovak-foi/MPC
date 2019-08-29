@@ -1,0 +1,56 @@
+Imamo N predmeta -> N godina -> N zadataka -> N predaja (studenata).
+
+FAZA 1 - priprema
+Prvo treba kopirati zadatke as izvora na radni direktorij.
+
+Jedan direktorij sa zadatkom ima više predaja u .zip ili .rar formatu:
+Situacija 1. (NE RADI!!!!) sa jednom datotekom koja sadrži sve zadatke ili
+Situacija 2. više datoteka svaka predaja posebno ili
+Situcaija 3. raspakirano svaki student u posebnom direktoriju ime dira je korime studenta.
+
+Ako je zip treba raspakriati i dobiva se situacija pod 2.
+Ako je više zip treba raspakirati.
+Treba preimenovati direktorij kako je bilo korisničko ime studenta u nazivu zip-a 
+i dobiva se situacija pod 3.
+
+Merge svih datoteka izvornog koda koje se žele. 
+Kad to imamo obrisati sve nevažeće datoteke i prazne direktorije.
+Na kraju ostaje samo jedan fajl u jednom direktoriju studenta.
+
+To je nulto stanje od tuda dalje ide preprocesiranje.
+FAZA 2 - preprocesiranje
+Definirati koje tehnike preprocesiranja se koriste.
+Definirati kombinacije tehnika!
+Proći kroz sve dane zadatke i napraviti preprocesiranje sa svakom od zadanih tehnika.
+    - Kopirati direktorij za jednu tehniku jednog zadatka
+    - Napraviti preprocesiranje svakom tehikom
+
+To je stanje za detekciju.
+
+FAZA 3 - detekcija
+Definirati koji alati se koriste.
+Proći kroz sve alate i napraviti detekciju za svaku kombinaciju tehnika i danih zadataka.
+    - Kopirati direktorij za jedan alata, jednu tehniku, jednog zadatka 
+    - Napraviti detekciju sakim alatom
+
+    FAZA 4 - spremanje u bazu
+    Ako je rezultat u datotekama kao kod Sherlocka pročitati rezultat i spremiti u bazu.
+    Ako je rezultat u memoriju možda ide to zajedno sa prethodnom fazom.
+
+FAZA 5 - pregled rezultata
+Prikaz rezultata u čitljivom obliku
+
+    FAZA 6 - potvrda plagijata
+    Sve što je dobiveno od svakog alata i tehnika za jedan zadatak provjeriti i potvrditi što
+    su stvarni plagijati da se može napraviti statistička obrada. 
+    Staviti prag za koji se smatra da je sigurno plagijat. 
+
+FAZA 7 - STATISTIKA
+Kad je sve spremljeno provesti statističku obradu.
+    FAZA 8 - spremanje podataka statistike u bazu
+
+    FAZA 9 - Pregled Statistike - prikaz u čitljivom obliku
+
+Napomena:
+Kako možemo dati jedan zadatak samo treba navesti na kojem nivou je izvorni kod.
+Tj. koliko nivoa ima i za svaki nivo što predstavlja (predmet, godina, zadatak ili predaja). 

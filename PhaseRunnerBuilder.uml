@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="163.0" y="305.0">org.foi.mpc.phases.runner.PhaseRunner</node>
+    <node x="195.0" y="80.0">org.foi.mpc.phases.executionphases.ExecutionPhase</node>
+    <node x="0.0" y="230.0">org.foi.mpc.phases.readerphase.MPCMatchListener</node>
+    <node x="134.25" y="0.0">org.foi.mpc.phases.runner.Phase</node>
+    <node x="0.0" y="305.0">org.foi.mpc.phases.PhaseFactory</node>
+    <node x="0.0" y="80.0">org.foi.mpc.phases.readerphase.MPCMatchReaderPhase</node>
+    <node x="203.0" y="155.0">org.foi.mpc.phases.runner.PhaseRunnerBuilder</node>
+    <node x="194.0" y="230.0">org.foi.mpc.phases.executionphases.ExecutionTool</node>
+    <node x="0.0" y="155.0">org.foi.mpc.phases.executionphases.DirectoryToolIterator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.foi.mpc.phases.executionphases.ExecutionPhase" target="org.foi.mpc.phases.runner.Phase">
+      <point x="0.0" y="-15.0" />
+      <point x="260.0" y="55.0" />
+      <point x="193.5" y="55.0" />
+      <point x="19.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.phases.readerphase.MPCMatchReaderPhase" target="org.foi.mpc.phases.runner.Phase">
+      <point x="0.0" y="-15.0" />
+      <point x="87.5" y="55.0" />
+      <point x="154.0" y="55.0" />
+      <point x="-19.75" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.7000000000000006" x="422.0588235294116" y="218.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

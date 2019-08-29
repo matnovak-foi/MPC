@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+
+    <p:outputPanel id="comboErrorMessage">
+        <ui:include src="errorMessage.xhtml" >
+            <ui:param name="viewModel" value="#{bean.techniqueViewModel}"/>
+        </ui:include>
+    </p:outputPanel>
+
+    <p:panelGrid columns="2" columnClasses="label,value" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}">
+        <f:facet name="header">
+            <p:outputLabel value="Combo Techniques"/>
+        </f:facet>
+
+
+        <p:outputLabel for="techniques" value=""/>
+        <p:commandButton value="Add to combo" id="addTechniqueToCombo"
+                         update="newComboParts comboErrorMessage"
+                         actionListener="#{bean.techniqueController.addTechniqueToCombo}"
+                         styleClass="ui-priority-primary"/>
+
+        <p:outputLabel for="newComboParts" value="Combo parts:"/>
+        <p:selectManyMenu id="newComboParts" value="#{bean.techniqueViewModel.selectedComboPartsToDelete}">
+            <f:selectItems value="#{bean.techniqueViewModel.comboTechniqueParts}"/>
+        </p:selectManyMenu>
+
+
+        <p:outputLabel for="deleteComboPart" value=""/>
+        <p:commandButton value="Delete from combo" id="deleteComboPart"
+                         update="newComboParts comboErrorMessage"
+                         actionListener="#{bean.techniqueController.deleteTechniqueFromCombo}"
+                         styleClass="ui-priority-primary"/>
+
+        <p:outputLabel for="existingCombos" value="Combo techniques:"/>
+        <p:selectManyMenu id="existingCombos"
+                          value="#{bean.techniqueViewModel.selectedComboTechniques}">
+            <f:selectItems value="#{bean.techniqueViewModel.avalibleComboTechniques}"/>
+        </p:selectManyMenu>
+
+        <p:outputLabel for="newComboName" value="Combo name:"/>
+        <p:inputText id="newComboName" value="#{bean.techniqueViewModel.comboTechniqueName}"/>
+
+        <p:outputLabel for="createComboTechnique" value=""/>
+        <p:commandButton value="Create combo technique" id="createComboTechnique"
+                         update="newComboParts existingCombos comboErrorMessage"
+                         actionListener="#{bean.techniqueController.createComboTechnique}"
+                         styleClass="ui-priority-primary"/>
+    </p:panelGrid>
+
+</f:view>
+</html>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="662.2387820512821" y="160.0">org.foi.mpc.phases.runner.PhaseRunner</node>
+    <node x="481.2387820512821" y="160.0">org.foi.mpc.phases.readerphase.MPCMatchListener</node>
+    <node x="237.23878205128207" y="80.0">org.foi.mpc.usecases.reports.summaryReport.SummaryReportOutputBoundary</node>
+    <node x="576.0200320512821" y="240.0">org.foi.mpc.phases.runner.PhaseRunnerBuilder</node>
+    <node x="76.86458333333337" y="240.0">org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase</node>
+    <node x="162.50000000000003" y="160.0">org.foi.mpc.usecases.reports.summaryReport.SummaryReportInputBoundary</node>
+    <node x="416.7075320512821" y="0.0">org.foi.mpc.phases.executionphases.ExecutionTool</node>
+    <node x="10.5" y="160.0">org.foi.mpc.abstractfactories.FactoryProvider</node>
+    <node x="22.375" y="80.0">org.foi.mpc.abstractfactories.ExecutionToolFactory</node>
+    <node x="244.2395833333334" y="350.0">org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase.SummaryReportInfo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportInputBoundary" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportOutputBoundary">
+      <point x="0.0" y="-15.0" />
+      <point x="269.0" y="135.0" />
+      <point x="274.40544871794873" y="135.0" />
+      <point x="-74.33333333333331" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase.SummaryReportInfo" target="org.foi.mpc.phases.runner.PhaseRunnerBuilder">
+      <point x="54.25" y="-15.0" />
+      <point x="375.98958333333337" y="320.0" />
+      <point x="653.0200320512821" y="320.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportInputBoundary">
+      <point x="35.599999999999966" y="-15.0" />
+      <point x="201.46458333333334" y="210.0" />
+      <point x="269.0" y="210.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportOutputBoundary">
+      <point x="71.19999999999999" y="-15.0" />
+      <point x="237.06458333333336" y="220.0" />
+      <point x="386.0" y="220.0" />
+      <point x="386.0" y="135.0" />
+      <point x="348.7387820512821" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.phases.runner.PhaseRunnerBuilder" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="653.0200320512821" y="220.0" />
+      <point x="651.7387820512821" y="220.0" />
+      <point x="651.7387820512821" y="50.0" />
+      <point x="527.407532051282" y="50.0" />
+      <point x="49.19999999999999" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase.SummaryReportInfo" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase">
+      <point x="-54.25" y="-15.0" />
+      <point x="267.48958333333337" y="320.0" />
+      <point x="99.11458333333337" y="320.0" />
+      <point x="-66.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase.SummaryReportInfo" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportOutputBoundary">
+      <point x="7.75" y="-15.0" />
+      <point x="329.48958333333337" y="290.0" />
+      <point x="410.86458333333337" y="290.0" />
+      <point x="410.86458333333337" y="135.0" />
+      <point x="423.07211538461536" y="135.0" />
+      <point x="74.33333333333326" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase.SummaryReportInfo" target="org.foi.mpc.phases.readerphase.MPCMatchListener">
+      <point x="38.75" y="-15.0" />
+      <point x="360.48958333333337" y="310.0" />
+      <point x="517.9506410256411" y="310.0" />
+      <point x="517.9506410256411" y="220.0" />
+      <point x="506.0721153846154" y="220.0" />
+      <point x="-49.66666666666666" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.ExecutionToolFactory" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="0.0" y="-15.0" />
+      <point x="103.375" y="60.0" />
+      <point x="453.6075320512821" y="60.0" />
+      <point x="-24.600000000000023" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.phases.runner.PhaseRunnerBuilder" target="org.foi.mpc.phases.readerphase.MPCMatchListener">
+      <point x="-66.0" y="-15.0" />
+      <point x="587.0200320512821" y="220.0" />
+      <point x="555.7387820512821" y="220.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase" target="org.foi.mpc.abstractfactories.FactoryProvider">
+      <point x="-35.60000000000002" y="-15.0" />
+      <point x="130.26458333333335" y="220.0" />
+      <point x="108.75" y="220.0" />
+      <point x="32.75" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase" target="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase.SummaryReportInfo">
+      <point x="22.25" y="15.0" />
+      <point x="188.11458333333337" y="300.0" />
+      <point x="298.48958333333337" y="300.0" />
+      <point x="-23.25" y="-15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase.SummaryReportInfo" target="org.foi.mpc.phases.executionphases.ExecutionTool">
+      <point x="23.25" y="-15.0" />
+      <point x="344.98958333333337" y="300.0" />
+      <point x="470.7387820512821" y="300.0" />
+      <point x="470.7387820512821" y="60.0" />
+      <point x="478.2075320512821" y="60.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.phases.runner.PhaseRunnerBuilder" target="org.foi.mpc.phases.runner.PhaseRunner">
+      <point x="66.0" y="-15.0" />
+      <point x="719.0200320512821" y="220.0" />
+      <point x="735.3637820512821" y="220.0" />
+      <point x="14.625" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.abstractfactories.FactoryProvider" target="org.foi.mpc.abstractfactories.ExecutionToolFactory">
+      <point x="-32.75" y="-15.0" />
+      <point x="43.25" y="135.0" />
+      <point x="49.375" y="135.0" />
+      <point x="-54.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase" target="org.foi.mpc.abstractfactories.ExecutionToolFactory">
+      <point x="-5.6843418860808015E-14" y="-15.0" />
+      <point x="165.86458333333331" y="220.0" />
+      <point x="152.00000000000003" y="220.0" />
+      <point x="152.00000000000003" y="135.0" />
+      <point x="157.375" y="135.0" />
+      <point x="54.0" y="15.0" />
+    </edge>
+    <edge source="org.foi.mpc.usecases.reports.summaryReport.SummaryReportUseCase.SummaryReportInfo" target="org.foi.mpc.phases.runner.PhaseRunner">
+      <point x="69.75" y="-15.0" />
+      <point x="391.48958333333337" y="330.0" />
+      <point x="742.5208333333334" y="330.0" />
+      <point x="742.5208333333334" y="220.0" />
+      <point x="764.6137820512821" y="220.0" />
+      <point x="43.875" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.9000000000000008" x="473.6842105263156" y="214.99999999999991" />
+  <SelectedNodes>
+    <node>org.foi.mpc.phases.executionphases.ExecutionTool</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

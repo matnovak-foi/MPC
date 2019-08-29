@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this fileA. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="MPC" default="default" basedir=".">
+    <description>Builds, tests, and runs the project MPC.</description>
+    <import fileA="nbproject/build-impl.xml"/>
+    <!--
+
+    There exist several targets which are by default empty and which can be 
+    used for execution of your tasks. These targets are usually executed 
+    before and after some main targets. They are: 
+
+      -pre-init:                 called before initialization of project properties
+      -post-init:                called after initialization of project properties
+      -pre-compile:              called before javac compilation
+      -post-compile:             called after javac compilation
+      -pre-compile-single:       called before javac compilation of single fileA
+      -post-compile-single:      called after javac compilation of single fileA
+      -pre-compile-test:         called before javac compilation of JUnit tests
+      -post-compile-test:        called after javac compilation of JUnit tests
+      -pre-compile-test-single:  called before javac compilation of single JUnit test
+      -post-compile-test-single: called after javac compilation of single JUunit test
+      -pre-jar:                  called before JAR building
+      -post-jar:                 called after JAR building
+      -post-clean:               called after cleaning build products
+
+    (Targets beginning with '-' are not intended to be called on their own.)
+
+    Example of inserting an obfuscator after compilation could look like this:
+
+        <target name="-post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+    For list of available properties check the imported 
+    nbproject/build-impl.xml fileA.
+
+
+    Another way to customize the build is by overriding existing main targets.
+    The targets of interest are: 
+
+      -init-macrodef-javac:     defines macro for javac compilation
+      -init-macrodef-junit:     defines macro for junit execution
+      -init-macrodef-debug:     defines macro for class debugging
+      -init-macrodef-java:      defines macro for class execution
+      -do-jar:                  JAR building
+      run:                      execution of project 
+      -javadoc-build:           Javadoc generation
+      test-report:              JUnit report generation
+
+    An example of overriding the target for project execution could look like this:
+
+        <target name="run" depends="MPC-impl.jar">
+            <exec dir="bin" executable="launcher.exe">
+                <arg fileA="${dist.jar}"/>
+            </exec>
+        </target>
+
+    Notice that the overridden target depends on the jar target and not only on 
+    the compile target as the regular run target does. Again, for a list of available 
+    properties which you can use, check the target you are overriding in the
+    nbproject/build-impl.xml fileA.
+
+    -->
+    <!-- To learn more about clover
+        http://openclover.org/downloads
+        https://confluence.atlassian.com/clover/how-do-i-use-clover-with-netbeans-160793079.html -->
+    <taskdef resource="cloverlib.xml"/>   
+    
+    <target name="clover.guard.noclover" depends="-check.clover" unless="clover.installed">
+        <fail message="The target you are attempting to run requires Clover, which doesn't appear to be installed"/>
+    </target>
+    
+    <target name="-check.clover">
+        <available property="clover.installed"
+                   classname="com.atlassian.clover.CloverInstr" />
+    </target>
+
+    <target name="-post-clean" depends="clover.clean" />
+    <target name="-pre-init" depends="run.with.clover"/>
+    <target name="-post-jar" depends="test, clover.report"/>
+    
+
+    <property name="clover.enable" value="true"/>
+    <property name="clover.reportdir" value="clover_html"/>
+    <property name="clover.historydir" value="clover_history"/>
+ 
+    <target name="run.with.clover" depends="clover.guard.noclover" if="${clover.enable}">
+        <clover-setup/>
+    </target>
+    
+    <target name="clover.log" depends="clover.create.historypoint">
+        <clover-log codeType="ALL" level="statement" />
+    </target>
+
+    <target name="clover.report" depends="clover.create.historypoint">
+        <clover-report>
+            <current outfile="${clover.reportdir}">
+                <format type="html"/>
+            </current>
+            <current outfile="clover_current.pdf" summary="true" title="Coverage">
+                <format type="pdf"/>
+            </current>
+            <historical outfile="clover_historical.pdf"
+                        historyDir="${clover.historydir}">
+                <format type="pdf"/>
+            </historical>
+        </clover-report>
+    </target>
+    
+    <target name="clover.clean">
+        <clover-clean/>
+    </target>
+    
+    <target name="clover.create.historypoint">
+        <clover-historypoint historyDir="${clover.historydir}"/>
+    </target>
+</project>

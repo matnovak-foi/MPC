@@ -1,0 +1,10 @@
+var clover = new Object();
+
+// JSON: {classes : [{name, id, sl, el,  methods : [{sl, el}, ...]}, ...]}
+clover.pageData = {"classes":[{"el":88,"id":8577,"methods":[{"el":25,"sc":5,"sl":21},{"el":30,"sc":5,"sl":27},{"el":41,"sc":5,"sl":32},{"el":51,"sc":5,"sl":43},{"el":64,"sc":5,"sl":53},{"el":75,"sc":5,"sl":66},{"el":87,"sc":5,"sl":77}],"name":"ComboTechniquePresenterTest","sl":16}]}
+
+// JSON: {test_ID : {"methods": [ID1, ID2, ID3...], "name" : "testXXX() void"}, ...};
+clover.testTargets = {"test_14":{"methods":[{"sl":53}],"name":"translatesComboTechniquesRepsonseModelToViewModel","pass":true,"statements":[{"sl":55},{"sl":56},{"sl":57},{"sl":58},{"sl":60},{"sl":62},{"sl":63}]},"test_259":{"methods":[{"sl":32}],"name":"translatesComboPartsResponseModelToViewModel","pass":true,"statements":[{"sl":34},{"sl":35},{"sl":36},{"sl":38},{"sl":40}]},"test_353":{"methods":[{"sl":27}],"name":"isPPTestReportOutputBoundary","pass":true,"statements":[{"sl":29}]},"test_648":{"methods":[{"sl":66}],"name":"clearSelectedTechniques","pass":true,"statements":[{"sl":68},{"sl":69},{"sl":70},{"sl":71},{"sl":72},{"sl":73},{"sl":74}]},"test_668":{"methods":[{"sl":77}],"name":"translatesResponseModelOfAvalibleTechniquesToViewModelOnPresentProcessedTehcniques","pass":true,"statements":[{"sl":79},{"sl":80},{"sl":81},{"sl":83},{"sl":85},{"sl":86}]},"test_77":{"methods":[{"sl":43}],"name":"translatesResponseModelOfAvalibleTechniquesToViewModel","pass":true,"statements":[{"sl":45},{"sl":46},{"sl":48},{"sl":50}]}}
+
+// JSON: { lines : [{tests : [testid1, testid2, testid3, ...]}, ...]};
+clover.srcFileLines = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [353], [], [353], [], [], [259], [], [259], [259], [259], [], [259], [], [259], [], [], [77], [], [77], [77], [], [77], [], [77], [], [], [14], [], [14], [14], [14], [14], [], [14], [], [14], [14], [], [], [648], [], [648], [648], [648], [648], [648], [648], [648], [], [], [668], [], [668], [668], [668], [], [668], [], [668], [668], [], []]

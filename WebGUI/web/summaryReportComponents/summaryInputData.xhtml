@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <p:panelGrid columns="2" rowClasses="topAligned">
+        <p:panel rowClasses="topAligned">
+            <f:facet name="header">
+                <p:outputLabel value="Report Input Data"/>
+            </f:facet>
+
+            <ui:include src="../standardComponents/standardInputData.xhtml">
+                <ui:param name="bean" value="#{summaryReportBean}"/>
+            </ui:include>
+
+            <ui:include src="../standardComponents/inputDirList.xhtml">
+                <ui:param name="bean" value="#{summaryReportBean}"/>
+            </ui:include>
+
+            <p:commandButton value="Generate report" id="generateReport"
+                             update="summaryInfo :form:pairDetail"
+                             actionListener="#{summaryReportBean.generateReport}"
+                             styleClass="ui-priority-primary"/>
+            <p:blockUI block="generateReport" trigger="generateReport">
+                LOADING
+                <p:graphicImage name="/images/ajaxloadingbar.gif"/>
+            </p:blockUI>
+        </p:panel>
+
+        <h:panelGroup rowClasses="topAligned">
+            <ui:include src="../standardComponents/comboTechniques.xhtml">
+                <ui:param name="bean" value="#{summaryReportBean}"/>
+            </ui:include>
+        </h:panelGroup>
+    </p:panelGrid>
+</f:view>
+</html>

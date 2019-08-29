@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="WebGUI:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/WebGUI_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="WebGUI/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="WebGUI" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Mojarra-2.2.1" />
+          <element id="library" level="project" name="PrimeFaces-6.1" />
+          <element id="library" level="project" name="afternoon-1.0.10" />
+          <element id="library" level="application" name="Clover IDEA Plugin" />
+          <element id="library" level="application" name="JUnit-4.12" />
+          <element id="file-copy" path="$PROJECT_DIR$/../tools/jPlag/jplag-2.11.9-SNAPSHOT/jplag/target/jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../tools/sherlock/out/artifacts/sherlock_jar/sherlock.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../tools/Spector/out/artifacts/Spector_jar/Spector.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../junrar/target/junrar-0.8-SNAPSHOT-jar-with-dependencies.jar" />
+          <element id="artifact" artifact-name="TemplateExclusionTechnique:jar" />
+          <element id="artifact" artifact-name="MPC:jar" />
+          <element id="artifact" artifact-name="MPCMatches:jar" />
+          <element id="library" level="project" name="java-diff-utils" />
+          <element id="library" level="application" name="poi-4.0.0" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../lib/ApacheCommons/poi-bin/poi-4.0.0/poi-4.0.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../lib/ApacheCommons/commons-math3-3.6.1/commons-math3-3.6.1.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

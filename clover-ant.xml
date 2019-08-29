@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this fileA. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="MPC" default="clover.report" basedir=".">
+
+    <!-- To learn more about clover
+        http://openclover.org/downloads
+        https://confluence.atlassian.com/clover/how-do-i-use-clover-with-netbeans-160793079.html -->
+        <fileset dir="D:\java\lib\clover-idea\">
+            <include name="clover-idea-4.3.1.jar"/>
+        </fileset>
+    <taskdef resource="cloverlib.xml" classpath="../../lib/clover-idea/clover-idea-4.3.1.jar"/>
+
+    <target name="clover.guard.noclover" depends="-check.clover" unless="clover.installed">
+        <fail message="The target you are attempting to run requires Clover, which doesn't appear to be installed"/>
+    </target>
+
+    <clover-setup initstring=".clover/clover4_2_0.db" />
+
+    <target name="-check.clover">
+        <available property="clover.installed"
+                   classname="com.atlassian.clover.CloverInstr" />
+    </target>
+
+    <property name="clover.enable" value="true"/>
+    <property name="clover.reportdir" value="clover_html"/>
+    <property name="clover.historydir" value="clover_history"/>
+    <clover-setup initstring=".clover/clover4_2_0.db" />
+
+    <target name="run.with.clover" depends="clover.guard.noclover" if="${clover.enable}">
+        <clover-setup/>
+    </target>
+
+    <target name="clover.log" depends="clover.create.historypoint">
+        <clover-log codeType="ALL" level="statement" />
+    </target>
+
+    <target name="clover.report">
+        <clover-report>
+            <current outfile="${clover.reportdir}">
+                <format type="html"/>
+            </current>
+            <current outfile="clover_current.pdf" summary="true" title="Coverage">
+                <format type="pdf"/>
+            </current>
+            <historical outfile="clover_historical.pdf"
+                        historyDir="${clover.historydir}">
+                <format type="pdf"/>
+            </historical>
+        </clover-report>
+    </target>
+
+    <target name="clover.report.history">
+        <clover-report>
+            <historical outfile="clover_historical.pdf"
+                        historyDir="${clover.historydir}">
+                <format type="pdf"/>
+            </historical>
+        </clover-report>
+    </target>
+
+    <target name="clover.clean">
+        <clover-clean/>
+    </target>
+
+    <target name="clover.create.historypoint">
+        <clover-historypoint historyDir="${clover.historydir}"/>
+    </target>
+</project>

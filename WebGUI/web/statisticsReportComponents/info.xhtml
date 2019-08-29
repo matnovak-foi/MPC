@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <p:outputPanel id="statInfo">
+        <ui:include src="../standardComponents/mainErrorMessageBox.xhtml">
+            <ui:param name="viewModel" value="#{statisticsReportBean.reportViewModel}"/>
+        </ui:include>
+
+        <p:outputPanel id="comboErrorMessage">
+            <ui:include src="../standardComponents/errorMessage.xhtml">
+                <ui:param name="viewModel" value="#{statisticsReportBean.techniqueViewModel}"/>
+            </ui:include>
+        </p:outputPanel>
+
+        <h:outputText value="Assignment dir:"/>
+        <h:outputText id="assignemntReport"
+                      value="#{statisticsReportBean.reportViewModel.assigmentDirPath}"/>
+        <br/>
+        <h:outputText value="Total number of plagiarized matches:"/>
+        <h:outputText id="plagiarizedMatches"
+                      value="#{statisticsReportBean.reportViewModel.plagiarizedMatches}"/>
+
+        <p:growl id="msgs" showDetail="true"/>
+        <p:dataTable id="statOverviewReport" var="statReportTableRow"
+                     value="#{statisticsReportBean.reportViewModel.reportTable}"
+                     selectionMode="single" rowKey="#{statReportTableRow.tool}-#{statReportTableRow.technique}"
+                     paginator="true" rows="50"
+                     sortBy="#{statReportTableRow.tool}" sortOrder="descending"
+                     selection="#{statisticsReportBean.reportViewModel.selectedReportTableRow}"
+                     rendered="#{statisticsReportBean.reportViewModel.reportTable != null}"
+                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown} {Exporters}"
+                     rowsPerPageTemplate="5,10,15,20,30,50,100"
+                     rowStyleClass="">
+
+            <p:ajax event="rowSelect" listener="#{statisticsReportBean.onStatReportRowSelect}"
+                    update=":form:msgs"/>
+
+            <f:facet name="header">
+                STATS
+
+                <p:commandButton id="togglerStatInfoTable" type="button" value="Columns" style="float:right"
+                                 icon="ui-icon-calculator"/>
+                <p:columnToggler datasource="statOverviewReport" trigger="togglerStatInfoTable"/>
+            </f:facet>
+
+            <f:facet name="{Exporters}">
+                <h:commandLink>
+                    <p:graphicImage name="/images/excel.png" width="24"/>
+                    <p:dataExporter type="xls" target="statOverviewReport" fileName="statistics" />
+                </h:commandLink>
+                <h:commandLink>
+                    <p:graphicImage name="/images/csv.png" width="24"/>
+                    <p:dataExporter type="csv" target="statOverviewReport" fileName="statistics" />
+                </h:commandLink>
+            </f:facet>
+
+            <p:column headerText="Tool" sortBy="#{statReportTableRow.tool}">
+                <h:outputText value="#{statReportTableRow.tool}"/>
+            </p:column>
+
+            <p:column headerText="Techique" sortBy="#{statReportTableRow.technique}">
+                <h:outputText value="#{statReportTableRow.technique}"/>
+            </p:column>
+
+            <p:column headerText="MatchesDir" sortBy="#{statReportTableRow.matchesDir}" visible="false">
+                <h:outputText value="#{statReportTableRow.matchesDir}"/>
+            </p:column>
+
+            <p:column headerText="Precision" sortBy="#{statReportTableRow.precision}">
+                <h:outputText value="#{statReportTableRow.precision}"/>
+            </p:column>
+
+            <p:column headerText="Recall" sortBy="#{statReportTableRow.recall}">
+                <h:outputText value="#{statReportTableRow.recall}"/>
+            </p:column>
+
+            <p:column headerText="F1" sortBy="#{statReportTableRow.f1}">
+                <h:outputText value="#{statReportTableRow.f1}"/>
+            </p:column>
+            <p:column headerText="True positives" sortBy="#{statReportTableRow.truePositives}" visible="false">
+                <h:outputText value="#{statReportTableRow.truePositives}"/>
+            </p:column>
+            <p:column headerText="False positives" sortBy="#{statReportTableRow.falsePositives}" visible="false">
+                <h:outputText value="#{statReportTableRow.falsePositives}"/>
+            </p:column>
+            <p:column headerText="False negatives" sortBy="#{statReportTableRow.falseNegatives}" visible="false">
+                <h:outputText value="#{statReportTableRow.falseNegatives}"/>
+            </p:column>
+            <p:column headerText="Plagiarized matches" visible="false">
+                <h:outputText value="#{statisticsReportBean.reportViewModel.plagiarizedMatches}"/>
+            </p:column>
+            <p:column headerText="Indicated Matches" sortBy="#{statReportTableRow.indicatedMatches}" >
+                <h:outputText value="#{statReportTableRow.indicatedMatches}"/>
+            </p:column>
+            <p:column headerText="Number of matches" sortBy="#{statReportTableRow.numberOfMatches}" visible="false">
+                <h:outputText value="#{statReportTableRow.numberOfMatches}"/>
+            </p:column>
+            <p:column headerText="Inlcuded matches in calculation" sortBy="#{statReportTableRow.includedMatches}" visible="false">
+                <h:outputText value="#{statReportTableRow.includedMatches}"/>
+            </p:column>
+            <p:column headerText="Cut-off Threshold - #{statisticsReportBean.reportViewModel.thresholdType} - #{statisticsReportBean.reportViewModel.thresholdValue}" sortBy="#{statReportTableRow.treshold}" visible="false">
+                <h:outputText value="#{statReportTableRow.treshold}"/>
+            </p:column>
+            <p:column headerText="Min" sortBy="#{statReportTableRow.min}" visible="false">
+                <h:outputText value="#{statReportTableRow.min}"/>
+            </p:column>
+            <p:column headerText="Q1" sortBy="#{statReportTableRow.q1}" visible="false">
+                <h:outputText value="#{statReportTableRow.q1}"/>
+            </p:column>
+            <p:column headerText="Median" sortBy="#{statReportTableRow.median}">
+                <h:outputText value="#{statReportTableRow.median}"/>
+            </p:column>
+            <p:column headerText="Q3" sortBy="#{statReportTableRow.q3}" visible="false">
+                <h:outputText value="#{statReportTableRow.q3}"/>
+            </p:column>
+            <p:column headerText="Max" sortBy="#{statReportTableRow.max}" visible="false">
+                <h:outputText value="#{statReportTableRow.max}"/>
+            </p:column>
+            <p:column headerText="IRQ" sortBy="#{statReportTableRow.IRQ}">
+                <h:outputText value="#{statReportTableRow.IRQ}"/>
+            </p:column>
+            <p:column headerText="Mean" sortBy="#{statReportTableRow.mean}" visible="false">
+                <h:outputText value="#{statReportTableRow.mean}"/>
+            </p:column>
+            <p:column headerText="STD" sortBy="#{statReportTableRow.STD}" visible="false">
+                <h:outputText value="#{statReportTableRow.STD}"/>
+            </p:column>
+        </p:dataTable>
+
+    </p:outputPanel>
+</f:view>
+</html>

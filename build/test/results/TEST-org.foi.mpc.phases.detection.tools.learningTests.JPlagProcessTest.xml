@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="matnovak_laptop" name="org.foi.mpc.executiontools.detectionTools.learningTests.JPlagProcessTest" skipped="1" tests="1" time="0.143" timestamp="2017-10-16T10:03:53">
+  <properties>
+    <property name="libs.Pellet.maven-pom" value="" />
+    <property name="libs.jsp-compiler.javadoc" value="" />
+    <property name="netbeans.autoupdate.country" value="US" />
+    <property name="libs.R_2.javadoc" value="" />
+    <property name="javac.test.classpath" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar:E:\java\doktorski_rad\tools\Spector/dist/Spector.jar:E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar:E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar:E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar:build/classes:C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar;D:\java\lib\junit-hierarchicalcontextrunner-4.12.1.jar:C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar:D:\java\lib\clover-ant-4.2.0\clover.jar" />
+    <property name="libs.jsf20.maven-pom" value="" />
+    <property name="libs.DataBindingME.src" value="C:\Program Files\NetBeans 8.2\mobility\sources\netbeans_databindingme-src.zip" />
+    <property name="libs.Jena.classpath" value="E:\java\lib\semantic_web\apache-jena-2.11.2\lib\commons-codec-1.6.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\httpclient-4.2.6.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\httpclient-cache-4.2.6.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\httpcore-4.2.5.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jackson-annotations-2.3.0.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jackson-core-2.3.3.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jackson-databind-2.3.3.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jcl-over-slf4j-1.7.6.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jena-arq-2.11.2.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jena-core-2.11.2.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jena-iri-1.0.2.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jena-sdb-1.4.2.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jena-tdb-1.0.2.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\jsonld-java-0.4.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\log4j-1.2.17.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\slf4j-api-1.7.6.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\slf4j-log4j12-1.7.6.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\xercesImpl-2.11.0.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib\xml-apis-1.4.01.jar" />
+    <property name="libs.spring-webmvc4.0.src" value="" />
+    <property name="ant.core.lib" value="C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar" />
+    <property name="libs.javaws.src" value="" />
+    <property name="javadoc.windowtitle" value="" />
+    <property name="libs.jsp-compilation.javadoc" value="" />
+    <property name="user.dir" value="D:\java\doktorski_rad\MPC" />
+    <property name="libs.javaee-api-7.0.src" value="" />
+    <property name="clover.enable" value="true" />
+    <property name="java.vm.version" value="25.144-b01" />
+    <property name="libs.DataBindingME.classpath" value="C:\Program Files\NetBeans 8.2\mobility\modules\ext\netbeans_databindingme.jar" />
+    <property name="libs.j2me_common_ant.src" value="" />
+    <property name="libs.JAX-WS-ENDORSED.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\api\jaxws-api.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jaxb-api.jar" />
+    <property name="libs.MySQLDriver.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\mysql-connector-java-5.1.23-bin.jar" />
+    <property name="libs.jettison.classpath" value="E:\java\lib\jettison-1.3.3.jar" />
+    <property name="libs.eclipselinkmodelgen.src" value="" />
+    <property name="project.Spector" value="E:\java\doktorski_rad\tools\Spector" />
+    <property name="libs.Apache_Camel.classpath" value="E:\java\lib\apache-camel-2.14.0\lib\camel-ahc-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ahc-ws-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-amqp-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-apns-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-atmosphere-websocket-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-atom-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-avro-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-aws-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-bam-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-barcode-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-base64-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-bean-validator-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-beanio-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-bindy-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-blueprint-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-box-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-cache-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-castor-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-cdi-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-cmis-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-cometd-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-context-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-core-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-core-osgi-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-couchdb-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-crypto-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-csv-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-cxf-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-cxf-transport-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-disruptor-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-dns-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-dozer-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-dropbox-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-eclipse-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ejb-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-elasticsearch-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-eventadmin-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-exec-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-facebook-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-flatpack-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-fop-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-freemarker-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ftp-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-gae-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-geocoder-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-google-drive-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-gora-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-groovy-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-gson-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-guava-eventbus-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-guice-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-hawtdb-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-hazelcast-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-hbase-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-hdfs-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-hdfs2-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-hl7-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-http-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-http4-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ibatis-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ical-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-infinispan-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-irc-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jackson-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jasypt-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-javaspace-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jaxb-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jclouds-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jcr-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jdbc-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jetty-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jgroups-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jibx-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jing-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jms-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jmx-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-josql-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jpa-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jsch-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jsonpath-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jt400-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-juel-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-jxpath-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-kafka-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-karaf-commands-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-kestrel-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-krati-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ldap-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-leveldb-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-linkedin-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-linkedin-api-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-lucene-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-mail-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-metrics-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-mina-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-mina2-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-mongodb-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-mqtt-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-msv-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-mustache-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-mvel-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-mybatis-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-nagios-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-netty-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-netty-http-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-netty4-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-netty4-http-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ognl-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-olingo2-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-olingo2-api-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-openshift-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-optaplanner-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-paxlogging-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-printer-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-protobuf-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-quartz-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-quartz2-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-quickfix-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-rabbitmq-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-restlet-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-rmi-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-routebox-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-rss-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ruby-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-rx-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-salesforce-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-sap-netweaver-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-saxon-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-scala-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-schematron-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-script-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-servlet-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-servletlistener-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-shiro-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-sip-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-sjms-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-smpp-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-snmp-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-soap-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-solr-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spark-rest-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-splunk-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spring-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spring-batch-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spring-integration-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spring-javaconfig-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spring-ldap-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spring-redis-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spring-security-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-spring-ws-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-sql-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-ssh-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-stax-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-stomp-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-stream-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-stringtemplate-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-swagger-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-syslog-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-tagsoup-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-test-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-test-blueprint-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-test-spring-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-test-spring3-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-testng-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-twitter-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-urlrewrite-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-velocity-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-vertx-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-weather-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-websocket-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-xmlbeans-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-xmljson-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-xmlrpc-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-xmlsecurity-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-xmpp-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-xstream-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-yammer-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-zipfile-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\camel-zookeeper-2.14.0.jar;E:\java\lib\apache-camel-2.14.0\lib\slf4j-api-1.6.6.jar;E:\java\lib\apache-camel-2.14.0\lib\optional\jasypt-1.9.2.jar" />
+    <property name="javadoc.notree" value="false" />
+    <property name="netbeans.autoupdate.version" value="1.23" />
+    <property name="libs.EclipseLink-GlassFish-v3.classpath" value="C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.antlr.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.asm.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.core.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.dbws.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.jpa.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.jpa.jpql.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.jpa.modelgen.processor.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.moxy.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\org.eclipse.persistence.oracle.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.persistence.jar" />
+    <property name="libs.javaee-web-api-6.0.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee-web-api-6.0.jar" />
+    <property name="libs.DataBindingME-PIM.maven-pom" value="" />
+    <property name="libs.Java-EE-GlassFish-v3-Prelude.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.Pellet_Jenna.maven-pom" value="" />
+    <property name="javac.profile.cmd.line.arg" value="" />
+    <property name="jdk.home" value="C:\Program Files\Java\jdk1.8.0_144" />
+    <property name="libs.R.maven-pom" value="" />
+    <property name="libs.javac-api.src" value="" />
+    <property name="javadoc.noindex" value="false" />
+    <property name="libs.jpa2-persistence.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-jpa-2.1-api-1.0.0.Final.jar" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="libs.Java-EE-GlassFish-v3-Prelude.src" value="" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
+    <property name="netbeans.autoupdate.variant" value="" />
+    <property name="platforms.JDK_1.7.home" value="C:\Program Files\Java\jdk1.7.0_80" />
+    <property name="have.tests" value="true" />
+    <property name="libs.Pellet.src" value="" />
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
+    <property name="libs.hamcrest.classpath" value="C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar" />
+    <property name="libs.Jena.src" value="E:\java\lib\semantic_web\apache-jena-2.11.2\lib-src\jena-arq-2.11.2-sources.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib-src\jena-core-2.11.2-sources.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib-src\jena-iri-1.0.2-sources.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib-src\jena-sdb-1.4.2-sources.jar;E:\java\lib\semantic_web\apache-jena-2.11.2\lib-src\jena-tdb-1.0.2-sources.jar" />
+    <property name="libs.javac-api.javadoc" value="" />
+    <property name="libs.Display_tag.maven-pom" value="" />
+    <property name="os.name" value="Windows 10" />
+    <property name="libs.beans-binding.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\beansbinding-1.2.1.jar" />
+    <property name="reference.Spector.jar" value="E:\java\doktorski_rad\tools\Spector/dist/Spector.jar" />
+    <property name="libs.javaee-endorsed-api-7.0.maven-pom" value="" />
+    <property name="ap.proc.none.internal" value="" />
+    <property name="libs.DataBindingME-SVG.javadoc" value="C:\Program Files\NetBeans 8.2\mobility\modules\docs\netbeans_databindingme_svg-api.zip" />
+    <property name="libs.restapi.javadoc" value="" />
+    <property name="libs.JWSAntTasks.maven-pom" value="" />
+    <property name="reference.sherlock.jar" value="E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar" />
+    <property name="libs.jstl.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jstl-api.jar" />
+    <property name="libs.testng.src" value="" />
+    <property name="libs.spring-webmvc3.0.src" value="" />
+    <property name="libs.restapi.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jaxrs-2.0\javax.ws.rs-api-2.0.jar" />
+    <property name="fileA.reference.junrar-0.8-SNAPSHOT-jar-with-dependencies.jar" value="E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="libs.jaxb.maven-pom" value="" />
+    <property name="os.arch" value="amd64" />
+    <property name="libs.eclipselink.src" value="" />
+    <property name="user.name" value="matnovak" />
+    <property name="libs.jsf12.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.Comet-GlassFish-v3.javadoc" value="" />
+    <property name="tmp.manifest.fileA" value="D:\java\doktorski_rad\MPC\build\null193879271" />
+    <property name="copylibs.rebase" value="true" />
+    <property name="libs.j2me_common_ant.maven-pom" value="" />
+    <property name="libs.spring-webmvc3.0.maven-pom" value="" />
+    <property name="libs.swing-layout.maven-pom" value="" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.foi.mpc.executiontools.detectionTools.learningTests.JPlagProcessTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\java\doktorski_rad\MPC\build\test\results\TEST-org.foi.mpc.executiontools.detectionTools.learningTests.JPlagProcessTest.xml crashfile=D:\java\doktorski_rad\MPC\build\junitvmwatcher2430154878059388201.properties propsfile=D:\java\doktorski_rad\MPC\build\junit2756046952231554365.properties" />
+    <property name="build.classes.dir" value="build/classes" />
+    <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
+    <property name="build.sysclasspath" value="ignore" />
+    <property name="manifest.encoding" value="UTF-8" />
+    <property name="ap.supported.internal" value="true" />
+    <property name="java.failonerror" value="true" />
+    <property name="libs.javaee-endorsed-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.jaxws21.javadoc" value="C:\Program Files\NetBeans 8.2\java\docs\jaxws-api-doc.zip" />
+    <property name="libs.Rserve.javadoc" value="" />
+    <property name="libs.spring-webmvc4.0.javadoc" value="" />
+    <property name="includes" value="**" />
+    <property name="user.country" value="US" />
+    <property name="javadoc.encoding" value="UTF-8" />
+    <property name="javac.classpath" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar:E:\java\doktorski_rad\tools\Spector/dist/Spector.jar:E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar:E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar:E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar" />
+    <property name="libs.jsp-compilation-syscp.src" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.src" value="" />
+    <property name="libs.R.javadoc" value="" />
+    <property name="libs.spring-framework400.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-aop-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-aspects-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-beans-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-build-src-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-context-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-context-support-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-core-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-expression-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-framework-bom-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-instrument-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-instrument-tomcat-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-jdbc-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-jms-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-messaging-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-orm-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-oxm-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-test-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-tx-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-web-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-webmvc-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-webmvc-portlet-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-websocket-4.0.1.RELEASE.jar" />
+    <property name="debug-transport" value="dt_shmem" />
+    <property name="jar.usage.message" value="" />
+    <property name="netbeans.home" value="C:\Program Files\NetBeans 8.2\platform" />
+    <property name="build.compiler.emacs" value="true" />
+    <property name="libs.javaee-web-api-6.0.src" value="" />
+    <property name="platforms.Oracle_Java_TM__Platform_Micro_Edition_SDK_8_1.type" value="UEI-1.0.1" />
+    <property name="libs.jsp-compilation-syscp.classpath" value="C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
+    <property name="libs.Pellet_Jenna.javadoc" value="" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\endorsed" />
+    <property name="user.language.format" value="hr" />
+    <property name="platforms.Oracle_Java_TM__Platform_Micro_Edition_SDK_8_1.preverifycommandline" value="" />
+    <property name="libs.Comet-GlassFish-v3.maven-pom" value="" />
+    <property name="libs.groovy-all.src" value="" />
+    <property name="clover.historydir" value="clover_history" />
+    <property name="netbeans.dynamic.classpath" value="C:\Users\matnovak\AppData\Roaming\NetBeans\8.2\core\org-openide-filesystems.jar;C:\Users\matnovak\AppData\Roaming\NetBeans\8.2\core\locale\org-openide-filesystems_ja.jar;C:\Users\matnovak\AppData\Roaming\NetBeans\8.2\core\locale\org-openide-filesystems_pt_BR.jar;C:\Users\matnovak\AppData\Roaming\NetBeans\8.2\core\locale\org-openide-filesystems_ru.jar;C:\Users\matnovak\AppData\Roaming\NetBeans\8.2\core\locale\org-openide-filesystems_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\asm-all-5.0.1.jar;C:\Program Files\NetBeans 8.2\platform\core\core-base.jar;C:\Program Files\NetBeans 8.2\platform\core\core.jar;C:\Program Files\NetBeans 8.2\platform\core\org-netbeans-libs-asm.jar;C:\Program Files\NetBeans 8.2\platform\core\org-openide-filesystems-compat8.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_zh_CN.jar;C:\Program Files\NetBeans 8.2\nb\core\org-netbeans-upgrader.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_ja.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_pt_BR.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_ru.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_zh_CN.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_ja.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_pt_BR.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_ru.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_zh_CN.jar" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="libs.hibernate4-support.src" value="" />
+    <property name="libs.primefaces.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\primefaces\primefaces-5.0.jar" />
+    <property name="build.classes.dir.resolved" value="D:\java\doktorski_rad\MPC\build\classes" />
+    <property name="libs.javaee-api-6.0.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee-api-6.0.jar" />
+    <property name="libs.groovy-all.maven-pom" value="" />
+    <property name="netbeans.productversion" value="NetBeans IDE 8.2 (Build 201705191307)" />
+    <property name="libs.jaxws21.src" value="" />
+    <property name="do.archive" value="true" />
+    <property name="netbeans.autoupdate.language" value="en" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="libs.javaee-api-6.0.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="jar.index.metainf" value="false" />
+    <property name="javac.debug" value="true" />
+    <property name="javadoc.splitindex" value="true" />
+    <property name="fileA.separator" value="\" />
+    <property name="libs.Java-EE-GlassFish-v3-Prelude.maven-pom" value="" />
+    <property name="libs.junit_4.maven-pom" value="" />
+    <property name="mkdist.disabled" value="true" />
+    <property name="javac.test.processorpath" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar:E:\java\doktorski_rad\tools\Spector/dist/Spector.jar:E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar:E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar:E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar:build/classes:C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar;D:\java\lib\junit-hierarchicalcontextrunner-4.12.1.jar:C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar:D:\java\lib\clover-ant-4.2.0\clover.jar" />
+    <property name="netbeans.buildnumber" value="201705191307" />
+    <property name="libs.JWSAntTasks.javadoc" value="" />
+    <property name="build.generated.sources.dir" value="build/generated-sources" />
+    <property name="user.variant" value="" />
+    <property name="libs.eclipselinkmodelgen.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\eclipselink\org.eclipse.persistence.jpa.modelgen_2.5.2.v20140319-9ad6abd.jar" />
+    <property name="libs.javaee-endorsed-api-7.0.src" value="" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
+    <property name="libs.jaxb.javadoc" value="C:\Program Files\NetBeans 8.2\ide\docs\jaxb-api-doc.zip" />
+    <property name="libs.struts.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\antlr-2.7.2.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\bsf-2.3.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-chain-1.2.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-digester-1.8.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-io-1.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-logging-1.0.4.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-validator-1.3.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\jstl-1.0.2.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\oro-2.0.8.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\standard-1.0.6.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-core-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-el-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-extras-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-faces-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-tiles-1.3.10.jar" />
+    <property name="ant.home" value="C:\Program Files\NetBeans 8.2\extide\ant" />
+    <property name="libs.junit_4.src" value="C:\Program Files\NetBeans 8.2\platform\docs\junit-4.12-sources.jar" />
+    <property name="platforms.Oracle_Java_TM__Platform_Micro_Edition_SDK_8_1.debugcommandline" value="" />
+    <property name="libs.testng.classpath" value="C:\Program Files\NetBeans 8.2\platform\modules\ext\testng-6.8.1-dist.jar" />
+    <property name="libs.absolutelayout.maven-pom" value="" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\xampp\php\bin;C:\xampp\perl\bin;C:\Program Files\R\R-3.3.3\library\rJava\jri\x64;C:\Program Files\R\R-3.3.3\bin\x64;C:\xampp\php;C:\Program Files\qemu\;C:\Program Files\Java\jdk1.8.0_60\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Calibre2\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\MiKTeX\miktex\bin\x64\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Program Files (x86)\Skype\Phone\;C:\Users\matnovak\AppData\Local\Microsoft\WindowsApps;C:\Users\matnovak\AppData\Roaming\MiKTeX\2.9\miktex\bin\x64\;." />
+    <property name="javadoc.author" value="false" />
+    <property name="libs.metro.maven-pom" value="" />
+    <property name="libs.EclipseLink-GlassFish-v3.src" value="" />
+    <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
+    <property name="libs.Jena-2.12.0.src" value="E:\java\lib\semantic_web\apache-jena-2.12.0\lib-src\jena-arq-2.12.0-sources.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib-src\jena-core-2.12.0-sources.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib-src\jena-iri-1.1.0-sources.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib-src\jena-sdb-1.5.0-sources.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib-src\jena-tdb-1.1.0-sources.jar" />
+    <property name="libs.spring-framework400.src" value="" />
+    <property name="libs.PostgreSQLDriver.src" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="basedir" value="D:\java\doktorski_rad\MPC" />
+    <property name="libs.jpa20-persistence.maven-pom" value="" />
+    <property name="jar.compress" value="false" />
+    <property name="libs.javaee-web-api-7.0.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee-web-api-7.0.jar" />
+    <property name="path.separator" value=";" />
+    <property name="libs.javaee-web-api-6.0.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="ant.junit.enabletestlistenerevents" value="true" />
+    <property name="fileA.reference.jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="libs.Clover.classpath" value="D:\java\lib\clover-ant-4.2.0\clover.jar" />
+    <property name="libs.jaxws21.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\FastInfoset.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\gmbal-api-only.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\ha-api.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\javax.mail_1.4.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\jaxws-rt.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\jaxws-tools.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\management-api.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\mimepull.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\policy.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\saaj-impl.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\stax-ex.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\stax2-api.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\streambuffer.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\woodstox-core-asl.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\api\jaxws-api.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\api\jsr181-api.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\api\javax.annotation.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\jaxws22\api\saaj-api.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
+    <property name="libs.struts.src" value="" />
+    <property name="compile.on.save" value="true" />
+    <property name="apple.awt.graphics.UseQuartz" value="true" />
+    <property name="libs.Clover.javadoc" value="" />
+    <property name="user.language" value="en" />
+    <property name="testng.mode" value="testng" />
+    <property name="libs.JAXB-ENDORSED.maven-pom" value="" />
+    <property name="libs.eclipselink.maven-pom" value="" />
+    <property name="clover.installed" value="true" />
+    <property name="clover.reportdir" value="clover_html" />
+    <property name="test.binaryincludes" value="&lt;nothing&gt;" />
+    <property name="libs.primefaces.javadoc" value="" />
+    <property name="libs.spring-framework300.maven-pom" value="" />
+    <property name="run.test.classpath" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar:E:\java\doktorski_rad\tools\Spector/dist/Spector.jar:E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar:E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar:E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar:build/classes:C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar;D:\java\lib\junit-hierarchicalcontextrunner-4.12.1.jar:C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar:D:\java\lib\clover-ant-4.2.0\clover.jar:build/test/classes" />
+    <property name="ant.project.invoked-targets" value="clean,jar" />
+    <property name="test.binaryexcludes" value="" />
+    <property name="fileA.reference.antlr-3.5.2-complete.jar" value="E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar" />
+    <property name="libs.swing-layout.javadoc" value="C:\Program Files\NetBeans 8.2\platform\docs\swing-layout-1.0.4-doc.zip" />
+    <property name="sun.java2d.dpiaware" value="true" />
+    <property name="libs.hibernate4-persistence.maven-pom" value="" />
+    <property name="libs.DataBindingME-SVG.classpath" value="C:\Program Files\NetBeans 8.2\mobility\modules\ext\netbeans_databindingme_svg.jar" />
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|matnovak_laptop" />
+    <property name="libs.PostgreSQLDriver.maven-pom" value="" />
+    <property name="java.class.version" value="52.0" />
+    <property name="libs.JAVADB_DRIVER_LABEL.classpath" value="C:\Program Files\Java\jdk1.8.0_60\db\lib\derby.jar;C:\Program Files\Java\jdk1.8.0_60\db\lib\derbyclient.jar;C:\Program Files\Java\jdk1.8.0_60\db\lib\derbynet.jar" />
+    <property name="libs.hibernate4-persistencemodelgen.maven-pom" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.src" value="" />
+    <property name="libs.eclipselink.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
+    <property name="libs.jsp-compilation.maven-pom" value="" />
+    <property name="user.properties.fileA" value="C:\Users\matnovak\AppData\Roaming\NetBeans\8.2\build.properties" />
+    <property name="ant.fileA.MPC" value="D:\java\doktorski_rad\MPC\build.xml" />
+    <property name="runtime.encoding" value="UTF-8" />
+    <property name="libs.javac-api.maven-pom" value="" />
+    <property name="fileA.encoding.pkg" value="sun.io" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="libs.JAXB-ENDORSED.javadoc" value="" />
+    <property name="libs.JWSAntTasks.classpath" value="C:\Program Files\NetBeans 8.2\java\ant\extra\org-netbeans-modules-javawebstart-anttasks.jar" />
+    <property name="libs.spring-webmvc4.0.maven-pom" value="" />
+    <property name="libs.spring-framework300.src" value="" />
+    <property name="libs.jstl.src" value="" />
+    <property name="empty.dir" value="D:\java\doktorski_rad\MPC\build\empty" />
+    <property name="libs.Pellet_Jenna.src" value="" />
+    <property name="version-output" value="java version &quot;1.8" />
+    <property name="test.binarytestincludes" value="" />
+    <property name="libs.hibernate4-persistencemodelgen.src" value="" />
+    <property name="javadoc.preview" value="true" />
+    <property name="ant.fileA.type.MPC-impl" value="fileA" />
+    <property name="libs.jpa20-persistence.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_144\jre" />
+    <property name="ant.fileA.MPC-impl" value="D:\java\doktorski_rad\MPC\nbproject\build-impl.xml" />
+    <property name="libs.jsp-compilation.src" value="" />
+    <property name="libs.Jena.maven-pom" value="" />
+    <property name="debug.test.classpath" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar:E:\java\doktorski_rad\tools\Spector/dist/Spector.jar:E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar:E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar:E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar:build/classes:C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar;D:\java\lib\junit-hierarchicalcontextrunner-4.12.1.jar:C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar:D:\java\lib\clover-ant-4.2.0\clover.jar:build/test/classes" />
+    <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
+    <property name="libs.javaee-api-6.0.src" value="" />
+    <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
+    <property name="ant.project.default-target" value="default" />
+    <property name="annotation.processing.run.all.processors" value="true" />
+    <property name="libs.DataBindingME.maven-pom" value="" />
+    <property name="libs.PostgreSQLDriver.javadoc" value="" />
+    <property name="libs.restlib.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\asm-all-repackaged-2.2.0-b21.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\cglib-2.2.0-b21.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\guava-14.0.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\hk2-api-2.2.0-b21.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\hk2-locator-2.2.0-b21.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\hk2-utils-2.2.0-b21.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\javax.annotation-api-1.2.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\javax.inject-2.2.0-b21.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\javax.servlet-api-3.0.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\jaxb-api-2.2.7.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\jersey-entity-filtering-2.5.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\jersey-media-moxy-2.5.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\org.osgi.core-4.2.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\osgi-resource-locator-1.0.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\persistence-api-1.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\ext\validation-api-1.1.0.Final.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\jersey-client.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\jersey-common.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\jersey-container-servlet.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\jersey-container-servlet-core.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jersey2\jersey-server.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\eclipselink\eclipselink.jar" />
+    <property name="libs.JAX-WS-ENDORSED.maven-pom" value="" />
+    <property name="libs.Display_tag.javadoc" value="" />
+    <property name="libs.Jena-2.12.0.classpath" value="E:\java\lib\semantic_web\apache-jena-2.12.0\lib\commons-codec-1.6.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\httpclient-4.2.6.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\httpclient-cache-4.2.6.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\httpcore-4.2.5.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jackson-annotations-2.3.0.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jackson-core-2.3.3.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jackson-databind-2.3.3.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jcl-over-slf4j-1.7.6.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jena-arq-2.12.0.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jena-core-2.12.0.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jena-iri-1.1.0.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jena-sdb-1.5.0.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jena-tdb-1.1.0.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\jsonld-java-0.5.0.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\log4j-1.2.17.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\slf4j-api-1.7.6.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\slf4j-log4j12-1.7.6.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\xercesImpl-2.11.0.jar;E:\java\lib\semantic_web\apache-jena-2.12.0\lib\xml-apis-1.4.01.jar" />
+    <property name="libs.MySQLDriver.maven-pom" value="" />
+    <property name="built-clean.properties" value="D:\java\doktorski_rad\MPC\build\built-clean.properties" />
+    <property name="platforms.Oracle_Java_TM__Platform_Micro_Edition_SDK_8_1.runcommandline" value="" />
+    <property name="libs.JAX-WS-ENDORSED.src" value="" />
+    <property name="libs.Pellet.javadoc" value="" />
+    <property name="libs.Apache_Camel.maven-pom" value="" />
+    <property name="libs.hibernate4-persistence.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|matnovak_laptop" />
+    <property name="libs.junit_4.javadoc" value="C:\Program Files\NetBeans 8.2\platform\docs\junit-4.12-javadoc.jar" />
+    <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
+    <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
+    <property name="run.classpath" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar:E:\java\doktorski_rad\tools\Spector/dist/Spector.jar:E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar:E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar:E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar:build/classes" />
+    <property name="jna.boot.library.name" value="jnidispatch-422" />
+    <property name="libs.javaee-endorsed-api-6.0.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.javaee-api-7.0.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee-api-7.0.jar" />
+    <property name="sun.awt.datatransfer.timeout" value="1000" />
+    <property name="libs.spring-webmvc3.0.javadoc" value="" />
+    <property name="libs.jpa2-persistence.maven-pom" value="" />
+    <property name="annotation.processing.enabled.in.editor" value="false" />
+    <property name="libs.hibernate4-support.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\antlr-2.7.7.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\c3p0-0.9.2.1.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-c3p0-4.3.1.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\mchange-commons-java-0.2.3.4.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\dom4j-1.6.1.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\ehcache-core-2.4.3.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-ehcache-4.3.1.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-core-4.3.1.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\jboss-logging-3.1.3.GA.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-commons-annotations-4.0.4.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-entitymanager-4.3.1.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\javassist-3.18.1-GA.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\slf4j-api-1.6.1.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\slf4j-simple-1.6.1.jar" />
+    <property name="libs.R_2.classpath" value="" />
+    <property name="nb.native.filechooser" value="false" />
+    <property name="libs.restapi.src" value="" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="libs.j2me_common_ant.javadoc" value="" />
+    <property name="javac.deprecation" value="false" />
+    <property name="build.compiler" value="com.atlassian.clover.ant.taskdefs.CloverCompilerAdapter" />
+    <property name="javadoc.use" value="true" />
+    <property name="sun.java2d.noddraw" value="true" />
+    <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\ant\extra\jspcompile.jar" />
+    <property name="javac.processorpath" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar:E:\java\doktorski_rad\tools\Spector/dist/Spector.jar:E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar:E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar:E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar" />
+    <property name="libs.hamcrest.maven-pom" value="" />
+    <property name="javac.compilerargs" value="" />
+    <property name="svnkit.http.methods" value="Basic" />
+    <property name="ant.fileA" value="D:\java\doktorski_rad\MPC\build.xml" />
+    <property name="libs.beans-binding.maven-pom" value="" />
+    <property name="libs.javaws.classpath" value="C:\Users\matnovak\.m2\repository\com\sun\javaws\1.7.0_40\javaws-1.7.0_40.jar" />
+    <property name="libs.R.src" value="" />
+    <property name="libs.hibernate4-support.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
+    <property name="libs.jsf12.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-1_2\commons-beanutils.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-1_2\commons-collections.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-1_2\commons-digester.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-1_2\commons-logging.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-1_2\jsf-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-1_2\jsf-impl.jar" />
+    <property name="libs.Jena-2.12.0.javadoc" value="E:\java\lib\semantic_web\apache-jena-2.12.0\javadoc-arq;E:\java\lib\semantic_web\apache-jena-2.12.0\javadoc-core;E:\java\lib\semantic_web\apache-jena-2.12.0\javadoc-sdb;E:\java\lib\semantic_web\apache-jena-2.12.0\javadoc-tdb" />
+    <property name="libs.Java-EE-GlassFish-v3-Prelude.classpath" value="C:\Program Files\glassfish-4.1.1\glassfish\modules\endorsed\javax.annotation-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\endorsed\jaxb-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\endorsed\webservices-api-osgi.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\bean-validator.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\cdi-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.batch-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.ejb-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.el.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.enterprise.concurrent-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.enterprise.concurrent.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.enterprise.deploy-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.faces.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.inject.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.interceptor-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.jms-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.json.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.mail.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.management.j2ee-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.persistence.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.resource-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.security.auth.message-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.security.jacc-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.servlet-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.servlet.jsp-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.servlet.jsp.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.servlet.jsp.jstl-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.servlet.jsp.jstl.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.transaction-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.websocket-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.ws.rs-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.xml.registry-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\javax.xml.rpc-api.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\jaxb-osgi.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\webservices-osgi.jar;C:\Program Files\glassfish-4.1.1\glassfish\modules\weld-osgi-bundle.jar;C:\Program Files\glassfish-4.1.1\mq\lib\jaxm-api.jar" />
+    <property name="libs.jstl.maven-pom" value="" />
+    <property name="libs.restapi.maven-pom" value="" />
+    <property name="libs.beans-binding.src" value="" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="libs.DataBindingME-PIM.javadoc" value="C:\Program Files\NetBeans 8.2\mobility\modules\docs\netbeans_databindingme_pim-api.zip" />
+    <property name="libs.swing-layout.src" value="C:\Program Files\NetBeans 8.2\platform\docs\swing-layout-1.0.4-src.zip" />
+    <property name="org.openide.major.version" value="IDE/1" />
+    <property name="libs.Apache_Camel.src" value="" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="netbeans.user" value="C:\Users\matnovak\AppData\Roaming\NetBeans\8.2" />
+    <property name="tests.failed" value="true" />
+    <property name="javadoc.additionalparam" value="" />
+    <property name="java.io.tmpdir" value="C:\Users\matnovak\AppData\Local\Temp\" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="junit.available" value="true" />
+    <property name="endorsed.classpath.cmd.line.arg" value="" />
+    <property name="jna.loaded" value="true" />
+    <property name="libs.Pellet.classpath" value="E:\java\lib\semantic_web\pellet-2.3.1\lib\aterm-java-1.6.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-cli.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-core.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-datatypes.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-el.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-explanation.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-jena.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-modularity.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-owlapiv3.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-pellint.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-query.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-rules.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\pellet-test.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\antlr\antlr-runtime-3.2.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jgrapht\jgrapht-jdk1.5.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\junit\junit.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\owlapiv3\owlapi-distribution-3.4.3-bin.jar" />
+    <property name="dist.jar.dir" value="D:\java\doktorski_rad\MPC\dist" />
+    <property name="libs.jsp-compiler.src" value="" />
+    <property name="have.sources" value="true" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\bin" />
+    <property name="libs.hamcrest.javadoc" value="" />
+    <property name="debug.classpath" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar:E:\java\doktorski_rad\tools\Spector/dist/Spector.jar:E:\java\doktorski_rad\tools\sherlock/dist/sherlock.jar:E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar:E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar:build/classes" />
+    <property name="javadoc.private" value="false" />
+    <property name="javac.external.vm" value="true" />
+    <property name="test.src.dir" value="test" />
+    <property name="libs.Rserve.src" value="" />
+    <property name="libs.jsf20.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
+    <property name="ap.processors.internal" value="" />
+    <property name="clover.initstring" value="D:\java\doktorski_rad\MPC\.clover\clover4_2_0.db" />
+    <property name="meta.inf.dir" value="src/META-INF" />
+    <property name="javadoc.encoding.used" value="UTF-8" />
+    <property name="libs.DataBindingME-SVG.src" value="C:\Program Files\NetBeans 8.2\mobility\sources\netbeans_databindingme_svg-src.zip" />
+    <property name="dist.jar" value="dist/MPC.jar" />
+    <property name="libs.spring-framework400.maven-pom" value="" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.project.name" value="MPC" />
+    <property name="netbeans.hash.code" value="unique=NB_CND_EXTIDE_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE09daaa869-71cc-40ab-9abb-f02e7f447845_ac9b941f-e33e-480c-914c-9d8bf2614193" />
+    <property name="libs.jsp-compilation-syscp.maven-pom" value="" />
+    <property name="netbeans.default_userdir_root" value="C:\Users\matnovak\AppData\Roaming\NetBeans" />
+    <property name="run.classpath.with.dist.jar" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar;E:\java\doktorski_rad\tools\Spector\dist\Spector.jar;E:\java\doktorski_rad\tools\sherlock\dist\sherlock.jar;E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar;E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar;D:\java\doktorski_rad\MPC\dist\MPC.jar" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="libs.CopyLibs.javadoc" value="" />
+    <property name="libs.spring-framework400.javadoc" value="" />
+    <property name="org.openide.specification.version" value="6.2" />
+    <property name="libs.DataBindingME-PIM.classpath" value="C:\Program Files\NetBeans 8.2\mobility\modules\ext\netbeans_databindingme_pim.jar" />
+    <property name="user.home" value="C:\Users\matnovak" />
+    <property name="annotation.processing.processors.list" value="" />
+    <property name="debug-args-line" value="-Xdebug" />
+    <property name="libs.primefaces.maven-pom" value="" />
+    <property name="libs.Apache_Camel.javadoc" value="" />
+    <property name="libs.Pellet_Jenna.classpath" value="E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\commons-codec-1.6.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\httpclient-4.2.3.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\httpcore-4.2.2.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\jcl-over-slf4j-1.6.4.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\jena-arq-2.10.0.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\jena-core-2.10.0.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\jena-iri-0.9.5.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\jena-tdb-0.10.0.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\log4j-1.2.16.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\slf4j-api-1.6.4.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\slf4j-log4j12-1.6.4.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\xercesImpl-2.10.0.jar;E:\java\lib\semantic_web\pellet-2.3.1\lib\jena\xml-apis-1.4.01.jar" />
+    <property name="libs.javaee-api-6.0.maven-pom" value="" />
+    <property name="libs.R.classpath" value="C:\Program Files\R\R-3.3.3\library\rJava\jri\JRI.jar;C:\Program Files\R\R-3.3.3\library\rJava\jri\JRIEngine.jar;C:\Program Files\R\R-3.3.3\library\rJava\jri\REngine.jar" />
+    <property name="libs.Rserve.maven-pom" value="" />
+    <property name="libs.jettison.src" value="" />
+    <property name="libs.JWSAntTasks.src" value="" />
+    <property name="libs.CopyLibs.maven-pom" value="" />
+    <property name="jar.index" value="false" />
+    <property name="libs.absolutelayout.javadoc" value="" />
+    <property name="libs.spring-framework300.javadoc" value="" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="jar.usage.level" value="debug" />
+    <property name="guice.disable.misplaced.annotation.check" value="true" />
+    <property name="libs.Clover.src" value="" />
+    <property name="libs.R_2.src" value="" />
+    <property name="clover.jarpath" value="D:\java\lib\clover-ant-4.2.0\clover.jar" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="libs.javac-api.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\nb-javac-api.jar" />
+    <property name="java.version" value="1.8.0_144" />
+    <property name="run.jvmargs.ide" value="" />
+    <property name="javadoc.version" value="false" />
+    <property name="libs.MySQLDriver.javadoc" value="" />
+    <property name="org.openide.version" value="deprecated" />
+    <property name="source.encoding" value="UTF-8" />
+    <property name="platform.java" value="C:\Program Files\Java\jdk1.8.0_144\jre/bin/java" />
+    <property name="ap.cmd.line.internal" value="" />
+    <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
+    <property name="libs.Display_tag.classpath" value="E:\java\lib\displaytag_biblioteke\commons-beanutils-1.7.0.jar;E:\java\lib\displaytag_biblioteke\commons-collections-3.1.jar;E:\java\lib\displaytag_biblioteke\commons-lang-2.3.jar;E:\java\lib\displaytag_biblioteke\commons-logging-1.1.1.jar;E:\java\lib\displaytag_biblioteke\displaytag-1.2.jar" />
+    <property name="libs.jsp-compilation-syscp.javadoc" value="" />
+    <property name="libs.eclipselinkmodelgen.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-7.0.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee7-endorsed\javax.annotation-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee7-endorsed\javax.xml.soap-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee7-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee7-endorsed\jaxws-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\javaee7-endorsed\jsr181-api.jar" />
+    <property name="libs.metro.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\metro-1.4-doc.zip" />
+    <property name="libs.struts.maven-pom" value="" />
+    <property name="netbeans.home+have.tests" value="true" />
+    <property name="annotation.processing.processor.options" value="" />
+    <property name="libs.testng.maven-pom" value="" />
+    <property name="libs.jaxb.src" value="" />
+    <property name="jdk.launcher.addexports.5" value="java.management/sun.management=ALL-UNNAMED" />
+    <property name="jdk.launcher.addexports.4" value="java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED" />
+    <property name="work.dir" value="D:\java\doktorski_rad\MPC" />
+    <property name="jdk.launcher.addexports.3" value="java.desktop/sun.awt.im=ALL-UNNAMED" />
+    <property name="libs.jaxb.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb1-impl.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
+    <property name="jdk.launcher.addexports.2" value="java.desktop/java.awt.peer=ALL-UNNAMED" />
+    <property name="jdk.launcher.addexports.1" value="java.base/jdk.internal.jrtfs=ALL-UNNAMED" />
+    <property name="php.global.include.path" value="C:\xampp\php\pear:E:\php\ZEND LIBRARAY\ZendFramework-1.12.3\ZendFramework-1.12.3\library" />
+    <property name="jdk.launcher.addexports.0" value="java.desktop/sun.awt=ALL-UNNAMED" />
+    <property name="do.depend" value="false" />
+    <property name="libs.j2me_common_ant.classpath" value="C:\Program Files\NetBeans 8.2\mobility\modules\org-netbeans-modules-j2me-common-ant.jar;C:\Program Files\NetBeans 8.2\java\modules\org-netbeans-modules-classfile.jar" />
+    <property name="dist.javadoc.dir" value="dist/javadoc" />
+    <property name="libs.spring-webmvc3.0.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-webmvc-3.2.7.RELEASE.jar" />
+    <property name="libs.swing-layout.classpath" value="C:\Program Files\NetBeans 8.2\platform\modules\ext\swing-layout-1.0.4.jar" />
+    <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
+    <property name="libs.restlib.src" value="" />
+    <property name="javac.source" value="1.8" />
+    <property name="build.generated.dir" value="build/generated" />
+    <property name="project.sherlock" value="E:\java\doktorski_rad\tools\sherlock" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="libs.Clover.maven-pom" value="" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="dist.jar.resolved" value="D:\java\doktorski_rad\MPC\dist\MPC.jar" />
+    <property name="nb.junit.batch" value="true" />
+    <property name="junit.forkmode" value="perTest" />
+    <property name="user.country.format" value="HR" />
+    <property name="ant.fileA.type.MPC" value="fileA" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\classes" />
+    <property name="javac.target" value="1.8" />
+    <property name="built-jar.properties" value="D:\java\doktorski_rad\MPC\build\built-jar.properties" />
+    <property name="libs.jettison.maven-pom" value="" />
+    <property name="build.test.classes.dir" value="build/test/classes" />
+    <property name="src.dir" value="src" />
+    <property name="libs.jpa2-persistence.src" value="" />
+    <property name="annotation.processing.enabled" value="true" />
+    <property name="sun.awt.keepWorkingSetOnMinimize" value="true" />
+    <property name="libs.jsf20.src" value="" />
+    <property name="libs.jpa20-persistence.src" value="" />
+    <property name="libs.DataBindingME-SVG.maven-pom" value="" />
+    <property name="libs.jsf12.src" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.maven-pom" value="" />
+    <property name="libs.struts.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\struts-1.3.10-javadoc.zip" />
+    <property name="libs.Comet-GlassFish-v3.classpath" value="" />
+    <property name="libs.javaee-web-api-7.0.src" value="" />
+    <property name="libs.primefaces.src" value="" />
+    <property name="libs.JAX-WS-ENDORSED.javadoc" value="" />
+    <property name="dist.dir" value="dist" />
+    <property name="libs.groovy-all.javadoc" value="" />
+    <property name="testng.debug.mode" value="" />
+    <property name="libs.groovy-all.classpath" value="C:\Program Files\NetBeans 8.2\groovy\modules\ext\groovy-all.jar" />
+    <property name="javac.fork" value="true" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="default.javac.source" value="1.8" />
+    <property name="platforms.JDK_1.7.compiler" value="modern" />
+    <property name="debug-transport-by-os" value="dt_shmem" />
+    <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="Cp1250" />
+    <property name="libs.Jena.javadoc" value="E:\java\lib\semantic_web\apache-jena-2.11.2\javadoc-arq;E:\java\lib\semantic_web\apache-jena-2.11.2\javadoc-core;E:\java\lib\semantic_web\apache-jena-2.11.2\javadoc-sdb;E:\java\lib\semantic_web\apache-jena-2.11.2\javadoc-tdb" />
+    <property name="platforms.JDK_1.7.bootclasspath" value="C:\Program Files\Java\jdk1.7.0_80\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_80\jre\classes;C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\ext\zipfs.jar" />
+    <property name="build.test.results.dir" value="build/test/results" />
+    <property name="java.runtime.version" value="1.8.0_144-b01" />
+    <property name="default.javac.target" value="1.8" />
+    <property name="libs.junit_4.classpath" value="C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar;D:\java\lib\junit-hierarchicalcontextrunner-4.12.1.jar" />
+    <property name="user.timezone" value="" />
+    <property name="nb.junit.single" value="false" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="netbeans.dirs" value="C:\Program Files\NetBeans 8.2\nb;C:\Program Files\NetBeans 8.2\ergonomics;C:\Program Files\NetBeans 8.2\ide;C:\Program Files\NetBeans 8.2\extide;C:\Program Files\NetBeans 8.2\java;C:\Program Files\NetBeans 8.2\apisupport;C:\Program Files\NetBeans 8.2\webcommon;C:\Program Files\NetBeans 8.2\websvccommon;C:\Program Files\NetBeans 8.2\enterprise;C:\Program Files\NetBeans 8.2\mobility;C:\Program Files\NetBeans 8.2\profiler;C:\Program Files\NetBeans 8.2\python;C:\Program Files\NetBeans 8.2\php;C:\Program Files\NetBeans 8.2\identity;C:\Program Files\NetBeans 8.2\harness;C:\Program Files\NetBeans 8.2\cnd;C:\Program Files\NetBeans 8.2\cndext;C:\Program Files\NetBeans 8.2\dlight;C:\Program Files\NetBeans 8.2\groovy;C:\Program Files\NetBeans 8.2\extra;C:\Program Files\NetBeans 8.2\javacard;C:\Program Files\NetBeans 8.2\javafx" />
+    <property name="libs.jsf20.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.jstl.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="libs.metro.src" value="" />
+    <property name="libs.absolutelayout.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\AbsoluteLayout.jar" />
+    <property name="excludes" value="" />
+    <property name="libs.restlib.maven-pom" value="" />
+    <property name="libs.metro.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\metro\webservices-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\metro\webservices-extra-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\metro\webservices-extra.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\metro\webservices-rt.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\metro\webservices-tools.jar" />
+    <property name="libs.jpa2-persistence.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
+    <property name="libs.Jena-2.12.0.maven-pom" value="" />
+    <property name="libs.DataBindingME.javadoc" value="C:\Program Files\NetBeans 8.2\mobility\modules\docs\netbeans_databindingme-api.zip" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="java.class.path" value="E:\java\doktorski_rad\tools\jPlag\jplag-2.11.9-SNAPSHOT\jplag\target\jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar;E:\java\doktorski_rad\tools\Spector\dist\Spector.jar;E:\java\doktorski_rad\tools\sherlock\dist\sherlock.jar;E:\java\doktorski_rad\tools\Spector\lib\antlr-3.5.2-complete.jar;E:\java\junrar\target\junrar-0.8-SNAPSHOT-jar-with-dependencies.jar;D:\java\doktorski_rad\MPC\build\classes;C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar;D:\java\lib\junit-hierarchicalcontextrunner-4.12.1.jar;C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar;D:\java\lib\clover-ant-4.2.0\clover.jar;D:\java\doktorski_rad\MPC\build\test\classes;D:\java\doktorski_rad\MPC;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit4.jar" />
+    <property name="libs.absolutelayout.src" value="" />
+    <property name="libs.jpa20-persistence.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar" />
+    <property name="os.version" value="10.0" />
+    <property name="application.args" value="" />
+    <property name="libs.EclipseLink-GlassFish-v3.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.javaee-api-7.0.maven-pom" value="" />
+    <property name="sun.awt.enableExtraMouseButtons" value="true" />
+    <property name="libs.Display_tag.src" value="" />
+    <property name="sun.desktop" value="windows" />
+    <property name="libs.hibernate4-persistence.src" value="" />
+    <property name="libs.hibernate4-support.maven-pom" value="" />
+    <property name="libs.Comet-GlassFish-v3.src" value="" />
+    <property name="libs.restlib.javadoc" value="" />
+    <property name="libs.JAXB-ENDORSED.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jaxb-api.jar" />
+    <property name="nb.internal.action.name" value="rebuild" />
+    <property name="libs.R_2.maven-pom" value="" />
+    <property name="libs.eclipselink.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\eclipselink\eclipselink.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\eclipselink\org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" />
+    <property name="libs.javaee-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="libs.beans-binding.javadoc" value="C:\Program Files\NetBeans 8.2\java\docs\beansbinding-1.2.1-doc.zip" />
+    <property name="libs.Rserve.classpath" value="C:\Program Files\R\R-3.3.3\library\Rserve\java\REngine.jar;C:\Program Files\R\R-3.3.3\library\Rserve\java\Rserve.jar" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="libs.CopyLibs.classpath" value="C:\Program Files\NetBeans 8.2\java\ant\extra\org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+    <property name="libs.spring-framework300.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-aop-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-aspects-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-beans-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-build-src-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-context-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-context-support-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-core-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-expression-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-framework-bom-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-instrument-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-jdbc-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-jms-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-orm-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-oxm-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-struts-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-test-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-tx-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-web-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-webmvc-3.2.7.RELEASE.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.2.7.RELEASE.jar" />
+    <property name="libs.jsp-compiler.maven-pom" value="" />
+    <property name="libs.hamcrest.src" value="" />
+    <property name="run.jvmargs" value="" />
+    <property name="libs.hibernate4-persistence.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\antlr-2.7.7.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\c3p0-0.9.2.1.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-c3p0-4.3.1.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\mchange-commons-java-0.2.3.4.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\dom4j-1.6.1.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\ehcache-core-2.4.3.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-ehcache-4.3.1.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-core-4.3.1.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\jboss-logging-3.1.3.GA.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-commons-annotations-4.0.4.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-entitymanager-4.3.1.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\javassist-3.18.1-GA.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\slf4j-api-1.6.1.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\slf4j-simple-1.6.1.jar;C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-jpa-2.1-api-1.0.0.Final.jar" />
+    <property name="platforms.Oracle_Java_TM__Platform_Micro_Edition_SDK_8_1.home" value="C:\Java_ME_platform_SDK_8.1" />
+    <property name="dist.archive.excludes" value="" />
+    <property name="libs.JAXB-ENDORSED.src" value="" />
+    <property name="libs.testng.javadoc" value="C:\Program Files\NetBeans 8.2\platform\docs\testng-6.8.1-javadoc.zip" />
+    <property name="libs.DataBindingME-PIM.src" value="C:\Program Files\NetBeans 8.2\mobility\sources\netbeans_databindingme_pim-src.zip" />
+    <property name="libs.javaws.maven-pom" value="" />
+    <property name="user.script" value="" />
+    <property name="libs.PostgreSQLDriver.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\postgresql-9.4.1209.jar" />
+    <property name="libs.jsf12.maven-pom" value="" />
+    <property name="libs.hibernate4-persistencemodelgen.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\hibernate4\hibernate-jpamodelgen-4.3.1.Final.jar" />
+    <property name="libs.jettison.javadoc" value="" />
+    <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
+    <property name="build.dir" value="build" />
+    <property name="libs.CopyLibs.src" value="" />
+    <property name="libs.jsp-compilation.classpath" value="C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-2_2\javax.faces.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jstl-api.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-launcher.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
+    <property name="fileA.encoding" value="Cp1250" />
+    <property name="build.classes.excludes" value="**/*.java,**/*.form" />
+    <property name="javadoc.nonavbar" value="false" />
+    <property name="jdkBug6558476" value="false" />
+    <property name="libs.spring-webmvc4.0.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\spring-4\spring-webmvc-4.0.1.RELEASE.jar" />
+    <property name="platform.active" value="default_platform" />
+    <property name="libs.javaws.javadoc" value="" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
+  </properties>
+  <testcase classname="junit.framework.JUnit4TestCaseFacade" name="org.foi.mpc.executiontools.detectionTools.learningTests.JPlagProcessTest" time="0.0">
+    <skipped />
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <p:panelGrid columns="2" columnClasses="label,value">
+        <p:outputLabel for="workingDir" value="Working directory path:" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+        <p:inputText id="workingDir" value="#{bean.reportViewModel.workingDirPath}" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+        <p:outputLabel for="sourceDir" value="Source directory path:" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+        <p:inputText id="sourceDir" value="#{bean.reportViewModel.sourceDirPath}" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+        <ui:insert name="customInputData">
+
+        </ui:insert>
+        <p:outputLabel for="tool" value="Plagiarism detection tool:"/>
+        <p:selectManyMenu id="tool" value="#{bean.reportViewModel.selectedTools}">
+            <f:selectItems value="#{bean.reportViewModel.availableTools}"/>
+        </p:selectManyMenu>
+
+        <p:outputLabel for="techniques" value="Preprocessing techniques:"/>
+        <p:selectManyMenu id="techniques" value="#{bean.techniqueViewModel.selectedTechniques}" style="width: 200px;">
+            <f:selectItems value="#{bean.techniqueViewModel.availableTechniques}"/>
+        </p:selectManyMenu>
+
+        <p:outputLabel for="clearComboSelection" value=""/>
+        <p:commandButton value="Clear all technique selections" id="clearComboSelection"
+                         update="existingCombos techniques"
+                         actionListener="#{bean.techniqueController.clearTechniqueSelection}"
+                         styleClass="ui-priority-primary" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+
+        <p:commandButton  disabled="#{bean.reportViewModel.disabledLoadToolsAndTechniquesFromFile}"
+                          value="Load form file" id="loadToolsAndTechniquesFromFile"
+                          update="tool techniques errorMessage comboErrorMessage existingCombos"
+                          action="#{bean.loadToolsAndTechniquesFromFile}"
+                          styleClass="ui-priority-primary" readonly="#{bean.getAnalysisMode}" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+        <p:commandButton disabled="#{bean.reportViewModel.disabledLoadProcessedToolsAndTechniques}"
+                         value="Load processed" id="loadProcessedToolsAndTechniques"
+                         update="tool techniques errorMessage comboErrorMessage existingCombos"
+                         action="#{bean.loadProcessedToolsAndTechniques}"
+                         styleClass="ui-priority-primary" readonly="#{bean.getAnalysisMode}" rendered="#{not facesContext.externalContext.getInitParameter('analysisMode')}"/>
+
+
+    </p:panelGrid>
+</f:view>
+</html>

@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    
+    
+    <link rel="SHORTCUT ICON" href="img/clover.ico" />
+
+    <link rel="stylesheet" href="aui/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="aui/css/aui-experimental.min.css" media="all"/>
+    <!--[if IE 9]><link rel="stylesheet" href="aui/css/aui-ie9.min.css" media="all"/><![endif]-->
+
+    <style type="text/css" media="all">
+        @import url('style.css');
+        @import url('tree.css');
+        
+    </style>
+
+    <script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui-experimental.min.js" type="text/javascript"></script>
+    <script src="aui/js/aui-soy.min.js" type="text/javascript"></script>
+
+    <script src="package-nodes-tree.js" type="text/javascript"></script>
+    <script src="clover-tree.js" type="text/javascript"></script>
+    <script src="clover.js" type="text/javascript"></script>
+    <script src="clover-descriptions.js" type="text/javascript"></script>
+    <script src="cloud.js" type="text/javascript"></script>
+
+            <title>Clover</title>
+    </head>
+
+<body onresize="processTreeMapDashJson(treeMapJson);" >
+    <div id="page">
+        
+        
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+        <div class="aui-header-inner">
+            <div class="aui-header-primary">
+                <h1 id="logo" class="aui-header-logo aui-header-logo-clover">
+                    <a href="http://openclover.org" title="Visit OpenClover home page"><span class="aui-header-logo-device">OpenClover</span></a>
+                </h1>
+                                <ul class="aui-nav">
+                    <li>
+                        <a href="#dropdown2-jira3" aria-owns="dropdown2-jira3" aria-haspopup="true"
+                           class="aui-dropdown2-trigger" aria-controls="dropdown2-header7">
+                            Linked reports
+                            <span class="aui-icon-dropdown"></span>
+                        </a>
+
+                        <div class="aui-dropdown2 aui-style-default aui-dropdown2-in-header" id="dropdown2-jira3"
+                             style="display: none; top: 40px; min-width: 160px; left: 1213px; " aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                                <ul>
+                                                                                                                <li><a href="../clover_current.pdf">Coverage</a></li>
+                                                                            <li><a href="../clover_historical.pdf">Historical</a></li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                            </div>
+            <div class="aui-header-secondary">
+                <ul class="aui-nav">
+                    <li id="system-help-menu">
+                        <a class="aui-nav-link" title="Open online documentation" target="_blank"
+                           href="http://openclover.org/documentation">
+                            <span class="aui-icon aui-icon-small aui-iconfont-help">&#160;Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        
+        <div class="aui-page-panel">
+            <div class="aui-page-panel-inner">
+                <div class="aui-page-panel-nav aui-page-panel-nav-clover">
+                    
+
+<div class="aui-page-header-inner" style="margin-bottom: 20px;">
+    <div class="aui-page-header-image">
+                <div class="aui-avatar aui-avatar-large aui-avatar-project">
+            <div class="aui-avatar-inner">
+                                    <img src="img/clover_logo_large.png" alt="Clover icon"/>
+                            </div>
+        </div>
+            </div>
+    <div class="aui-page-header-main" >
+        <h1>
+                                        Coverage Report
+                                </h1>
+    </div>
+</div>
+
+<nav class="aui-navgroup aui-navgroup-vertical">
+    <div class="aui-navgroup-inner">
+                                            <ul class="aui-nav">
+                <li class="aui-nav-selected">
+                    <a href="dashboard.html">Project overview</a>
+                </li>
+            </ul>
+        
+                <div class="aui-nav-heading packages-nav-heading">
+            <strong>Packages</strong>
+        </div>
+        <div class="aui-nav project-packages">
+            <form method="get" action="#" class="aui package-filter-container">
+                <input type="text" autocomplete="off" class="package-filter text"
+                       placeholder="Type to filter packages..." name="package-filter" id="package-filter"
+                       title="Start typing package name (or part of the name) to search through the tree. Use arrow keys and the Enter key to navigate."/>
+            </form>
+            <p class="package-filter-no-results-message hidden">
+                <small>No results found.</small>
+            </p>
+                                                  <div class="packages-tree-wrapper" data-root-relative="" data-package-name="">
+                <div class="packages-tree-container"></div>
+                <div class="clover-packages-lozenges"></div>
+            </div>
+        </div>
+        
+            </div>
+</nav>                </div>
+                <section class="aui-page-panel-content">
+                    <div class="aui-page-panel-content-clover">
+
+                    
+                    <ol class="aui-nav aui-nav-breadcrumbs">
+            
+        <li><a href="dashboard.html">Project Clover database čet lis 4 2018 23:29:25 CEST</a></li>
+    </ol>
+    
+<h1 class="aui-h2-clover">
+            Project overview
+    </h1>
+<div class="aui-tabs horizontal-tabs">
+        <ul class="tabs-menu">
+            <li class="menu-item active-tab">
+            <a href="dashboard.html">Dashboard</a>
+        </li>
+                <li class="menu-item ">
+            <a href="pkg-summary.html"><strong>Application code</strong></a>
+        </li>
+                <li class="menu-item ">
+            <a href="testsrc-pkg-summary.html"><strong>Test code</strong></a>
+        </li>
+        <li class="menu-item ">
+            <a href="test-pkg-summary.html"><strong>Test results</strong></a>
+        </li>
+                <li class="menu-item ">
+            <a href="top-risks.html"><strong>Top risks</strong></a>
+        </li>
+        <li class="menu-item ">
+            <a href="quick-wins.html"><strong>Quick wins</strong></a>
+        </li>
+                                                <li class="menu-item ">
+                <a href="treemap.html"><strong>Coverage tree map</strong></a>
+            </li>
+            </ul>
+    <div class="tabs-pane active-pane" id="tabs-first">
+
+        <div>&#160;</div>
+
+
+
+
+
+
+<div class="aui-group">
+    <div class="aui-item">
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                
+                <h3>
+                    Code coverage
+                    <small style="float:right; font-weight: normal">
+                        268 classes,
+                        5.678 /
+                        6.758 elements
+                    </small>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.8401894</span>84%</div><div style="display: table-cell">
+ <div title="84% Covered"  style="min-width:200px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:84%"></div></div></div></div>
+                <p><a href="pkg-summary.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>
+                    Test results
+                    <small style="float:right; font-weight: normal">
+                        765 /
+                        768 tests
+                        150,6 secs
+                    </small>
+                </h3>
+            </header>
+            <div class="dashboard-widget-content">
+                                    
+
+<div style="display: table; width: 100%">
+            <div class="barGraphValue"><span class="sortValue">0.99609375</span>99,6%</div>         <div style="display: table-cell">
+            
+            <div title="0% Errors" style="min-width: 40px;" class="testBarError">
+                <div title="99,6% of tests passed&lt;br/&gt;0,4% of tests failed" class="testBarFail" style="width: 100%"><div class="testBarPass" style="width: 99.6%"></div></div>
+            </div>
+        </div>
+    </div>                                <p><a href="test-pkg-summary.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Code metrics</h3>
+            </header>
+                         
+
+<div id="$statsId" class="aui-item" style="display: ${display}">
+<div style="display: table">
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of branches in this project">Branches:</label></div>
+        <div class="stats-box-value">986</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of statements in this project">Statements:</label></div>
+        <div class="stats-box-value">4.439</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of methods in this project">Methods:</label></div>
+        <div class="stats-box-value">1.333</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of classes in this project">Classes:</label></div>
+        <div class="stats-box-value">268</div>
+    </div>
+            <div class="stats-box">
+            <div class="stats-box-label"><label title="Total number of files in this project">Files:</label></div>
+            <div class="stats-box-value">196</div>
+        </div>
+                <div class="stats-box">
+            <div class="stats-box-label"><label title="Total number of packages in this project">Packages:</label></div>
+            <div class="stats-box-value">55</div>
+        </div>
+        <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of lines of code in this project">LOC:</label></div>
+        <div class="stats-box-value">15.025</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Total number of non-comment lines of code in this project">NCLOC:</label></div>
+        <div class="stats-box-value">12.414</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Cyclomatic complexity is the number of paths in this project">Total complexity:</label></div>
+        <div class="stats-box-value">1.928</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label">
+            <label title="Complexity density is the complexity divided by the number of statements in this project">Complexity density:</label>
+        </div>
+        <div class="stats-box-value">0,43</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Number of statements per method.">Statements/Method:</label></div>
+        <div class="stats-box-value">3,33</div>
+    </div>
+    <div class="stats-box">
+        <div class="stats-box-label"><label title="Number of methods per class.">Methods/Class:</label></div>
+        <div class="stats-box-value">4,97</div>
+    </div>
+            <div class="stats-box">
+            <div class="stats-box-label"><label title="Number of classes per package.">Classes/Package:</label></div>
+            <div class="stats-box-value">4,87</div>
+        </div>
+        <div class="stats-box">
+        <div class="stats-box-label"><label title="Complexity divided by the number of methods in this project">Average method complexity:</label></div>
+        <div class="stats-box-value">1,45</div>
+    </div>
+</div>
+
+</div>        </div>
+
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Class Coverage Distribution</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="text-align: center">                     <img src="img/classDistrubutionChart.png" alt="img/classDistrubutionChart.png" usemap="#classDistrubutionChart.png"/>
+                </div>
+                <map id="classDistrubutionChart.png" name="classDistrubutionChart.png">
+<area shape="rect" coords="282,15,304,205" title="129 classes have 91-100% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="258,182,280,205" title="16 classes have 81-90% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="233,194,255,205" title="8 classes have 71-80% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="209,200,231,205" title="4 classes have 61-70% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="184,188,206,205" title="12 classes have 51-60% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="160,203,182,205" title="2 classes have 41-50% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="135,201,157,205" title="3 classes have 31-40% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="111,200,133,205" title="4 classes have 21-30% coverage" alt="" nohref="nohref"/>
+<area shape="rect" coords="38,154,60,205" title="35 classes have 0% coverage" alt="" nohref="nohref"/>
+</map>
+            </div>
+        </div>
+        
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Class Complexity</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <div style="text-align: center">
+                    <img src="img/classComplexityChart.png" alt="img/classComplexityChart.png" usemap="#classComplexityChart.png"/>
+                </div>
+                <map id="classComplexityChart.png" name="classComplexityChart.png">
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,181,302,184,299,181,302,179,304,181,304,181" title="Complexity: 9; Coverage: 100%; Class: FactoryProvider" alt="" href="org/foi/mpc/abstractfactories/FactoryProvider.html#FactoryProvider"/>
+<area shape="poly" coords="264,196,262,199,259,196,262,194,264,196,264,196" title="Complexity: 4; Coverage: 84%; Class: SubmissionFilesUnifier.FileExtensionFilterInversed" alt="" href="org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html#SubmissionFilesUnifier.FileExtensionFilterInversed"/>
+<area shape="poly" coords="304,196,302,199,299,196,302,194,304,196,304,196" title="Complexity: 4; Coverage: 100%; Class: SubmissionFilesUnifier.FileExtensionFilter" alt="" href="org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html#SubmissionFilesUnifier.FileExtensionFilter"/>
+<area shape="poly" coords="294,146,292,148,289,146,292,143,294,146,294,146" title="Complexity: 21; Coverage: 96%; Class: SubmissionFilesUnifier" alt="" href="org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html#SubmissionFilesUnifier"/>
+<area shape="poly" coords="304,199,302,202,299,199,302,197,304,199,304,199" title="Complexity: 3; Coverage: 100%; Class: ArchiveExtractor.CheckExtractedArchive" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor.CheckExtractedArchive"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="284,169,282,172,279,169,282,167,284,169,284,169" title="Complexity: 13; Coverage: 92%; Class: ArchiveExtractor" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor"/>
+<area shape="poly" coords="304,175,302,178,299,175,302,173,304,175,304,175" title="Complexity: 11; Coverage: 100%; Class: Renamer" alt="" href="org/foi/mpc/executiontools/prepareTools/Renamer.html#Renamer"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="259,175,257,178,254,175,257,173,259,175,259,175" title="Complexity: 11; Coverage: 82%; Class: PPTestReportBean" alt="" href="org/foi/mpc/pptestreport/view/PPTestReportBean.html#PPTestReportBean"/>
+<area shape="poly" coords="262,169,259,172,257,169,259,167,262,169,262,169" title="Complexity: 13; Coverage: 83%; Class: ComboTechniqueViewModelBuilder" alt="" href="org/foi/mpc/usecases/combotechnique/view/models/ComboTechniqueViewModelBuilder.html#ComboTechniqueViewModelBuilder"/>
+<area shape="poly" coords="232,148,229,151,227,148,229,146,232,148,232,148" title="Complexity: 20; Coverage: 71%; Class: ComboTechniqueViewModel" alt="" href="org/foi/mpc/usecases/combotechnique/view/models/ComboTechniqueViewModel.html#ComboTechniqueViewModel"/>
+<area shape="poly" coords="149,178,147,181,144,178,147,176,149,178,149,178" title="Complexity: 10; Coverage: 38%; Class: SelectOption" alt="" href="org/foi/mpc/usecases/reports/view/models/SelectOption.html#SelectOption"/>
+<area shape="poly" coords="269,163,267,166,264,163,267,161,269,163,269,163" title="Complexity: 15; Coverage: 86%; Class: StandardReportInputData" alt="" href="org/foi/mpc/usecases/reports/view/models/StandardReportInputData.html#StandardReportInputData"/>
+<area shape="poly" coords="304,190,302,193,299,190,302,188,304,190,304,190" title="Complexity: 6; Coverage: 100%; Class: StandardReportInputListData" alt="" href="org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html#StandardReportInputListData"/>
+<area shape="poly" coords="304,131,302,133,299,131,302,128,304,131,304,131" title="Complexity: 26; Coverage: 100%; Class: StandradReportDescriptiveStatistics" alt="" href="org/foi/mpc/usecases/reports/view/models/StandradReportDescriptiveStatistics.html#StandradReportDescriptiveStatistics"/>
+<area shape="poly" coords="304,116,302,118,299,116,302,113,304,116,304,116" title="Complexity: 31; Coverage: 100%; Class: ToolCalibratorUseCase" alt="" href="org/foi/mpc/usecases/toolCalibration/ToolCalibratorUseCase.html#ToolCalibratorUseCase"/>
+<area shape="poly" coords="304,148,302,151,299,148,302,146,304,148,304,148" title="Complexity: 20; Coverage: 100%; Class: StatisticsReportViewModel.PresentableStatisticsReportTableRow" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html#StatisticsReportViewModel.PresentableStatisticsReportTableRow"/>
+<area shape="poly" coords="242,184,239,187,237,184,239,182,242,184,242,184" title="Complexity: 8; Coverage: 75%; Class: StatisticsReportViewModel" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html#StatisticsReportViewModel"/>
+<area shape="poly" coords="242,199,239,202,237,199,239,197,242,199,242,199" title="Complexity: 3; Coverage: 75%; Class: MPCMatchReaderPhaseSpy" alt="" href="org/foi/mpc/phases/readerphase/MPCMatchReaderPhaseSpy.html#MPCMatchReaderPhaseSpy"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="282,157,279,160,277,157,279,155,282,157,282,157" title="Complexity: 17; Coverage: 91%; Class: MPCMatchReaderPhase" alt="" href="org/foi/mpc/phases/readerphase/MPCMatchReaderPhase.html#MPCMatchReaderPhase"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="122,190,119,193,117,190,119,188,122,190,122,190" title="Complexity: 6; Coverage: 27%; Class: StatisticsReportUseCase.StatisticsReportGenerator.MatchesDirKey" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html#StatisticsReportUseCase.StatisticsReportGenerator.MatchesDirKey"/>
+<area shape="poly" coords="299,143,297,145,294,143,297,140,299,143,299,143" title="Complexity: 22; Coverage: 98%; Class: StatisticsReportUseCase.StatisticsReportGenerator" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html#StatisticsReportUseCase.StatisticsReportGenerator"/>
+<area shape="poly" coords="304,190,302,193,299,190,302,188,304,190,304,190" title="Complexity: 6; Coverage: 100%; Class: StandardReportInputListData" alt="" href="org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html#StandardReportInputListData"/>
+<area shape="poly" coords="304,172,302,175,299,172,302,170,304,172,304,172" title="Complexity: 12; Coverage: 100%; Class: SummaryReportControler" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportControler.html#SummaryReportControler"/>
+<area shape="poly" coords="299,157,297,160,294,157,297,155,299,157,299,157" title="Complexity: 17; Coverage: 98%; Class: SummaryReportPresenter" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportPresenter.html#SummaryReportPresenter"/>
+<area shape="poly" coords="304,154,302,157,299,154,302,152,304,154,304,154" title="Complexity: 18; Coverage: 100%; Class: DetailsReportControler" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportControler.html#DetailsReportControler"/>
+<area shape="poly" coords="297,175,294,178,292,175,294,173,297,175,297,175" title="Complexity: 11; Coverage: 97%; Class: DetailsReportPresenter" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportPresenter.html#DetailsReportPresenter"/>
+<area shape="poly" coords="304,190,302,193,299,190,302,188,304,190,304,190" title="Complexity: 6; Coverage: 100%; Class: StandardReportInputListData" alt="" href="org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html#StandardReportInputListData"/>
+<area shape="poly" coords="304,98,302,100,299,98,302,95,304,98,304,98" title="Complexity: 37; Coverage: 100%; Class: JavaCodePartsRemover.CommentsRemover" alt="" href="org/foi/common/JavaCodePartsRemover.html#JavaCodePartsRemover.CommentsRemover"/>
+<area shape="poly" coords="304,131,302,133,299,131,302,128,304,131,304,131" title="Complexity: 26; Coverage: 100%; Class: StandradReportDescriptiveStatistics" alt="" href="org/foi/mpc/usecases/reports/view/models/StandradReportDescriptiveStatistics.html#StandradReportDescriptiveStatistics"/>
+<area shape="poly" coords="54,202,52,205,49,202,52,200,54,202,54,202" title="Complexity: 2; Coverage: 0%; Class: MathHelper" alt="" href="org/foi/common/MathHelper.html#MathHelper"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="179,202,177,205,174,202,177,200,179,202,179,202" title="Complexity: 2; Coverage: 50%; Class: MPCexcpetions.IsNullException" alt="" href="org/foi/common/MPCexcpetions.html#MPCexcpetions.IsNullException"/>
+<area shape="poly" coords="304,181,302,184,299,181,302,179,304,181,304,181" title="Complexity: 9; Coverage: 100%; Class: FactoryProvider" alt="" href="org/foi/mpc/abstractfactories/FactoryProvider.html#FactoryProvider"/>
+<area shape="poly" coords="299,184,297,187,294,184,297,182,299,184,299,184" title="Complexity: 8; Coverage: 98%; Class: StatisticsReportPresenter" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/view/StatisticsReportPresenter.html#StatisticsReportPresenter"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,148,302,151,299,148,302,146,304,148,304,148" title="Complexity: 20; Coverage: 100%; Class: StatisticsReportViewModel.PresentableStatisticsReportTableRow" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html#StatisticsReportViewModel.PresentableStatisticsReportTableRow"/>
+<area shape="poly" coords="114,166,112,169,109,166,112,164,114,166,114,166" title="Complexity: 14; Coverage: 24%; Class: ExecutionLogger" alt="" href="org/foi/mpc/phases/executionphases/ExecutionLogger.html#ExecutionLogger"/>
+<area shape="poly" coords="304,172,302,175,299,172,302,170,304,172,304,172" title="Complexity: 12; Coverage: 100%; Class: SummaryReportControler" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportControler.html#SummaryReportControler"/>
+<area shape="poly" coords="289,166,287,169,284,166,287,164,289,166,289,166" title="Complexity: 14; Coverage: 94%; Class: StatisticsReportBean" alt="" href="org/foi/mpc/statisticsReport/view/StatisticsReportBean.html#StatisticsReportBean"/>
+<area shape="poly" coords="304,193,302,196,299,193,302,191,304,193,304,193" title="Complexity: 5; Coverage: 100%; Class: SIMGruneCalibrator" alt="" href="org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html#SIMGruneCalibrator"/>
+<area shape="poly" coords="304,193,302,196,299,193,302,191,304,193,304,193" title="Complexity: 5; Coverage: 100%; Class: SIMGruneCalibrator" alt="" href="org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html#SIMGruneCalibrator"/>
+<area shape="poly" coords="54,151,52,154,49,151,52,149,54,151,54,151" title="Complexity: 19; Coverage: 0%; Class: ToolsConfiguration" alt="" href="org/foi/mpc/executiontools/calibrator/ToolsConfiguration.html#ToolsConfiguration"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="297,116,294,118,292,116,294,113,297,116,297,116" title="Complexity: 31; Coverage: 97%; Class: SimilarityDetectionToolCalibrator" alt="" href="org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibrator.html#SimilarityDetectionToolCalibrator"/>
+<area shape="poly" coords="304,193,302,196,299,193,302,191,304,193,304,193" title="Complexity: 5; Coverage: 100%; Class: SIMGruneCalibrator" alt="" href="org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html#SIMGruneCalibrator"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="292,157,289,160,287,157,289,155,292,157,292,157" title="Complexity: 17; Coverage: 95%; Class: SimilarityDetectionToolSettingFactory" alt="" href="org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolSettingFactory.html#SimilarityDetectionToolSettingFactory"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="124,196,122,199,119,196,122,194,124,196,124,196" title="Complexity: 4; Coverage: 28%; Class: SimilarityDetectionToolCalibratorFactory" alt="" href="org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibratorFactory.html#SimilarityDetectionToolCalibratorFactory"/>
+<area shape="poly" coords="54,196,52,199,49,196,52,194,54,196,54,196" title="Complexity: 4; Coverage: 0%; Class: SummaryReportResponseModel.SummaryReportTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/models/SummaryReportResponseModel.html#SummaryReportResponseModel.SummaryReportTableRow"/>
+<area shape="poly" coords="54,196,52,199,49,196,52,194,54,196,54,196" title="Complexity: 4; Coverage: 0%; Class: SummaryReportResponseModel.SummaryReportTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/models/SummaryReportResponseModel.html#SummaryReportResponseModel.SummaryReportTableRow"/>
+<area shape="poly" coords="54,196,52,199,49,196,52,194,54,196,54,196" title="Complexity: 4; Coverage: 0%; Class: SummaryReportResponseModel.SummaryReportTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/models/SummaryReportResponseModel.html#SummaryReportResponseModel.SummaryReportTableRow"/>
+<area shape="poly" coords="54,196,52,199,49,196,52,194,54,196,54,196" title="Complexity: 4; Coverage: 0%; Class: SummaryReportResponseModel.SummaryReportTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/models/SummaryReportResponseModel.html#SummaryReportResponseModel.SummaryReportTableRow"/>
+<area shape="poly" coords="54,196,52,199,49,196,52,194,54,196,54,196" title="Complexity: 4; Coverage: 0%; Class: SummaryReportResponseModel.SummaryReportTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/models/SummaryReportResponseModel.html#SummaryReportResponseModel.SummaryReportTableRow"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="204,193,202,196,199,193,202,191,204,193,204,193" title="Complexity: 5; Coverage: 60%; Class: SimilarityDetectionToolSpy" alt="" href="org/foi/mpc/executiontools/spies/SimilarityDetectionToolSpy.html#SimilarityDetectionToolSpy"/>
+<area shape="poly" coords="274,196,272,199,269,196,272,194,274,196,274,196" title="Complexity: 4; Coverage: 88%; Class: PrepareToolWithFileSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolWithFileSpy.html#PrepareToolWithFileSpy"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="54,196,52,199,49,196,52,194,54,196,54,196" title="Complexity: 4; Coverage: 0%; Class: SummaryReportResponseModel.SummaryReportTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/models/SummaryReportResponseModel.html#SummaryReportResponseModel.SummaryReportTableRow"/>
+<area shape="poly" coords="54,196,52,199,49,196,52,194,54,196,54,196" title="Complexity: 4; Coverage: 0%; Class: SummaryReportResponseModel.SummaryReportTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/models/SummaryReportResponseModel.html#SummaryReportResponseModel.SummaryReportTableRow"/>
+<area shape="poly" coords="304,190,302,193,299,190,302,188,304,190,304,190" title="Complexity: 6; Coverage: 100%; Class: StandardReportInputListData" alt="" href="org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html#StandardReportInputListData"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="294,172,292,175,289,172,292,170,294,172,294,172" title="Complexity: 12; Coverage: 96%; Class: SpectorMatchesWriter" alt="" href="org/foi/mpc/executiontools/detectionTools/spector/SpectorMatchesWriter.html#SpectorMatchesWriter"/>
+<area shape="poly" coords="274,196,272,199,269,196,272,194,274,196,274,196" title="Complexity: 4; Coverage: 88%; Class: PrepareToolWithFileSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolWithFileSpy.html#PrepareToolWithFileSpy"/>
+<area shape="poly" coords="277,175,274,178,272,175,274,173,277,175,277,175" title="Complexity: 11; Coverage: 89%; Class: SpectorAdapter" alt="" href="org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapter.html#SpectorAdapter"/>
+<area shape="poly" coords="287,184,284,187,282,184,284,182,287,184,287,184" title="Complexity: 8; Coverage: 93%; Class: SimilarityDetectionToolFactory" alt="" href="org/foi/mpc/executiontools/factories/SimilarityDetectionToolFactory.html#SimilarityDetectionToolFactory"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="299,146,297,148,294,146,297,143,299,146,299,146" title="Complexity: 21; Coverage: 98%; Class: PreprocessingTechniqueFactory" alt="" href="org/foi/mpc/executiontools/factories/PreprocessingTechniqueFactory.html#PreprocessingTechniqueFactory"/>
+<area shape="poly" coords="297,175,294,178,292,175,294,173,297,175,297,175" title="Complexity: 11; Coverage: 97%; Class: DetailsReportPresenter" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportPresenter.html#DetailsReportPresenter"/>
+<area shape="poly" coords="299,175,297,178,294,175,297,173,299,175,299,175" title="Complexity: 11; Coverage: 98%; Class: JplagMatchesWriter" alt="" href="org/foi/mpc/executiontools/detectionTools/JPlag/JplagMatchesWriter.html#JplagMatchesWriter"/>
+<area shape="poly" coords="304,199,302,202,299,199,302,197,304,199,304,199" title="Complexity: 3; Coverage: 100%; Class: ArchiveExtractor.CheckExtractedArchive" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor.CheckExtractedArchive"/>
+<area shape="poly" coords="304,199,302,202,299,199,302,197,304,199,304,199" title="Complexity: 3; Coverage: 100%; Class: ArchiveExtractor.CheckExtractedArchive" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor.CheckExtractedArchive"/>
+<area shape="poly" coords="279,199,277,202,274,199,277,197,279,199,279,199" title="Complexity: 3; Coverage: 90%; Class: JPlagAdapter.ProgramWraper" alt="" href="org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html#JPlagAdapter.ProgramWraper"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="297,169,294,172,292,169,294,167,297,169,297,169" title="Complexity: 13; Coverage: 97%; Class: JPlagAdapter" alt="" href="org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html#JPlagAdapter"/>
+<area shape="poly" coords="54,196,52,199,49,196,52,194,54,196,54,196" title="Complexity: 4; Coverage: 0%; Class: SummaryReportResponseModel.SummaryReportTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/models/SummaryReportResponseModel.html#SummaryReportResponseModel.SummaryReportTableRow"/>
+<area shape="poly" coords="187,196,184,199,182,196,184,194,187,196,187,196" title="Complexity: 4; Coverage: 53%; Class: MultipleDetectionRequestModel" alt="" href="org/foi/mpc/usecases/multipleDetecion/models/MultipleDetectionRequestModel.html#MultipleDetectionRequestModel"/>
+<area shape="poly" coords="304,190,302,193,299,190,302,188,304,190,304,190" title="Complexity: 6; Coverage: 100%; Class: StandardReportInputListData" alt="" href="org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html#StandardReportInputListData"/>
+<area shape="poly" coords="242,196,239,199,237,196,239,194,242,196,242,196" title="Complexity: 4; Coverage: 75%; Class: PPTestReportViewModel" alt="" href="org/foi/mpc/usecases/reports/pptestreport/view/models/PPTestReportViewModel.html#PPTestReportViewModel"/>
+<area shape="poly" coords="192,172,189,175,187,172,189,170,192,172,192,172" title="Complexity: 12; Coverage: 55%; Class: PresentableReportPPTechnique" alt="" href="org/foi/mpc/usecases/reports/pptestreport/view/models/PresentableReportPPTechnique.html#PresentableReportPPTechnique"/>
+<area shape="poly" coords="192,172,189,175,187,172,189,170,192,172,192,172" title="Complexity: 12; Coverage: 55%; Class: PresentableReportPPTechnique" alt="" href="org/foi/mpc/usecases/reports/pptestreport/view/models/PresentableReportPPTechnique.html#PresentableReportPPTechnique"/>
+<area shape="poly" coords="272,187,269,190,267,187,269,185,272,187,272,187" title="Complexity: 7; Coverage: 87%; Class: InMemoryFile" alt="" href="org/foi/common/filesystem/file/InMemoryFile.html#InMemoryFile"/>
+<area shape="poly" coords="219,190,217,193,214,190,217,188,219,190,219,190" title="Complexity: 6; Coverage: 66%; Class: TextCreator" alt="" href="org/foi/common/filesystem/file/TextCreator.html#TextCreator"/>
+<area shape="poly" coords="219,202,217,205,214,202,217,200,219,202,219,202" title="Complexity: 2; Coverage: 66%; Class: InMemoryObjectFileUtility" alt="" href="org/foi/common/filesystem/file/InMemoryObjectFileUtility.html#InMemoryObjectFileUtility"/>
+<area shape="poly" coords="279,187,277,190,274,187,277,185,279,187,279,187" title="Complexity: 7; Coverage: 90%; Class: InMemoryTextFileUtility" alt="" href="org/foi/common/filesystem/file/InMemoryTextFileUtility.html#InMemoryTextFileUtility"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="279,196,277,199,274,196,277,194,279,196,279,196" title="Complexity: 4; Coverage: 90%; Class: ObjectFileUtility" alt="" href="org/foi/common/filesystem/file/ObjectFileUtility.html#ObjectFileUtility"/>
+<area shape="poly" coords="304,199,302,202,299,199,302,197,304,199,304,199" title="Complexity: 3; Coverage: 100%; Class: ArchiveExtractor.CheckExtractedArchive" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor.CheckExtractedArchive"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="289,187,287,190,284,187,287,185,289,187,289,187" title="Complexity: 7; Coverage: 94%; Class: ZipArchive" alt="" href="org/foi/common/filesystem/file/ZipArchive.html#ZipArchive"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="289,98,287,100,284,98,287,95,289,98,289,98" title="Complexity: 37; Coverage: 94%; Class: TextFileUtility" alt="" href="org/foi/common/filesystem/file/TextFileUtility.html#TextFileUtility"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="269,196,267,199,264,196,267,194,269,196,269,196" title="Complexity: 4; Coverage: 86%; Class: PropertiesFileUtility" alt="" href="org/foi/common/filesystem/file/PropertiesFileUtility.html#PropertiesFileUtility"/>
+<area shape="poly" coords="54,190,52,193,49,190,52,188,54,190,54,190" title="Complexity: 6; Coverage: 0%; Class: CalibratedToolCases" alt="" href="org/foi/mpc/executiontools/calibrator/models/CalibratedToolCases.html#CalibratedToolCases"/>
+<area shape="poly" coords="54,181,52,184,49,181,52,179,54,181,54,181" title="Complexity: 9; Coverage: 0%; Class: CalibratedToolCase" alt="" href="org/foi/mpc/executiontools/calibrator/models/CalibratedToolCase.html#CalibratedToolCase"/>
+<area shape="poly" coords="54,193,52,196,49,193,52,191,54,193,54,193" title="Complexity: 5; Coverage: 0%; Class: CalibratedToolParam" alt="" href="org/foi/mpc/executiontools/calibrator/models/CalibratedToolParam.html#CalibratedToolParam"/>
+<area shape="poly" coords="54,193,52,196,49,193,52,191,54,193,54,193" title="Complexity: 5; Coverage: 0%; Class: CalibratedToolParam" alt="" href="org/foi/mpc/executiontools/calibrator/models/CalibratedToolParam.html#CalibratedToolParam"/>
+<area shape="poly" coords="304,160,302,163,299,160,302,158,304,160,304,160" title="Complexity: 16; Coverage: 100%; Class: SummaryReportUseCase.UpdatePlagInfo" alt="" href="org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html#SummaryReportUseCase.UpdatePlagInfo"/>
+<area shape="poly" coords="304,143,302,145,299,143,302,140,304,143,304,143" title="Complexity: 22; Coverage: 100%; Class: SummaryReportUseCase.SummaryReportInfo" alt="" href="org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html#SummaryReportUseCase.SummaryReportInfo"/>
+<area shape="poly" coords="304,184,302,187,299,184,302,182,304,184,304,184" title="Complexity: 8; Coverage: 100%; Class: SummaryReportUseCase" alt="" href="org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html#SummaryReportUseCase"/>
+<area shape="poly" coords="292,89,289,91,287,89,289,86,292,89,292,89" title="Complexity: 40; Coverage: 95%; Class: DetailsReportUseCase.SideBySideInfo" alt="" href="org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html#DetailsReportUseCase.SideBySideInfo"/>
+<area shape="poly" coords="289,146,287,148,284,146,287,143,289,146,289,146" title="Complexity: 21; Coverage: 94%; Class: DetailsReportUseCase.DetailsInfo" alt="" href="org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html#DetailsReportUseCase.DetailsInfo"/>
+<area shape="poly" coords="304,199,302,202,299,199,302,197,304,199,304,199" title="Complexity: 3; Coverage: 100%; Class: ArchiveExtractor.CheckExtractedArchive" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor.CheckExtractedArchive"/>
+<area shape="poly" coords="304,178,302,181,299,178,302,176,304,178,304,178" title="Complexity: 10; Coverage: 100%; Class: ComboTechniqueControler" alt="" href="org/foi/mpc/usecases/combotechnique/view/ComboTechniqueControler.html#ComboTechniqueControler"/>
+<area shape="poly" coords="304,193,302,196,299,193,302,191,304,193,304,193" title="Complexity: 5; Coverage: 100%; Class: SIMGruneCalibrator" alt="" href="org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html#SIMGruneCalibrator"/>
+<area shape="poly" coords="304,196,302,199,299,196,302,194,304,196,304,196" title="Complexity: 4; Coverage: 100%; Class: SubmissionFilesUnifier.FileExtensionFilter" alt="" href="org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html#SubmissionFilesUnifier.FileExtensionFilter"/>
+<area shape="poly" coords="187,196,184,199,182,196,184,194,187,196,187,196" title="Complexity: 4; Coverage: 53%; Class: MultipleDetectionRequestModel" alt="" href="org/foi/mpc/usecases/multipleDetecion/models/MultipleDetectionRequestModel.html#MultipleDetectionRequestModel"/>
+<area shape="poly" coords="304,193,302,196,299,193,302,191,304,193,304,193" title="Complexity: 5; Coverage: 100%; Class: SIMGruneCalibrator" alt="" href="org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html#SIMGruneCalibrator"/>
+<area shape="poly" coords="304,190,302,193,299,190,302,188,304,190,304,190" title="Complexity: 6; Coverage: 100%; Class: StandardReportInputListData" alt="" href="org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html#StandardReportInputListData"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="287,131,284,133,282,131,284,128,287,131,287,131" title="Complexity: 26; Coverage: 93%; Class: SherlockAdapter" alt="" href="org/foi/mpc/executiontools/detectionTools/sherlock/SherlockAdapter.html#SherlockAdapter"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="294,154,292,157,289,154,292,152,294,154,294,154" title="Complexity: 18; Coverage: 96%; Class: SherlockMatchesWriter" alt="" href="org/foi/mpc/executiontools/detectionTools/sherlock/SherlockMatchesWriter.html#SherlockMatchesWriter"/>
+<area shape="poly" coords="274,196,272,199,269,196,272,194,274,196,274,196" title="Complexity: 4; Coverage: 88%; Class: PrepareToolWithFileSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolWithFileSpy.html#PrepareToolWithFileSpy"/>
+<area shape="poly" coords="304,184,302,187,299,184,302,182,304,184,304,184" title="Complexity: 8; Coverage: 100%; Class: SummaryReportUseCase" alt="" href="org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html#SummaryReportUseCase"/>
+<area shape="poly" coords="304,196,302,199,299,196,302,194,304,196,304,196" title="Complexity: 4; Coverage: 100%; Class: SubmissionFilesUnifier.FileExtensionFilter" alt="" href="org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html#SubmissionFilesUnifier.FileExtensionFilter"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="272,154,269,157,267,154,269,152,272,154,272,154" title="Complexity: 18; Coverage: 87%; Class: SimGruneAdapter" alt="" href="org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneAdapter.html#SimGruneAdapter"/>
+<area shape="poly" coords="304,196,302,199,299,196,302,194,304,196,304,196" title="Complexity: 4; Coverage: 100%; Class: SubmissionFilesUnifier.FileExtensionFilter" alt="" href="org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html#SubmissionFilesUnifier.FileExtensionFilter"/>
+<area shape="poly" coords="304,98,302,100,299,98,302,95,304,98,304,98" title="Complexity: 37; Coverage: 100%; Class: JavaCodePartsRemover.CommentsRemover" alt="" href="org/foi/common/JavaCodePartsRemover.html#JavaCodePartsRemover.CommentsRemover"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="289,125,287,127,284,125,287,122,289,125,289,125" title="Complexity: 28; Coverage: 94%; Class: SimGruneResultParser" alt="" href="org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneResultParser.html#SimGruneResultParser"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="272,160,269,163,267,160,269,158,272,160,272,160" title="Complexity: 16; Coverage: 87%; Class: ToolCalibration" alt="" href="org/foi/mpc/main/ToolCalibration.html#ToolCalibration"/>
+<area shape="poly" coords="187,196,184,199,182,196,184,194,187,196,187,196" title="Complexity: 4; Coverage: 53%; Class: MultipleDetectionRequestModel" alt="" href="org/foi/mpc/usecases/multipleDetecion/models/MultipleDetectionRequestModel.html#MultipleDetectionRequestModel"/>
+<area shape="poly" coords="117,196,114,199,112,196,114,194,117,196,117,196" title="Complexity: 4; Coverage: 25%; Class: MultipleDetectionMain.ComboTechniquePresenterDummy" alt="" href="org/foi/mpc/main/MultipleDetectionMain.html#MultipleDetectionMain.ComboTechniquePresenterDummy"/>
+<area shape="poly" coords="284,169,282,172,279,169,282,167,284,169,284,169" title="Complexity: 13; Coverage: 92%; Class: ArchiveExtractor" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor"/>
+<area shape="poly" coords="222,181,219,184,217,181,219,179,222,181,222,181" title="Complexity: 9; Coverage: 67%; Class: MultipleParamsCalibrator" alt="" href="org/foi/mpc/main/MultipleParamsCalibrator.html#MultipleParamsCalibrator"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="292,146,289,148,287,146,289,143,292,146,292,146" title="Complexity: 21; Coverage: 95%; Class: PresentableDetailsMatchPart" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableDetailsMatchPart.html#PresentableDetailsMatchPart"/>
+<area shape="poly" coords="204,166,202,169,199,166,202,164,204,166,204,166" title="Complexity: 14; Coverage: 60%; Class: PresentableReportSummary" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableReportSummary.html#PresentableReportSummary"/>
+<area shape="poly" coords="304,190,302,193,299,190,302,188,304,190,304,190" title="Complexity: 6; Coverage: 100%; Class: StandardReportInputListData" alt="" href="org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html#StandardReportInputListData"/>
+<area shape="poly" coords="254,119,252,121,249,119,252,116,254,119,254,119" title="Complexity: 30; Coverage: 80%; Class: DetailsReportViewModel" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/models/DetailsReportViewModel.html#DetailsReportViewModel"/>
+<area shape="poly" coords="282,113,279,115,277,113,279,110,282,113,282,113" title="Complexity: 32; Coverage: 91%; Class: PresentableReportSummaryTableRow" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableReportSummaryTableRow.html#PresentableReportSummaryTableRow"/>
+<area shape="poly" coords="254,193,252,196,249,193,252,191,254,193,254,193" title="Complexity: 5; Coverage: 80%; Class: SummaryReportViewModel" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/models/SummaryReportViewModel.html#SummaryReportViewModel"/>
+<area shape="poly" coords="304,137,302,139,299,137,302,134,304,137,304,137" title="Complexity: 24; Coverage: 100%; Class: PresentableDetailSimilarityTable" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableDetailSimilarityTable.html#PresentableDetailSimilarityTable"/>
+<area shape="poly" coords="187,196,184,199,182,196,184,194,187,196,187,196" title="Complexity: 4; Coverage: 53%; Class: MultipleDetectionRequestModel" alt="" href="org/foi/mpc/usecases/multipleDetecion/models/MultipleDetectionRequestModel.html#MultipleDetectionRequestModel"/>
+<area shape="poly" coords="294,101,292,103,289,101,292,98,294,101,294,101" title="Complexity: 36; Coverage: 96%; Class: PlagMatchesReader" alt="" href="org/foi/mpc/matches/PlagMatchesReader.html#PlagMatchesReader"/>
+<area shape="poly" coords="227,104,224,106,222,104,224,101,227,104,227,104" title="Complexity: 35; Coverage: 69%; Class: MPCMatchFileUtility" alt="" href="org/foi/mpc/matches/MPCMatchFileUtility.html#MPCMatchFileUtility"/>
+<area shape="poly" coords="187,196,184,199,182,196,184,194,187,196,187,196" title="Complexity: 4; Coverage: 53%; Class: MultipleDetectionRequestModel" alt="" href="org/foi/mpc/usecases/multipleDetecion/models/MultipleDetectionRequestModel.html#MultipleDetectionRequestModel"/>
+<area shape="poly" coords="184,193,182,196,179,193,182,191,184,193,184,193" title="Complexity: 5; Coverage: 52%; Class: ComboTechniqueResponseModel" alt="" href="org/foi/mpc/usecases/combotechnique/models/ComboTechniqueResponseModel.html#ComboTechniqueResponseModel"/>
+<area shape="poly" coords="304,172,302,175,299,172,302,170,304,172,304,172" title="Complexity: 12; Coverage: 100%; Class: SummaryReportControler" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportControler.html#SummaryReportControler"/>
+<area shape="poly" coords="304,184,302,187,299,184,302,182,304,184,304,184" title="Complexity: 8; Coverage: 100%; Class: SummaryReportUseCase" alt="" href="org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html#SummaryReportUseCase"/>
+<area shape="poly" coords="304,193,302,196,299,193,302,191,304,193,304,193" title="Complexity: 5; Coverage: 100%; Class: SIMGruneCalibrator" alt="" href="org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html#SIMGruneCalibrator"/>
+<area shape="poly" coords="304,199,302,202,299,199,302,197,304,199,304,199" title="Complexity: 3; Coverage: 100%; Class: ArchiveExtractor.CheckExtractedArchive" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor.CheckExtractedArchive"/>
+<area shape="poly" coords="304,154,302,157,299,154,302,152,304,154,304,154" title="Complexity: 18; Coverage: 100%; Class: DetailsReportControler" alt="" href="org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportControler.html#DetailsReportControler"/>
+<area shape="poly" coords="242,202,239,205,237,202,239,200,242,202,242,202" title="Complexity: 2; Coverage: 75%; Class: InMemoryDirectoryFileUtility" alt="" href="org/foi/common/filesystem/directory/InMemoryDirectoryFileUtility.html#InMemoryDirectoryFileUtility"/>
+<area shape="poly" coords="252,143,249,145,247,143,249,140,252,143,252,143" title="Complexity: 22; Coverage: 79%; Class: InMemoryDir" alt="" href="org/foi/common/filesystem/directory/InMemoryDir.html#InMemoryDir"/>
+<area shape="poly" coords="304,199,302,202,299,199,302,197,304,199,304,199" title="Complexity: 3; Coverage: 100%; Class: ArchiveExtractor.CheckExtractedArchive" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor.CheckExtractedArchive"/>
+<area shape="poly" coords="304,193,302,196,299,193,302,191,304,193,304,193" title="Complexity: 5; Coverage: 100%; Class: SIMGruneCalibrator" alt="" href="org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html#SIMGruneCalibrator"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="299,148,297,151,294,148,297,146,299,148,299,148" title="Complexity: 20; Coverage: 98%; Class: DirectoryFileUtility" alt="" href="org/foi/common/filesystem/directory/DirectoryFileUtility.html#DirectoryFileUtility"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="287,184,284,187,282,184,284,182,287,184,287,184" title="Complexity: 8; Coverage: 93%; Class: SimilarityDetectionToolFactory" alt="" href="org/foi/mpc/executiontools/factories/SimilarityDetectionToolFactory.html#SimilarityDetectionToolFactory"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,163,302,166,299,163,302,161,304,163,304,163" title="Complexity: 15; Coverage: 100%; Class: MultipleDetectionUseCase" alt="" href="org/foi/mpc/usecases/multipleDetecion/MultipleDetectionUseCase.html#MultipleDetectionUseCase"/>
+<area shape="poly" coords="292,187,289,190,287,187,289,185,292,187,292,187" title="Complexity: 7; Coverage: 95%; Class: DirectoryPreparer" alt="" href="org/foi/mpc/usecases/multipleDetecion/DirectoryPreparer.html#DirectoryPreparer"/>
+<area shape="poly" coords="164,140,162,142,159,140,162,137,164,140,164,140" title="Complexity: 23; Coverage: 44%; Class: SummaryReportBean" alt="" href="org/foi/mpc/summaryReport/view/SummaryReportBean.html#SummaryReportBean"/>
+<area shape="poly" coords="142,181,139,184,137,181,139,179,142,181,142,181" title="Complexity: 9; Coverage: 35%; Class: SummaryReportDetailBean" alt="" href="org/foi/mpc/summaryReport/view/SummaryReportDetailBean.html#SummaryReportDetailBean"/>
+<area shape="poly" coords="134,18,132,20,129,18,132,15,134,18,134,18" title="Complexity: 64; Coverage: 32%; Class: TestServletContext" alt="" href="org/foi/mpc/TestServletContext.html#TestServletContext"/>
+<area shape="poly" coords="292,202,289,205,287,202,289,200,292,202,292,202" title="Complexity: 2; Coverage: 95%; Class: ContextListener" alt="" href="org/foi/mpc/ContextListener.html#ContextListener"/>
+<area shape="poly" coords="304,199,302,202,299,199,302,197,304,199,304,199" title="Complexity: 3; Coverage: 100%; Class: ArchiveExtractor.CheckExtractedArchive" alt="" href="org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html#ArchiveExtractor.CheckExtractedArchive"/>
+<area shape="poly" coords="269,178,267,181,264,178,267,176,269,178,269,178" title="Complexity: 10; Coverage: 86%; Class: TestContext" alt="" href="org/foi/mpc/TestContext.html#TestContext"/>
+<area shape="poly" coords="54,184,52,187,49,184,52,182,54,184,54,184" title="Complexity: 8; Coverage: 0%; Class: CaseSimilarityCalibratedTool" alt="" href="org/foi/mpc/usecases/toolCalibration/models/CaseSimilarityCalibratedTool.html#CaseSimilarityCalibratedTool"/>
+<area shape="poly" coords="182,184,179,187,177,184,179,182,182,184,182,184" title="Complexity: 8; Coverage: 51%; Class: ToolCalibrationRequestModel" alt="" href="org/foi/mpc/usecases/toolCalibration/models/ToolCalibrationRequestModel.html#ToolCalibrationRequestModel"/>
+<area shape="poly" coords="54,193,52,196,49,193,52,191,54,193,54,193" title="Complexity: 5; Coverage: 0%; Class: CalibratedToolParam" alt="" href="org/foi/mpc/executiontools/calibrator/models/CalibratedToolParam.html#CalibratedToolParam"/>
+<area shape="poly" coords="54,175,52,178,49,175,52,173,54,175,54,175" title="Complexity: 11; Coverage: 0%; Class: ToolCalibrationResponseModel" alt="" href="org/foi/mpc/usecases/toolCalibration/models/ToolCalibrationResponseModel.html#ToolCalibrationResponseModel"/>
+<area shape="poly" coords="184,193,182,196,179,193,182,191,184,193,184,193" title="Complexity: 5; Coverage: 52%; Class: ComboTechniqueResponseModel" alt="" href="org/foi/mpc/usecases/combotechnique/models/ComboTechniqueResponseModel.html#ComboTechniqueResponseModel"/>
+<area shape="poly" coords="304,148,302,151,299,148,302,146,304,148,304,148" title="Complexity: 20; Coverage: 100%; Class: StatisticsReportViewModel.PresentableStatisticsReportTableRow" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html#StatisticsReportViewModel.PresentableStatisticsReportTableRow"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="297,146,294,148,292,146,294,143,297,146,297,146" title="Complexity: 21; Coverage: 97%; Class: TemplateExclusionTechnique" alt="" href="org/foi/mpc/executiontools/techniques/TemplateExclusionTechnique.html#TemplateExclusionTechnique"/>
+<area shape="poly" coords="54,172,52,175,49,172,52,170,54,172,54,172" title="Complexity: 12; Coverage: 0%; Class: TemplateExclusionConfiguration" alt="" href="org/foi/mpc/executiontools/techniques/TemplateExclusionConfiguration.html#TemplateExclusionConfiguration"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="289,190,287,193,284,190,287,188,289,190,289,190" title="Complexity: 6; Coverage: 94%; Class: NoTechniqueOriginal" alt="" href="org/foi/mpc/executiontools/techniques/NoTechniqueOriginal.html#NoTechniqueOriginal"/>
+<area shape="poly" coords="304,205,302,208,299,205,302,203,304,205,304,205" title="Complexity: 1; Coverage: 100%; Class: ExecutionToolFactory.ClassNameException" alt="" href="org/foi/mpc/abstractfactories/ExecutionToolFactory.html#ExecutionToolFactory.ClassNameException"/>
+<area shape="poly" coords="292,160,289,163,287,160,289,158,292,160,292,160" title="Complexity: 16; Coverage: 95%; Class: CommonCodeRemoveTechnique" alt="" href="org/foi/mpc/executiontools/techniques/CommonCodeRemoveTechnique.html#CommonCodeRemoveTechnique"/>
+<area shape="poly" coords="287,163,284,166,282,163,284,161,287,163,287,163" title="Complexity: 15; Coverage: 93%; Class: RemoveCommentsTechnique" alt="" href="org/foi/mpc/executiontools/techniques/RemoveCommentsTechnique.html#RemoveCommentsTechnique"/>
+<area shape="poly" coords="54,205,52,208,49,205,52,203,54,205,54,205" title="Complexity: 1; Coverage: 0%; Class: StatisticsReportTableRow.StatMatch" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/models/StatisticsReportTableRow.html#StatisticsReportTableRow.StatMatch"/>
+<area shape="poly" coords="294,181,292,184,289,181,292,179,294,181,294,181" title="Complexity: 9; Coverage: 96%; Class: PreprocessDirectoryCleaner" alt="" href="org/foi/mpc/executiontools/techniques/PreprocessDirectoryCleaner.html#PreprocessDirectoryCleaner"/>
+<area shape="poly" coords="304,202,302,205,299,202,302,200,304,202,304,202" title="Complexity: 2; Coverage: 100%; Class: PrepareToolSpy" alt="" href="org/foi/mpc/executiontools/spies/PrepareToolSpy.html#PrepareToolSpy"/>
+<area shape="poly" coords="304,196,302,199,299,196,302,194,304,196,304,196" title="Complexity: 4; Coverage: 100%; Class: SubmissionFilesUnifier.FileExtensionFilter" alt="" href="org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html#SubmissionFilesUnifier.FileExtensionFilter"/>
+<area shape="poly" coords="304,181,302,184,299,181,302,179,304,181,304,181" title="Complexity: 9; Coverage: 100%; Class: FactoryProvider" alt="" href="org/foi/mpc/abstractfactories/FactoryProvider.html#FactoryProvider"/>
+<area shape="poly" coords="304,143,302,145,299,143,302,140,304,143,304,143" title="Complexity: 22; Coverage: 100%; Class: SummaryReportUseCase.SummaryReportInfo" alt="" href="org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html#SummaryReportUseCase.SummaryReportInfo"/>
+<area shape="poly" coords="304,151,302,154,299,151,302,149,304,151,304,151" title="Complexity: 19; Coverage: 100%; Class: PhaseRunner" alt="" href="org/foi/mpc/phases/runner/PhaseRunner.html#PhaseRunner"/>
+<area shape="poly" coords="304,148,302,151,299,148,302,146,304,148,304,148" title="Complexity: 20; Coverage: 100%; Class: StatisticsReportViewModel.PresentableStatisticsReportTableRow" alt="" href="org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html#StatisticsReportViewModel.PresentableStatisticsReportTableRow"/>
+</map>
+            </div>
+        </div>
+        
+                    <div class="dashboard-widget">
+                <header class="dashboard-widget-header">
+                    <h3>Coverage tree map</h3>
+                </header>
+                <div class="dashboard-widget-content">
+                    <div id="infovis" style="width:100%; height:250px;">
+                        <div id="treemap-loader" style="position:relative;top:50px;">
+                            <p>
+                                Generating Coverage Tree Map. Please wait...
+                            </p>
+                            <p>
+                                <img src="img/ajax-loader.gif" alt="Loading Treemap"/>
+                            </p>
+                        </div>
+                    </div>
+                    <p><a href="treemap.html">See more</a></p>
+                </div>
+
+            </div>
+            </div>
+
+
+    <div class="aui-item">
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Top 20 project risks</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                
+                                                                <a class="tag" href="org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html"
+                            style="font-size: 18px;color:#89c495"
+                            title="Average Method Complexity - 3,667 , Coverage - 98,6% ">StatisticsReportUseCase.StatisticsReportGenerator</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportPresenter.html"
+                            style="font-size: 16px;color:#89c495"
+                            title="Average Method Complexity - 2,833 , Coverage - 98% ">SummaryReportPresenter</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolSettingFactory.html"
+                            style="font-size: 17px;color:#89c495"
+                            title="Average Method Complexity - 3,4 , Coverage - 95% ">SimilarityDetectionToolSettingFactory</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html"
+                            style="font-size: 17px;color:#89c495"
+                            title="Average Method Complexity - 3,077 , Coverage - 95,9% ">DetailsReportUseCase.SideBySideInfo</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportPresenter.html"
+                            style="font-size: 15px;color:#89c495"
+                            title="Average Method Complexity - 2,2 , Coverage - 97,6% ">DetailsReportPresenter</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html"
+                            style="font-size: 16px;color:#89c495"
+                            title="Average Method Complexity - 2,625 , Coverage - 94,8% ">DetailsReportUseCase.DetailsInfo</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/usecases/multipleDetecion/DirectoryPreparer.html"
+                            style="font-size: 15px;color:#89c495"
+                            title="Average Method Complexity - 2,333 , Coverage - 95,8% ">DirectoryPreparer</a>
+                                    
+                                                                <a class="tag" href="org/foi/common/filesystem/file/TextFileUtility.html"
+                            style="font-size: 15px;color:#89c495"
+                            title="Average Method Complexity - 2,312 , Coverage - 94,1% ">TextFileUtility</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/executiontools/techniques/NoTechniqueOriginal.html"
+                            style="font-size: 15px;color:#89c495"
+                            title="Average Method Complexity - 2 , Coverage - 94,1% ">NoTechniqueOriginal</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/usecases/reports/statisticsReport/view/StatisticsReportPresenter.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,6 , Coverage - 98,2% ">StatisticsReportPresenter</a>
+                                    
+                                                                <a class="tag" href="org/foi/common/filesystem/directory/DirectoryFileUtility.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,538 , Coverage - 98,5% ">DirectoryFileUtility</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/executiontools/detectionTools/spector/SpectorMatchesWriter.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,714 , Coverage - 96,7% ">SpectorMatchesWriter</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/executiontools/techniques/TemplateExclusionTechnique.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,5 , Coverage - 97,4% ">TemplateExclusionTechnique</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/matches/PlagMatchesReader.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,636 , Coverage - 96,8% ">PlagMatchesReader</a>
+                                    
+                                                                <a class="tag" href="org/foi/common/filesystem/file/ObjectFileUtility.html"
+                            style="font-size: 15px;color:#14892c"
+                            title="Average Method Complexity - 2 , Coverage - 90,5% ">ObjectFileUtility</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,5 , Coverage - 96,8% ">SubmissionFilesUnifier</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibrator.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,409 , Coverage - 97,6% ">SimilarityDetectionToolCalibrator</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneResultParser.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,75 , Coverage - 94,3% ">SimGruneResultParser</a>
+                                    
+                                                                <a class="tag" href="org/foi/common/filesystem/file/ZipArchive.html"
+                            style="font-size: 14px;color:#89c495"
+                            title="Average Method Complexity - 1,75 , Coverage - 94,1% ">ZipArchive</a>
+                                    
+                                                                <a class="tag" href="org/foi/mpc/matches/MPCMatchFileUtility.html"
+                            style="font-size: 17px;color:#f6c342"
+                            title="Average Method Complexity - 3,182 , Coverage - 69,7% ">MPCMatchFileUtility</a>
+                                                    <p><a href="top-risks.html">See more</a></p>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Most complex packages</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                
+                <table class="aui">
+                                            
+                                                <tr>
+                            <td>1. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.87096775</span>87,1%</div><div style="display: table-cell">
+ <div title="87,1% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:87.1%"></div></div></div></div></td>
+                            <td>
+                                <a href="org/foi/mpc/usecases/reports/summaryReport/view/models/pkg-summary.html">org.foi.mpc.usecases.reports.summaryReport.view.models</a>
+                                <span class="aui-badge" title="Package complexity">132</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>2. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.9742574</span>97,4%</div><div style="display: table-cell">
+ <div title="97,4% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:97.4%"></div></div></div></div></td>
+                            <td>
+                                <a href="org/foi/mpc/usecases/reports/summaryReport/pkg-summary.html">org.foi.mpc.usecases.reports.summaryReport</a>
+                                <span class="aui-badge" title="Package complexity">110</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>3. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.9453376</span>94,5%</div><div style="display: table-cell">
+ <div title="94,5% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:94.5%"></div></div></div></div></td>
+                            <td>
+                                <a href="org/foi/mpc/executiontools/detectionTools/simgrune/pkg-summary.html">org.foi.mpc.executiontools.detectionTools.simgrune</a>
+                                <span class="aui-badge" title="Package complexity">93</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>4. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.781106</span>78,1%</div><div style="display: table-cell">
+ <div title="78,1% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:78.1%"></div></div></div></div></td>
+                            <td>
+                                <a href="org/foi/mpc/executiontools/calibrator/pkg-summary.html">org.foi.mpc.executiontools.calibrator</a>
+                                <span class="aui-badge" title="Package complexity">91</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>5. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.7986348</span>79,9%</div><div style="display: table-cell">
+ <div title="79,9% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:79.9%"></div></div></div></div></td>
+                            <td>
+                                <a href="org/foi/mpc/executiontools/techniques/pkg-summary.html">org.foi.mpc.executiontools.techniques</a>
+                                <span class="aui-badge" title="Package complexity">85</span>
+                            </td>
+                        </tr>
+                                    </table>
+            </div>
+        </div>
+
+        <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Most complex classes</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <table class="aui">
+                                            
+                                                <tr>
+                            <td>1. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.32394367</span>32,4%</div><div style="display: table-cell">
+ <div title="32,4% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:32.4%"></div></div></div></div></td>
+                            <td>
+                                <a  href="org/foi/mpc/TestServletContext.html"  title="org.foi.mpc.TestServletContext">TestServletContext</a>
+                                <span class="aui-badge" title="Class complexity">64</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>2. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.9585799</span>95,9%</div><div style="display: table-cell">
+ <div title="95,9% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:95.9%"></div></div></div></div></td>
+                            <td>
+                                <a  href="org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html"  title="org.foi.mpc.usecases.reports.summaryReport.DetailsReportUseCase.SideBySideInfo">DetailsReportUseCase.SideBySideInfo</a>
+                                <span class="aui-badge" title="Class complexity">40</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>3. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a  href="org/foi/common/JavaCodePartsRemover.html"  title="org.foi.common.JavaCodePartsRemover.CommentsRemover">JavaCodePartsRemover.CommentsRemover</a>
+                                <span class="aui-badge" title="Class complexity">37</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>4. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.94067794</span>94,1%</div><div style="display: table-cell">
+ <div title="94,1% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:94.1%"></div></div></div></div></td>
+                            <td>
+                                <a  href="org/foi/common/filesystem/file/TextFileUtility.html"  title="org.foi.common.filesystem.file.TextFileUtility">TextFileUtility</a>
+                                <span class="aui-badge" title="Class complexity">37</span>
+                            </td>
+                        </tr>
+                                            
+                                                <tr>
+                            <td>5. </td>
+                            <td><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">1.0</span>100%</div><div style="display: table-cell">
+ <div title="100% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:100%"></div></div></div></div></td>
+                            <td>
+                                <a  href="org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneMatchesWriter.html"  title="org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneMatchesWriter">SimGruneMatchesWriter</a>
+                                <span class="aui-badge" title="Class complexity">37</span>
+                            </td>
+                        </tr>
+                                    </table>
+            </div>
+        </div>
+
+                <div class="dashboard-widget">
+            <header class="dashboard-widget-header">
+                <h3>Least tested methods</h3>
+            </header>
+            <div class="dashboard-widget-content">
+                <table class="aui">
+                                            
+
+                    <tr>
+                        <td align="right">1.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ToolsConfiguration.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/executiontools/calibrator/ToolsConfiguration.html?line=43#src-43">ToolsConfiguration.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">18</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">2.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="TemplateExclusionConfiguration.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/executiontools/techniques/TemplateExclusionConfiguration.html?line=29#src-29">TemplateExclusionConfiguration.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">11</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">3.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="MPCMatchFileUtility.countLinesNew(String)&#160;:&#160;int" href="org/foi/mpc/matches/MPCMatchFileUtility.html?line=187#src-187">MPCMatchFileUtility.countLinesNew(String)&#160;:&#160;int</a>
+                            <span class="aui-badge" title="Method complexity">10</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">4.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="ToolCalibrationResponseModel.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/toolCalibration/models/ToolCalibrationResponseModel.html?line=32#src-32">ToolCalibrationResponseModel.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">10</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">5.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="CalibratedToolCase.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/executiontools/calibrator/models/CalibratedToolCase.html?line=25#src-25">CalibratedToolCase.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">8</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">6.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="CaseSimilarityCalibratedTool.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/toolCalibration/models/CaseSimilarityCalibratedTool.html?line=23#src-23">CaseSimilarityCalibratedTool.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">7</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">7.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="SummaryReportBean.onPairSelect(SelectEvent)&#160;:&#160;void" href="org/foi/mpc/summaryReport/view/SummaryReportBean.html?line=131#src-131">SummaryReportBean.onPairSelect(SelectEvent)&#160;:&#160;void</a>
+                            <span class="aui-badge" title="Method complexity">5</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">8.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="CalibratedToolCases.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/executiontools/calibrator/models/CalibratedToolCases.html?line=20#src-20">CalibratedToolCases.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">5</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">9.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="SummaryReportDetailBean.onPairSelect(SelectEvent)&#160;:&#160;void" href="org/foi/mpc/summaryReport/view/SummaryReportDetailBean.html?line=32#src-32">SummaryReportDetailBean.onPairSelect(SelectEvent)&#160;:&#160;void</a>
+                            <span class="aui-badge" title="Method complexity">2</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">10.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="CaseSimilarityBaseTool.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/toolCalibration/models/CaseSimilarityBaseTool.html?line=15#src-15">CaseSimilarityBaseTool.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">4</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">11.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="BaseToolCase.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/executiontools/calibrator/models/BaseToolCase.html?line=15#src-15">BaseToolCase.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">4</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">12.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="CalibratedToolParam.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/executiontools/calibrator/models/CalibratedToolParam.html?line=15#src-15">CalibratedToolParam.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">4</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">13.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="SummaryReportBean.setDefaultDataSOCO()&#160;:&#160;void" href="org/foi/mpc/summaryReport/view/SummaryReportBean.html?line=86#src-86">SummaryReportBean.setDefaultDataSOCO()&#160;:&#160;void</a>
+                            <span class="aui-badge" title="Method complexity">1</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">14.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="DetailsReportViewModel.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/reports/summaryReport/view/models/DetailsReportViewModel.html?line=72#src-72">DetailsReportViewModel.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">3</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">15.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="PresentableReportSummary.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableReportSummary.html?line=67#src-67">PresentableReportSummary.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">3</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">16.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="PresentableReport.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/reports/pptestreport/view/models/PresentableReport.html?line=53#src-53">PresentableReport.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">3</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">17.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="PresentableReportPPTechnique.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/reports/pptestreport/view/models/PresentableReportPPTechnique.html?line=41#src-41">PresentableReportPPTechnique.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">3</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">18.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="MultipleDetectionResponseModel.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/multipleDetecion/models/MultipleDetectionResponseModel.html?line=20#src-20">MultipleDetectionResponseModel.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">3</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">19.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="PPTestReportResponseModel.PPTestReportTechnique.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/reports/pptestreport/models/PPTestReportResponseModel.html?line=29#src-29">PPTestReportResponseModel.PPTestReportTechnique.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">3</span>
+
+                        </td>
+                    </tr>
+                                            
+
+                    <tr>
+                        <td align="right">20.</td>
+                        <td align="right"><div style="display: table; width: 100%">
+<div class="barGraphValue"><span class="sortValue">0.0</span>0%</div><div style="display: table-cell">
+ <div title="0% Covered"  style="min-width:40px;" class="barNegative contribBarNegative "><div class="barPositive contribBarPositive " style="width:0%"></div></div></div></div></td>
+                        <td>
+                              <!-- normal method -->
+                                                      <a title="PPTestReportRequestModel.equals(Object)&#160;:&#160;boolean" href="org/foi/mpc/usecases/reports/pptestreport/models/PPTestReportRequestModel.html?line=22#src-22">PPTestReportRequestModel.equals(Object)&#160;:&#160;boolean</a>
+                            <span class="aui-badge" title="Method complexity">3</span>
+
+                        </td>
+                    </tr>
+                                    </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+                            </div> <!-- tabs-pane active-pane -->
+                        </div>
+
+    <script type="text/javascript" src="jit.js" ></script>
+    <script type="text/javascript" src="treemap-dash-json.js" ></script>
+
+                        </div> <!-- class="aui-page-panel-content-clover" -->
+                    <footer id="footer" role="contentinfo">
+    <section class="footer-body">
+        <ul>
+            <li>
+                Report generated by <a target="_new" href="http://openclover.org">OpenClover</a> v 4.2.0
+                on čet lis 4 2018 23:33:28 CEST using coverage data from čet lis 4 2018 23:32:51 CEST.
+            </li>
+        </ul>
+        <ul>
+            <li>Clover free edition. </li>
+        </ul>
+    </section>
+</footer>                </section> <!-- class="aui-page-panel-content" -->
+            </div> <!-- class="aui-page-panel-inner" -->
+        </div> <!-- class="aui-page-panel" -->
+    </div> <!-- id="page" -->
+</body>
+</html>

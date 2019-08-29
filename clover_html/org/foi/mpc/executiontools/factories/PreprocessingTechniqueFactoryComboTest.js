@@ -1,0 +1,10 @@
+var clover = new Object();
+
+// JSON: {classes : [{name, id, sl, el,  methods : [{sl, el}, ...]}, ...]}
+clover.pageData = {"classes":[{"el":96,"id":9746,"methods":[{"el":35,"sc":5,"sl":24},{"el":40,"sc":5,"sl":37},{"el":47,"sc":5,"sl":42},{"el":54,"sc":5,"sl":49},{"el":70,"sc":5,"sl":56},{"el":82,"sc":5,"sl":72},{"el":87,"sc":5,"sl":84}],"name":"PreprocessingTechniqueFactoryComboTest","sl":18},{"el":95,"id":9783,"methods":[{"el":94,"sc":9,"sl":91}],"name":"PreprocessingTechniqueFactoryComboTest.PreprocessingTechniqueSpy","sl":89}]}
+
+// JSON: {test_ID : {"methods": [ID1, ID2, ID3...], "name" : "testXXX() void"}, ...};
+clover.testTargets = {"test_257":{"methods":[{"sl":84}],"name":"ifNonExistingComboTechniqueNameIsGivenToCreateToolThrowException","pass":true,"statements":[{"sl":86}]},"test_298":{"methods":[{"sl":56}],"name":"createComboTechniqueFromStrings","pass":true,"statements":[{"sl":58},{"sl":59},{"sl":60},{"sl":62},{"sl":64},{"sl":65},{"sl":67},{"sl":68},{"sl":69}]},"test_389":{"methods":[{"sl":37}],"name":"createdComboTechniqueHasTheRightName","pass":true,"statements":[{"sl":39}]},"test_422":{"methods":[{"sl":49}],"name":"createdComboTechniqueHasRunIndividualTechniques2","pass":true,"statements":[{"sl":51},{"sl":52},{"sl":53}]},"test_478":{"methods":[{"sl":72}],"name":"ifComboTechniqueNameIsGivenToCreateToolReturnComboTechniqueIfExists","pass":true,"statements":[{"sl":74},{"sl":75},{"sl":76},{"sl":78},{"sl":80},{"sl":81}]},"test_626":{"methods":[{"sl":42}],"name":"createdComboTechniqueHasRunIndividualTechniques","pass":true,"statements":[{"sl":44},{"sl":45},{"sl":46}]}}
+
+// JSON: { lines : [{tests : [testid1, testid2, testid3, ...]}, ...]};
+clover.srcFileLines = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [389], [], [389], [], [], [626], [], [626], [626], [626], [], [], [422], [], [422], [422], [422], [], [], [298], [], [298], [298], [298], [], [298], [], [298], [298], [], [298], [298], [298], [], [], [478], [], [478], [478], [478], [], [478], [], [478], [478], [], [], [257], [], [257], [], [], [], [], [], [], [], [], [], []]

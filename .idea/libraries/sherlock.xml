@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sherlock">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../tools/sherlock/out/artifacts/sherlock_jar/sherlock.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../tools/sherlock/out/artifacts/sherlock_jar/sherlock.jar!/" />
+    </SOURCES>
+  </library>
+</component>

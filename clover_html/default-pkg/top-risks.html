@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    
+    
+    <link rel="SHORTCUT ICON" href="../img/clover.ico" />
+
+    <link rel="stylesheet" href="../aui/css/aui.min.css" media="all"/>
+    <link rel="stylesheet" href="../aui/css/aui-experimental.min.css" media="all"/>
+    <!--[if IE 9]><link rel="stylesheet" href="../aui/css/aui-ie9.min.css" media="all"/><![endif]-->
+
+    <style type="text/css" media="all">
+        @import url('../style.css');
+        @import url('../tree.css');
+        
+    </style>
+
+    <script src="../jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../aui/js/aui.min.js" type="text/javascript"></script>
+    <script src="../aui/js/aui-experimental.min.js" type="text/javascript"></script>
+    <script src="../aui/js/aui-soy.min.js" type="text/javascript"></script>
+
+    <script src="../package-nodes-tree.js" type="text/javascript"></script>
+    <script src="../clover-tree.js" type="text/javascript"></script>
+    <script src="../clover.js" type="text/javascript"></script>
+    <script src="../clover-descriptions.js" type="text/javascript"></script>
+    <script src="../cloud.js" type="text/javascript"></script>
+
+            <title>Clover</title>
+    </head>
+
+<body  >
+    <div id="page">
+        
+        
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+        <div class="aui-header-inner">
+            <div class="aui-header-primary">
+                <h1 id="logo" class="aui-header-logo aui-header-logo-clover">
+                    <a href="http://openclover.org" title="Visit OpenClover home page"><span class="aui-header-logo-device">OpenClover</span></a>
+                </h1>
+                                <ul class="aui-nav">
+                    <li>
+                        <a href="#dropdown2-jira3" aria-owns="dropdown2-jira3" aria-haspopup="true"
+                           class="aui-dropdown2-trigger" aria-controls="dropdown2-header7">
+                            Linked reports
+                            <span class="aui-icon-dropdown"></span>
+                        </a>
+
+                        <div class="aui-dropdown2 aui-style-default aui-dropdown2-in-header" id="dropdown2-jira3"
+                             style="display: none; top: 40px; min-width: 160px; left: 1213px; " aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                                <ul>
+                                                                                                                <li><a href="../../clover_current.pdf">Coverage</a></li>
+                                                                            <li><a href="../../clover_historical.pdf">Historical</a></li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                            </div>
+            <div class="aui-header-secondary">
+                <ul class="aui-nav">
+                    <li id="system-help-menu">
+                        <a class="aui-nav-link" title="Open online documentation" target="_blank"
+                           href="http://openclover.org/documentation">
+                            <span class="aui-icon aui-icon-small aui-iconfont-help">&#160;Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+        
+        <div class="aui-page-panel">
+            <div class="aui-page-panel-inner">
+                <div class="aui-page-panel-nav aui-page-panel-nav-clover">
+                    
+
+<div class="aui-page-header-inner" style="margin-bottom: 20px;">
+    <div class="aui-page-header-image">
+                <div class="aui-avatar aui-avatar-large aui-avatar-project">
+            <div class="aui-avatar-inner">
+                                    <img src="../img/clover_logo_large.png" alt="Clover icon"/>
+                            </div>
+        </div>
+            </div>
+    <div class="aui-page-header-main" >
+        <h1>
+                                        Coverage Report
+                                </h1>
+    </div>
+</div>
+
+<nav class="aui-navgroup aui-navgroup-vertical">
+    <div class="aui-navgroup-inner">
+                                            <ul class="aui-nav">
+                <li class="">
+                    <a href="../dashboard.html">Project overview</a>
+                </li>
+            </ul>
+        
+                <div class="aui-nav-heading packages-nav-heading">
+            <strong>Packages</strong>
+        </div>
+        <div class="aui-nav project-packages">
+            <form method="get" action="#" class="aui package-filter-container">
+                <input type="text" autocomplete="off" class="package-filter text"
+                       placeholder="Type to filter packages..." name="package-filter" id="package-filter"
+                       title="Start typing package name (or part of the name) to search through the tree. Use arrow keys and the Enter key to navigate."/>
+            </form>
+            <p class="package-filter-no-results-message hidden">
+                <small>No results found.</small>
+            </p>
+                                                <div class="packages-tree-wrapper" data-root-relative="../" data-package-name="default-pkg">
+                <div class="packages-tree-container"></div>
+                <div class="clover-packages-lozenges"></div>
+            </div>
+        </div>
+        
+            </div>
+</nav>                </div>
+                <section class="aui-page-panel-content">
+                    <div class="aui-page-panel-content-clover">
+
+                    
+                    <ol class="aui-nav aui-nav-breadcrumbs">
+            
+        <li><a href="../dashboard.html">Project Clover database čet lis 4 2018 23:29:25 CEST</a></li> 
+    </ol>
+    
+<h1 class="aui-h2-clover">
+            Package default-pkg
+    </h1>
+<div class="aui-tabs horizontal-tabs">
+            <ul class="tabs-menu">
+                <li class="menu-item ">
+            <a href="pkg-summary.html"><strong>Application code</strong></a>
+        </li>
+                    <li class="menu-item active-tab">
+            <a href="top-risks.html"><strong>Top risks</strong></a>
+        </li>
+        <li class="menu-item ">
+            <a href="quick-wins.html"><strong>Quick wins</strong></a>
+        </li>
+                            </ul>
+    <div class="tabs-pane active-pane" id="tabs-first">
+
+        <div>&#160;</div>
+
+        
+
+
+                        <div style="text-align: right; margin-bottom: 10px">
+            
+                            <button id="cloudDepthCheckbox" class="aui-button active"
+                        onclick="showDeepPackageCloud(this)">Include classes from sub-packages</button>
+            
+                                    <button class="aui-button aui-button-subtle" id="popupHelp">
+    <span class="aui-icon aui-icon-small aui-iconfont-help"></span>&#160;How to read this chart
+</button>
+<script>
+    AJS.InlineDialog(AJS.$("#popupHelp"), "helpDialog",
+            function (content, trigger, showPopup) {
+                var description = topRisksDescription();
+                var title = 'Top Risks';
+                content.css({"padding": "20px"}).html(
+                        '<h2>' + title + '</h2>' + description);
+                showPopup();
+                return false;
+            },
+            {
+                width: 600
+            }
+    );
+</script>
+        </div>
+
+        
+
+<div style="padding: 20px; border: 1px solid #cccccc; background-color: #f5f5f5; border-radius: 3px">
+          <div id="deepPackageCloud"  >
+                          
+    
+        
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html" class="tag"
+            style="font-size: 24px;color:#14892c"
+            title="Average Method Complexity - 1,444 , Coverage - 92,3% ">ArchiveExtractor</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html" class="tag"
+            style="font-size: 25px;color:#89c495"
+            title="Average Method Complexity - 1,5 , Coverage - 100% ">ArchiveExtractor.CheckExtractedArchive</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/ArchiveExtractor.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ArchiveExtractor.ExtractException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/AssignementDirectoryIterator.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">AssignementDirectoryIterator</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/models/AvailableTechniquesResponseModel.html" class="tag"
+            style="font-size: 30px;color:#e7a19b"
+            title="Average Method Complexity - 2 , Coverage - 53,8% ">AvailableTechniquesResponseModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/avalibleTools/models/AvailableToolsResponseModel.html" class="tag"
+            style="font-size: 30px;color:#e7a19b"
+            title="Average Method Complexity - 2 , Coverage - 53,8% ">AvailableToolsResponseModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/avalibleTools/AvalibleToolsUseCase.html" class="tag"
+            style="font-size: 48px;color:#89c495"
+            title="Average Method Complexity - 4 , Coverage - 100% ">AvalibleToolsUseCase</a>
+            
+    
+            <a href="../org/foi/common/CollectionHelper.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">CollectionHelper</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/ComboPreprocessingTechnique.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ComboPreprocessingTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/ComboTechiniquesLoader.html" class="tag"
+            style="font-size: 24px;color:#89c495"
+            title="Average Method Complexity - 1,375 , Coverage - 97,6% ">ComboTechiniquesLoader</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/view/ComboTechniqueControler.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ComboTechniqueControler</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/view/ComboTechniquePresenter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ComboTechniquePresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/models/ComboTechniqueResponseModel.html" class="tag"
+            style="font-size: 34px;color:#e7a19b"
+            title="Average Method Complexity - 2,5 , Coverage - 52,9% ">ComboTechniqueResponseModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/ComboTechniqueUseCase.html" class="tag"
+            style="font-size: 25px;color:#89c495"
+            title="Average Method Complexity - 1,538 , Coverage - 100% ">ComboTechniqueUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/view/models/ComboTechniqueViewModel.html" class="tag"
+            style="font-size: 21px;color:#f6c342"
+            title="Average Method Complexity - 1,111 , Coverage - 71,1% ">ComboTechniqueViewModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/combotechnique/view/models/ComboTechniqueViewModelBuilder.html" class="tag"
+            style="font-size: 24px;color:#fae1a0"
+            title="Average Method Complexity - 1,444 , Coverage - 83,7% ">ComboTechniqueViewModelBuilder</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/CommonCodeRemoveTechnique.html" class="tag"
+            style="font-size: 25px;color:#89c495"
+            title="Average Method Complexity - 1,455 , Coverage - 95% ">CommonCodeRemoveTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/ContextListener.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 95,8% ">ContextListener</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportControler.html" class="tag"
+            style="font-size: 30px;color:#89c495"
+            title="Average Method Complexity - 2 , Coverage - 100% ">DetailsReportControler</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/DetailsReportPresenter.html" class="tag"
+            style="font-size: 31px;color:#89c495"
+            title="Average Method Complexity - 2,2 , Coverage - 97,6% ">DetailsReportPresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">DetailsReportUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html" class="tag"
+            style="font-size: 35px;color:#14892c"
+            title="Average Method Complexity - 2,625 , Coverage - 94,8% ">DetailsReportUseCase.DetailsInfo</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/DetailsReportUseCase.html" class="tag"
+            style="font-size: 39px;color:#89c495"
+            title="Average Method Complexity - 3,077 , Coverage - 95,9% ">DetailsReportUseCase.SideBySideInfo</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/DetailsReportViewModel.html" class="tag"
+            style="font-size: 21px;color:#fae1a0"
+            title="Average Method Complexity - 1,071 , Coverage - 80% ">DetailsReportViewModel</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryCreator.html" class="tag"
+            style="font-size: 25px;color:#89c495"
+            title="Average Method Complexity - 1,5 , Coverage - 100% ">DirectoryCreator</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryCreator.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">DirectoryCreator.DirTypes</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 25px;color:#89c495"
+            title="Average Method Complexity - 1,538 , Coverage - 98,5% ">DirectoryFileUtility</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">DirectoryFileUtility.DirAleradyExistsException</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">DirectoryFileUtility.DirCopyException</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">DirectoryFileUtility.DirDoesNotExistException</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,25 , Coverage - 100% ">DirectoryFileUtility.DirectoryTreeCopier</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryFileUtility.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">DirectoryFileUtility.DirectoryTreeDeleter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/multipleDetecion/DirectoryPreparer.html" class="tag"
+            style="font-size: 32px;color:#89c495"
+            title="Average Method Complexity - 2,333 , Coverage - 95,8% ">DirectoryPreparer</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/DirectoryPreparerSpy.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">DirectoryPreparerSpy</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/DirectoryToolIterator.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,333 , Coverage - 100% ">DirectoryToolIterator</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/DirectoryTreeWalker.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">DirectoryTreeWalker</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/ExecutionLogger.html" class="tag"
+            style="font-size: 37px;color:#d9695f"
+            title="Average Method Complexity - 2,8 , Coverage - 24,1% ">ExecutionLogger</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/ExecutionPhase.html" class="tag"
+            style="font-size: 22px;color:#89c495"
+            title="Average Method Complexity - 1,2 , Coverage - 100% ">ExecutionPhase</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/ExecutionToolAssertHelper.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ExecutionToolAssertHelper</a>
+            
+    
+            <a href="../org/foi/mpc/abstractfactories/ExecutionToolFactory.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ExecutionToolFactory.ClassNameException</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/spies/ExecutionToolSpy.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ExecutionToolSpy</a>
+            
+    
+            <a href="../org/foi/mpc/phases/executionphases/spies/ExecutionToolWithFileSpy.html" class="tag"
+            style="font-size: 23px;color:#14892c"
+            title="Average Method Complexity - 1,333 , Coverage - 88,9% ">ExecutionToolWithFileSpy</a>
+            
+    
+            <a href="../org/foi/mpc/abstractfactories/FactoryProvider.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">FactoryProvider</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/InMemoryDir.html" class="tag"
+            style="font-size: 24px;color:#fae1a0"
+            title="Average Method Complexity - 1,375 , Coverage - 79,3% ">InMemoryDir</a>
+            
+    
+            <a href="../org/foi/common/filesystem/directory/InMemoryDirectoryFileUtility.html" class="tag"
+            style="font-size: 30px;color:#fae1a0"
+            title="Average Method Complexity - 2 , Coverage - 75% ">InMemoryDirectoryFileUtility</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/InMemoryFile.html" class="tag"
+            style="font-size: 21px;color:#14892c"
+            title="Average Method Complexity - 1 , Coverage - 87,5% ">InMemoryFile</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/InMemoryObjectFileUtility.html" class="tag"
+            style="font-size: 21px;color:#f6c342"
+            title="Average Method Complexity - 1 , Coverage - 66,7% ">InMemoryObjectFileUtility</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/InMemoryTextFileUtility.html" class="tag"
+            style="font-size: 24px;color:#14892c"
+            title="Average Method Complexity - 1,4 , Coverage - 90% ">InMemoryTextFileUtility</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,3 , Coverage - 97,6% ">JPlagAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">JPlagAdapter.JPlagException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">JPlagAdapter.JPlagLanguage</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagAdapter.html" class="tag"
+            style="font-size: 25px;color:#14892c"
+            title="Average Method Complexity - 1,5 , Coverage - 90,9% ">JPlagAdapter.ProgramWraper</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/JPlagCalibrator.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,25 , Coverage - 100% ">JPlagCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagJavaAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">JPlagJavaAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JPlagTextAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">JPlagTextAdapter</a>
+            
+    
+            <a href="../org/foi/common/JavaCodePartsRemover.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,3 , Coverage - 100% ">JavaCodePartsRemover</a>
+            
+    
+            <a href="../org/foi/common/JavaCodePartsRemover.html" class="tag"
+            style="font-size: 35px;color:#89c495"
+            title="Average Method Complexity - 2,643 , Coverage - 100% ">JavaCodePartsRemover.CommentsRemover</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/JPlag/JplagMatchesWriter.html" class="tag"
+            style="font-size: 22px;color:#89c495"
+            title="Average Method Complexity - 1,222 , Coverage - 98,5% ">JplagMatchesWriter</a>
+            
+    
+            <a href="../org/foi/mpc/matches/models/MPCMatchBuilder.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1,091 , Coverage - 100% ">MPCMatchBuilder</a>
+            
+    
+            <a href="../org/foi/mpc/matches/MPCMatchFileUtility.html" class="tag"
+            style="font-size: 40px;color:#f6c342"
+            title="Average Method Complexity - 3,182 , Coverage - 69,7% ">MPCMatchFileUtility</a>
+            
+    
+            <a href="../org/foi/mpc/phases/readerphase/MPCMatchReaderPhase.html" class="tag"
+            style="font-size: 27px;color:#14892c"
+            title="Average Method Complexity - 1,7 , Coverage - 91,8% ">MPCMatchReaderPhase</a>
+            
+    
+            <a href="../org/foi/mpc/phases/readerphase/MPCMatchReaderPhase.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">MPCMatchReaderPhase.ReadFileThread</a>
+            
+    
+            <a href="../org/foi/mpc/phases/readerphase/MPCMatchReaderPhaseSpy.html" class="tag"
+            style="font-size: 21px;color:#fae1a0"
+            title="Average Method Complexity - 1 , Coverage - 75% ">MPCMatchReaderPhaseSpy</a>
+            
+    
+            <a href="../org/foi/mpc/matches/MPCPlagMatch.html" class="tag"
+            style="font-size: 30px;color:#e7a19b"
+            title="Average Method Complexity - 2 , Coverage - 53,8% ">MPCPlagMatch</a>
+            
+    
+            <a href="../org/foi/common/MPCexcpetions.html" class="tag"
+            style="font-size: 21px;color:#e7a19b"
+            title="Average Method Complexity - 1 , Coverage - 50% ">MPCexcpetions.IsNullException</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleDetectionConfigReader.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">MultipleDetectionConfigReader</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleDetectionConfiguration.html" class="tag"
+            style="font-size: 30px;color:#e7a19b"
+            title="Average Method Complexity - 2 , Coverage - 53,8% ">MultipleDetectionConfiguration</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleDetectionMain.html" class="tag"
+            style="font-size: 23px;color:#14892c"
+            title="Average Method Complexity - 1,3 , Coverage - 92% ">MultipleDetectionMain</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleDetectionMain.html" class="tag"
+            style="font-size: 21px;color:#d9695f"
+            title="Average Method Complexity - 1 , Coverage - 25% ">MultipleDetectionMain.ComboTechniquePresenterDummy</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/multipleDetecion/models/MultipleDetectionRequestModel.html" class="tag"
+            style="font-size: 30px;color:#e7a19b"
+            title="Average Method Complexity - 2 , Coverage - 53,8% ">MultipleDetectionRequestModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/multipleDetecion/MultipleDetectionUseCase.html" class="tag"
+            style="font-size: 26px;color:#89c495"
+            title="Average Method Complexity - 1,667 , Coverage - 100% ">MultipleDetectionUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/main/MultipleParamsCalibrator.html" class="tag"
+            style="font-size: 32px;color:#f6c342"
+            title="Average Method Complexity - 2,25 , Coverage - 67,6% ">MultipleParamsCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/NoTechniqueOriginal.html" class="tag"
+            style="font-size: 30px;color:#14892c"
+            title="Average Method Complexity - 2 , Coverage - 94,1% ">NoTechniqueOriginal</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/NoTechniqueOriginal.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">NoTechniqueOriginal.NoTechniqueRunException</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/ObjectFileUtility.html" class="tag"
+            style="font-size: 30px;color:#14892c"
+            title="Average Method Complexity - 2 , Coverage - 90,5% ">ObjectFileUtility</a>
+            
+    
+            <a href="../org/foi/mpc/pptestreport/view/PPTestReportBean.html" class="tag"
+            style="font-size: 21px;color:#fae1a0"
+            title="Average Method Complexity - 1 , Coverage - 82,1% ">PPTestReportBean</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/PPTestReportController.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,333 , Coverage - 100% ">PPTestReportController</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/PPTestReportPresenter.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,25 , Coverage - 100% ">PPTestReportPresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/PPTestReportUseCase.html" class="tag"
+            style="font-size: 26px;color:#89c495"
+            title="Average Method Complexity - 1,667 , Coverage - 100% ">PPTestReportUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/models/PPTestReportViewModel.html" class="tag"
+            style="font-size: 21px;color:#fae1a0"
+            title="Average Method Complexity - 1 , Coverage - 75% ">PPTestReportViewModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/models/PPTestReportViewModelBuilder.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PPTestReportViewModelBuilder</a>
+            
+    
+            <a href="../org/foi/mpc/phases/PhaseFactory.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PhaseFactory</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseRunner.html" class="tag"
+            style="font-size: 27px;color:#89c495"
+            title="Average Method Complexity - 1,727 , Coverage - 100% ">PhaseRunner</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseRunnerBuilder.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1,1 , Coverage - 100% ">PhaseRunnerBuilder</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseRunnerBuilderDummy.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PhaseRunnerBuilderDummy</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseRunnerBuilderStub.html" class="tag"
+            style="font-size: 22px;color:#89c495"
+            title="Average Method Complexity - 1,125 , Coverage - 100% ">PhaseRunnerBuilderStub</a>
+            
+    
+            <a href="../org/foi/mpc/phases/runner/PhaseSpy.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PhaseSpy</a>
+            
+    
+            <a href="../org/foi/mpc/matches/PlagMatchesReader.html" class="tag"
+            style="font-size: 26px;color:#89c495"
+            title="Average Method Complexity - 1,636 , Coverage - 96,8% ">PlagMatchesReader</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/spies/PrepareToolSpy.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PrepareToolSpy</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/spies/PrepareToolWithFileSpy.html" class="tag"
+            style="font-size: 23px;color:#14892c"
+            title="Average Method Complexity - 1,333 , Coverage - 88,9% ">PrepareToolWithFileSpy</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/PreprocessDirectoryCleaner.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,286 , Coverage - 96,6% ">PreprocessDirectoryCleaner</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/PreprocessingTechniqueFactory.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,312 , Coverage - 98,6% ">PreprocessingTechniqueFactory</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/PreprocessingTechniqueFactory.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PreprocessingTechniqueFactory.TechniqueCreationParametersException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/spies/PreprocessingTechniqueSpy.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PreprocessingTechniqueSpy</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableDetailSimilarityTable.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PresentableDetailSimilarityTable</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableDetailsMatchPart.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 95,2% ">PresentableDetailsMatchPart</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/models/PresentableReport.html" class="tag"
+            style="font-size: 22px;color:#e7a19b"
+            title="Average Method Complexity - 1,2 , Coverage - 55,2% ">PresentableReport</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/pptestreport/view/models/PresentableReportPPTechnique.html" class="tag"
+            style="font-size: 22px;color:#e7a19b"
+            title="Average Method Complexity - 1,2 , Coverage - 55,2% ">PresentableReportPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableReportSummary.html" class="tag"
+            style="font-size: 22px;color:#e7a19b"
+            title="Average Method Complexity - 1,167 , Coverage - 60,6% ">PresentableReportSummary</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableReportSummaryTableRow.html" class="tag"
+            style="font-size: 21px;color:#14892c"
+            title="Average Method Complexity - 1,067 , Coverage - 91,3% ">PresentableReportSummaryTableRow</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/PresentableSideBySide.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">PresentableSideBySide</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/PropertiesFileUtility.html" class="tag"
+            style="font-size: 30px;color:#14892c"
+            title="Average Method Complexity - 2 , Coverage - 86,7% ">PropertiesFileUtility</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/RemoveCommentsTechnique.html" class="tag"
+            style="font-size: 25px;color:#14892c"
+            title="Average Method Complexity - 1,5 , Coverage - 93% ">RemoveCommentsTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/Renamer.html" class="tag"
+            style="font-size: 31px;color:#89c495"
+            title="Average Method Complexity - 2,2 , Coverage - 100% ">Renamer</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SIMGruneCalibrator.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,25 , Coverage - 100% ">SIMGruneCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/view/models/SelectOption.html" class="tag"
+            style="font-size: 23px;color:#de7b72"
+            title="Average Method Complexity - 1,25 , Coverage - 38,5% ">SelectOption</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockAdapter.html" class="tag"
+            style="font-size: 23px;color:#14892c"
+            title="Average Method Complexity - 1,3 , Coverage - 93,9% ">SherlockAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockAdapter.SherlockFileType</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SherlockCalibrator.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockMatchesWriter.html" class="tag"
+            style="font-size: 24px;color:#89c495"
+            title="Average Method Complexity - 1,385 , Coverage - 96,3% ">SherlockMatchesWriter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockMatchesWriter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockMatchesWriter.MatchPartsFilter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNoCommentsNoWhiteSpacesPPTechnique.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockNoCommentsNoWhiteSpacesPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNoCommentsNormalisedPPTechnique.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockNoCommentsNormalisedPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNoCommentsPPTechnique.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockNoCommentsPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNoWhiteSpacesPPTechnique.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockNoWhiteSpacesPPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockNormalisePPTechnique.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockNormalisePPTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockOriginalAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockOriginalAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/sherlock/SherlockPreprocessingTechnique.html" class="tag"
+            style="font-size: 22px;color:#14892c"
+            title="Average Method Complexity - 1,143 , Coverage - 93,1% ">SherlockPreprocessingTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/sherlock/SherlockTokenisedAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SherlockTokenisedAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneAdapter.html" class="tag"
+            style="font-size: 26px;color:#14892c"
+            title="Average Method Complexity - 1,636 , Coverage - 87% ">SimGruneAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneJavaAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SimGruneJavaAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneMatchesWriter.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,276 , Coverage - 100% ">SimGruneMatchesWriter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneResultParser.html" class="tag"
+            style="font-size: 27px;color:#14892c"
+            title="Average Method Complexity - 1,75 , Coverage - 94,3% ">SimGruneResultParser</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneResultParser.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SimGruneResultParser.SimGruneException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/simgrune/SimGruneTextAdapter.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SimGruneTextAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibrator.html" class="tag"
+            style="font-size: 24px;color:#89c495"
+            title="Average Method Complexity - 1,409 , Coverage - 97,6% ">SimilarityDetectionToolCalibrator</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibrator.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SimilarityDetectionToolCalibrator.CasesMismatchException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolCalibratorFactory.html" class="tag"
+            style="font-size: 48px;color:#de7b72"
+            title="Average Method Complexity - 4 , Coverage - 28,6% ">SimilarityDetectionToolCalibratorFactory</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/factories/SimilarityDetectionToolFactory.html" class="tag"
+            style="font-size: 23px;color:#14892c"
+            title="Average Method Complexity - 1,333 , Coverage - 93,8% ">SimilarityDetectionToolFactory</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolSettingFactory.html" class="tag"
+            style="font-size: 42px;color:#89c495"
+            title="Average Method Complexity - 3,4 , Coverage - 95% ">SimilarityDetectionToolSettingFactory</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/SimilarityDetectionToolSettingFactory.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SimilarityDetectionToolSettingFactory.InvalidSimilarityToolParamException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/spies/SimilarityDetectionToolSpy.html" class="tag"
+            style="font-size: 21px;color:#e7a19b"
+            title="Average Method Complexity - 1 , Coverage - 60% ">SimilarityDetectionToolSpy</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapter.html" class="tag"
+            style="font-size: 21px;color:#14892c"
+            title="Average Method Complexity - 1,1 , Coverage - 89,5% ">SpectorAdapter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapter.html" class="tag"
+            style="font-size: 21px;color:#14892c"
+            title="Average Method Complexity - 1 , Coverage - 88,9% ">SpectorAdapter.PresenterWrapper</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapterSettings.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SpectorAdapterSettings.SpectorInputOption</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapterSettings.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SpectorAdapterSettings.SpectorOrderOption</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorAdapterSettings.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SpectorAdapterSettings.SpectorOutputOption</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/detectionTools/spector/SpectorMatchesWriter.html" class="tag"
+            style="font-size: 27px;color:#89c495"
+            title="Average Method Complexity - 1,714 , Coverage - 96,7% ">SpectorMatchesWriter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/view/models/StandardReportInputData.html" class="tag"
+            style="font-size: 21px;color:#14892c"
+            title="Average Method Complexity - 1 , Coverage - 86,7% ">StandardReportInputData</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/view/models/StandardReportInputListData.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">StandardReportInputListData</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/view/models/StandradReportDescriptiveStatistics.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">StandradReportDescriptiveStatistics</a>
+            
+    
+            <a href="../org/foi/mpc/statisticsReport/view/StatisticsReportBean.html" class="tag"
+            style="font-size: 21px;color:#14892c"
+            title="Average Method Complexity - 1,077 , Coverage - 94,4% ">StatisticsReportBean</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/view/StatisticsReportControler.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">StatisticsReportControler</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/view/StatisticsReportPresenter.html" class="tag"
+            style="font-size: 26px;color:#89c495"
+            title="Average Method Complexity - 1,6 , Coverage - 98,2% ">StatisticsReportPresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">StatisticsReportUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html" class="tag"
+            style="font-size: 44px;color:#89c495"
+            title="Average Method Complexity - 3,667 , Coverage - 98,6% ">StatisticsReportUseCase.StatisticsReportGenerator</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/StatisticsReportUseCase.html" class="tag"
+            style="font-size: 25px;color:#d9695f"
+            title="Average Method Complexity - 1,5 , Coverage - 27,8% ">StatisticsReportUseCase.StatisticsReportGenerator.MatchesDirKey</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html" class="tag"
+            style="font-size: 21px;color:#fae1a0"
+            title="Average Method Complexity - 1 , Coverage - 75% ">StatisticsReportViewModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/statisticsReport/view/model/StatisticsReportViewModel.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">StatisticsReportViewModel.PresentableStatisticsReportTableRow</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html" class="tag"
+            style="font-size: 25px;color:#89c495"
+            title="Average Method Complexity - 1,5 , Coverage - 96,8% ">SubmissionFilesUnifier</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html" class="tag"
+            style="font-size: 30px;color:#89c495"
+            title="Average Method Complexity - 2 , Coverage - 100% ">SubmissionFilesUnifier.FileExtensionFilter</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/prepareTools/SubmissionFilesUnifier.html" class="tag"
+            style="font-size: 30px;color:#14892c"
+            title="Average Method Complexity - 2 , Coverage - 84,6% ">SubmissionFilesUnifier.FileExtensionFilterInversed</a>
+            
+    
+            <a href="../org/foi/mpc/summaryReport/view/SummaryReportBean.html" class="tag"
+            style="font-size: 24px;color:#e28e87"
+            title="Average Method Complexity - 1,438 , Coverage - 44,6% ">SummaryReportBean</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportControler.html" class="tag"
+            style="font-size: 23px;color:#89c495"
+            title="Average Method Complexity - 1,333 , Coverage - 100% ">SummaryReportControler</a>
+            
+    
+            <a href="../org/foi/mpc/summaryReport/view/SummaryReportDetailBean.html" class="tag"
+            style="font-size: 22px;color:#de7b72"
+            title="Average Method Complexity - 1,125 , Coverage - 35,1% ">SummaryReportDetailBean</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/SummaryReportPresenter.html" class="tag"
+            style="font-size: 37px;color:#89c495"
+            title="Average Method Complexity - 2,833 , Coverage - 98% ">SummaryReportPresenter</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">SummaryReportUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html" class="tag"
+            style="font-size: 33px;color:#89c495"
+            title="Average Method Complexity - 2,444 , Coverage - 100% ">SummaryReportUseCase.SummaryReportInfo</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/SummaryReportUseCase.html" class="tag"
+            style="font-size: 48px;color:#89c495"
+            title="Average Method Complexity - 4 , Coverage - 100% ">SummaryReportUseCase.UpdatePlagInfo</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/reports/summaryReport/view/models/SummaryReportViewModel.html" class="tag"
+            style="font-size: 21px;color:#fae1a0"
+            title="Average Method Complexity - 1 , Coverage - 80% ">SummaryReportViewModel</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/TemplateExclusionConfigurationReader.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">TemplateExclusionConfigurationReader</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/TemplateExclusionTechnique.html" class="tag"
+            style="font-size: 25px;color:#89c495"
+            title="Average Method Complexity - 1,5 , Coverage - 97,4% ">TemplateExclusionTechnique</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/TemplateExclusionTechnique.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">TemplateExclusionTechnique.TemplateDirEmptyException</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/techniques/TemplateExclusionTechnique.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">TemplateExclusionTechnique.TemplateDirectoyCopyException</a>
+            
+    
+            <a href="../org/foi/mpc/TestContext.html" class="tag"
+            style="font-size: 21px;color:#14892c"
+            title="Average Method Complexity - 1 , Coverage - 86,7% ">TestContext</a>
+            
+    
+            <a href="../org/foi/mpc/TestContext.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">TestContext.PhaseFactorySpy</a>
+            
+    
+            <a href="../org/foi/mpc/TestServletContext.html" class="tag"
+            style="font-size: 23px;color:#de7b72"
+            title="Average Method Complexity - 1,231 , Coverage - 32,4% ">TestServletContext</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/TextCreator.html" class="tag"
+            style="font-size: 21px;color:#f6c342"
+            title="Average Method Complexity - 1 , Coverage - 66,7% ">TextCreator</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/TextFileUtility.html" class="tag"
+            style="font-size: 32px;color:#14892c"
+            title="Average Method Complexity - 2,312 , Coverage - 94,1% ">TextFileUtility</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/TextFileUtility.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">TextFileUtility.FileCreateException</a>
+            
+    
+            <a href="../org/foi/mpc/main/ToolCalibration.html" class="tag"
+            style="font-size: 23px;color:#14892c"
+            title="Average Method Complexity - 1,333 , Coverage - 87,5% ">ToolCalibration</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/toolCalibration/view/ToolCalibrationPresenterCMD.html" class="tag"
+            style="font-size: 30px;color:#89c495"
+            title="Average Method Complexity - 2 , Coverage - 100% ">ToolCalibrationPresenterCMD</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/toolCalibration/models/ToolCalibrationRequestModel.html" class="tag"
+            style="font-size: 48px;color:#e7a19b"
+            title="Average Method Complexity - 4 , Coverage - 51,7% ">ToolCalibrationRequestModel</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/toolCalibration/ToolCalibratorUseCase.html" class="tag"
+            style="font-size: 24px;color:#89c495"
+            title="Average Method Complexity - 1,409 , Coverage - 100% ">ToolCalibratorUseCase</a>
+            
+    
+            <a href="../org/foi/mpc/executiontools/calibrator/ToolConfigurationReader.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ToolConfigurationReader</a>
+            
+    
+            <a href="../org/foi/mpc/usecases/toolCalibration/models/ToolParam.html" class="tag"
+            style="font-size: 34px;color:#e7a19b"
+            title="Average Method Complexity - 2,5 , Coverage - 52,9% ">ToolParam</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/ZipArchive.html" class="tag"
+            style="font-size: 27px;color:#14892c"
+            title="Average Method Complexity - 1,75 , Coverage - 94,1% ">ZipArchive</a>
+            
+    
+            <a href="../org/foi/common/filesystem/file/ZipArchive.html" class="tag"
+            style="font-size: 21px;color:#89c495"
+            title="Average Method Complexity - 1 , Coverage - 100% ">ZipArchive.ExtractZipFileVisitor</a>
+           </div>
+   
+          <div id="shallowPackageCloud"  style="display: none"  >
+                          
+    
+       </div>
+   </div>
+    </div> <!-- tabs-pane active-pane -->
+</div> <!-- aui-tabs horizontal-tabs -->
+
+                        </div> <!-- class="aui-page-panel-content-clover" -->
+                    <footer id="footer" role="contentinfo">
+    <section class="footer-body">
+        <ul>
+            <li>
+                Report generated by <a target="_new" href="http://openclover.org">OpenClover</a> v 4.2.0
+                on čet lis 4 2018 23:33:28 CEST using coverage data from čet lis 4 2018 23:32:51 CEST.
+            </li>
+        </ul>
+        <ul>
+            <li>Clover free edition. </li>
+        </ul>
+    </section>
+</footer>                </section> <!-- class="aui-page-panel-content" -->
+            </div> <!-- class="aui-page-panel-inner" -->
+        </div> <!-- class="aui-page-panel" -->
+    </div> <!-- id="page" -->
+</body>
+</html>

@@ -1,0 +1,75 @@
+@startuml
+abstract class org.foi.mpc.tools.SherlockAdapter
+annotation java.lang.Override
+class java.io.BufferedReader
+class java.io.BufferedWriter
+class java.io.File
+class java.io.IOException
+class java.nio.charset.Charset
+class java.nio.fileA.CopyOption
+class java.nio.fileA.FileVisitResult
+class java.nio.fileA.Files
+class java.nio.fileA.OpenOption
+class java.nio.fileA.Path
+class java.nio.fileA.StandardCopyOption
+class java.nio.fileA.StandardOpenOption
+class java.nio.fileA.attribute.BasicFileAttributes
+class java.nio.fileA.attribute.FileAttribute
+class org.foi.mpc.AssignementPreparer
+class org.foi.common.filesystem.directory.DirectoryFileUtility
+class org.foi.common.filesystem.file.TextFileUtility
+class org.foi.mpc.tools.SherlockAdapterSettings
+class org.foi.mpc.tools.SherlockOriginalAdapter
+class org.foi.mpc.tools.SherlockTokenisedAdapter
+class uk.ac.warwick.dcs.cobalt.sherlock.FileTypeProfile
+class uk.ac.warwick.dcs.cobalt.sherlock.Samelines
+class uk.ac.warwick.dcs.cobalt.sherlock.Settings
+class uk.ac.warwick.dcs.cobalt.sherlock.SherlockProcess
+class uk.ac.warwick.dcs.cobalt.sherlock.SherlockProcessException
+class uk.ac.warwick.dcs.cobalt.sherlock.TokeniseFiles
+interface java.nio.fileA.FileVisitor
+interface org.foi.common.filesystem.directory.DirectoryTreeWalker
+interface org.foi.mpc.tools.SimilarityDetectionTool
+interface uk.ac.warwick.dcs.cobalt.sherlock.SherlockProcessCallback
+org.foi.mpc.tools.SherlockAdapter ..> java.lang.Override
+org.foi.mpc.tools.SherlockAdapter ..> java.io.File
+org.foi.mpc.tools.SherlockAdapter ..> org.foi.common.filesystem.directory.DirectoryFileUtility
+org.foi.mpc.tools.SherlockAdapter ..> uk.ac.warwick.dcs.cobalt.sherlock.FileTypeProfile
+org.foi.mpc.tools.SherlockAdapter ..> uk.ac.warwick.dcs.cobalt.sherlock.Samelines
+org.foi.mpc.tools.SherlockAdapter ..> uk.ac.warwick.dcs.cobalt.sherlock.Settings
+org.foi.mpc.tools.SherlockAdapter ..> uk.ac.warwick.dcs.cobalt.sherlock.SherlockProcess
+org.foi.mpc.tools.SherlockAdapter ..> uk.ac.warwick.dcs.cobalt.sherlock.SherlockProcessException
+org.foi.mpc.tools.SherlockAdapter ..> uk.ac.warwick.dcs.cobalt.sherlock.TokeniseFiles
+org.foi.mpc.tools.SherlockAdapter --|> uk.ac.warwick.dcs.cobalt.sherlock.SherlockProcessCallback
+org.foi.mpc.AssignementPreparer ..> java.io.File
+org.foi.mpc.AssignementPreparer ..> java.io.IOException
+org.foi.mpc.AssignementPreparer ..> org.foi.common.filesystem.directory.DirectoryFileUtility
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.lang.Override
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.io.File
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.io.IOException
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.nio.fileA.CopyOption
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.nio.fileA.FileVisitResult
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.nio.fileA.Files
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.nio.fileA.Path
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.nio.fileA.StandardCopyOption
+org.foi.common.filesystem.directory.DirectoryFileUtility ..> java.nio.fileA.attribute.BasicFileAttributes
+org.foi.common.filesystem.file.TextFileUtility ..> java.io.BufferedReader
+org.foi.common.filesystem.file.TextFileUtility ..> java.io.BufferedWriter
+org.foi.common.filesystem.file.TextFileUtility ..> java.io.File
+org.foi.common.filesystem.file.TextFileUtility ..> java.io.IOException
+org.foi.common.filesystem.file.TextFileUtility ..> java.nio.charset.Charset
+org.foi.common.filesystem.file.TextFileUtility ..> java.nio.fileA.Files
+org.foi.common.filesystem.file.TextFileUtility ..> java.nio.fileA.OpenOption
+org.foi.common.filesystem.file.TextFileUtility ..> java.nio.fileA.StandardOpenOption
+org.foi.common.filesystem.file.TextFileUtility ..> java.nio.fileA.attribute.FileAttribute
+org.foi.mpc.tools.SherlockAdapterSettings ..> java.io.File
+org.foi.mpc.tools.SherlockOriginalAdapter --|> org.foi.mpc.tools.SherlockAdapter
+org.foi.mpc.tools.SherlockTokenisedAdapter --|> org.foi.mpc.tools.SherlockAdapter
+org.foi.common.filesystem.directory.DirectoryTreeWalker ..> java.lang.Override
+org.foi.common.filesystem.directory.DirectoryTreeWalker ..> java.io.IOException
+org.foi.common.filesystem.directory.DirectoryTreeWalker ..> java.nio.fileA.FileVisitResult
+org.foi.common.filesystem.directory.DirectoryTreeWalker ..> java.nio.fileA.Path
+org.foi.common.filesystem.directory.DirectoryTreeWalker ..> java.nio.fileA.attribute.BasicFileAttributes
+org.foi.common.filesystem.directory.DirectoryTreeWalker ..> java.nio.fileA.attribute.FileAttribute
+org.foi.common.filesystem.directory.DirectoryTreeWalker --|> java.nio.fileA.FileVisitor
+@enduml
