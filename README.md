@@ -37,3 +37,8 @@ calibration in Section 4.4, 2) technique selection mode – used for technique s
 statistics mode – used for calculating statistics that are
 input for the analysis phase (Chapter 8). The overall architecture of the system is presented in Figure 3.3, 
 and in Appendix C a detailed description of the architecture is given.
+
+SIM avalible at: https://dickgrune.com/Programs/similarity_tester/
+Spector avalible at: https://gitlab.com/vimino/spector/tree/master
+JPlag avilible at: https://github.com/jplag originaly from https://jplag.ipd.kit.edu/
+Sherlock avalible at: https://warwick.ac.uk/fac/sci/dcs/research/ias/software/sherlock
