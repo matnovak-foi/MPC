@@ -13,7 +13,6 @@
           <element id="library" level="project" name="afternoon-1.0.10" />
           <element id="library" level="application" name="Clover IDEA Plugin" />
           <element id="library" level="application" name="JUnit-4.12" />
-          <element id="file-copy" path="$PROJECT_DIR$/../tools/jPlag/jplag-2.11.9-SNAPSHOT/jplag/target/jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../tools/sherlock/out/artifacts/sherlock_jar/sherlock.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../tools/Spector/out/artifacts/Spector_jar/Spector.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../junrar/target/junrar-0.8-SNAPSHOT-jar-with-dependencies.jar" />

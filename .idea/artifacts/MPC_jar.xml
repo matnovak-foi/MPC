@@ -11,7 +11,6 @@
       </element>
       <element id="file-copy" path="$PROJECT_DIR$/../../junrar/target/junrar-0.8-SNAPSHOT-jar-with-dependencies.jar" />
       <element id="library" level="application" name="JUnit-4.12" />
-      <element id="file-copy" path="$PROJECT_DIR$/../tools/jPlag/jplag-2.11.9-SNAPSHOT/jplag/target/jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar" />
       <element id="file-copy" path="$PROJECT_DIR$/../tools/sherlock/out/artifacts/sherlock_jar/sherlock.jar" />
       <element id="file-copy" path="$PROJECT_DIR$/../tools/Spector/out/artifacts/Spector_jar/Spector.jar" />
       <element id="directory" name="META-INF">
@@ -22,6 +21,7 @@
       <element id="artifact" artifact-name="TemplateExclusionTechnique:jar" />
       <element id="dir-copy" path="$PROJECT_DIR$/lib" />
       <element id="library" level="project" name="java-diff-utils" />
+      <element id="file-copy" path="$PROJECT_DIR$/../tools/jPlag/jplag/jplag/target/jplag-2.12.1-SNAPSHOT-jar-with-dependencies.jar" />
     </root>
   </artifact>
 </component>

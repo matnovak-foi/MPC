@@ -8,7 +8,23 @@
       <module fileurl="file://$PROJECT_DIR$/../tools/Spector/Spector.iml" filepath="$PROJECT_DIR$/../tools/Spector/Spector.iml" />
       <module fileurl="file://$PROJECT_DIR$/../tools/TemplateExclusionTechnique/TemplateExclusionTechnique.iml" filepath="$PROJECT_DIR$/../tools/TemplateExclusionTechnique/TemplateExclusionTechnique.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebGUI/WebGUI.iml" filepath="$PROJECT_DIR$/WebGUI/WebGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/aggregator.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/aggregator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/chars.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/chars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/cpp.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/cpp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/csharp-1.2.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/csharp-1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/frontend-utils.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/frontend-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/java-1.1exp.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/java-1.1exp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/java-1.2.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/java-1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/java-1.5.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/java-1.5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/java-1.7.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/java-1.7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/java-1.9.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/java-1.9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/parent.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/python-3.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/python-3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/scheme.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/scheme.iml" />
       <module fileurl="file://$PROJECT_DIR$/../tools/sherlock/sherlock.iml" filepath="$PROJECT_DIR$/../tools/sherlock/sherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/text.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/text.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tools/jPlag/jplag/utils.iml" filepath="$PROJECT_DIR$/../tools/jPlag/jplag/utils.iml" />
     </modules>
   </component>
 </project>

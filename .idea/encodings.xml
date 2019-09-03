@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with NO BOM" />
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend-utils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.chars" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.csharp-1.2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.1exp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.5" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.7" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.9" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.python-3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.scheme" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.text" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../tools/jPlag/jplag/jplag.utils" charset="UTF-8" />
+  </component>
 </project>
