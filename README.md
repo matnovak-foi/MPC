@@ -40,5 +40,5 @@ and in Appendix C a detailed description of the architecture is given.
 
 SIM avalible at: https://dickgrune.com/Programs/similarity_tester/
 Spector avalible at: https://gitlab.com/vimino/spector/tree/master
-JPlag avilible at: https://github.com/jplag originaly from https://jplag.ipd.kit.edu/
-Sherlock avalible at: https://warwick.ac.uk/fac/sci/dcs/research/ias/software/sherlock
+JPlag avilible at: https://github.com/jplag originaly from https://jplag.ipd.kit.edu/ modified version at:  https://github.com/matnovak-foi/jplag 
+Sherlock avalible at: https://warwick.ac.uk/fac/sci/dcs/research/ias/software/sherlock modified version at:  https://github.com/matnovak-foi/sherlock
