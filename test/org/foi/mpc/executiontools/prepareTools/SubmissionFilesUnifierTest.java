@@ -161,11 +161,14 @@ public class SubmissionFilesUnifierTest {
             assertEquals("mergedFile", tfu.readFileContentToString(mergedFile));
         }
 
-        @Test(expected = TextFileUtility.FileAlreadyExistException.class)
+        @Test
         public void dirHasFileNameAsMergeFile() throws IOException {
-            tfu.createFileWithText(directory,directory.getName()+".java","sameNameFile");
+            File mergedFile = new File(directory,directory.getName()+".java");
+            tfu.createFileWithText(directory,mergedFile.getName(),"sameNameFile");
             tfu.createFileWithText(directory,"newFile.java","someOtherFile");
             merger.unifyFilesInDirToOne(directory);
+            assertEquals(1, directory.listFiles().length);
+            assertEquals("sameNameFile"+ls+"someOtherFile", tfu.readFileContentToString(mergedFile));
         }
 
         @Test

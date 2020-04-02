@@ -1,7 +1,5 @@
 package org.foi.mpc.usecases.reports.summaryReport.view;
 
-import com.sun.org.glassfish.external.statistics.Statistic;
-import com.sun.org.glassfish.external.statistics.impl.StatisticImpl;
 import org.foi.common.MathHelper;
 import org.foi.mpc.usecases.reports.summaryReport.DetailsReportOutputBoundary;
 import org.foi.mpc.usecases.reports.summaryReport.models.DetailsReportMatchInfoResponseModel;

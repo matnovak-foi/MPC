@@ -155,6 +155,15 @@ public class TextFileUtilityTest  {
     }
 
     @Test
+    public void canWorkWithEmptyFile() throws IOException{
+        File file = new File("emptyFile.txt");
+        fileUtility.createFileWithText(file, "");
+        String textFromFile = fileUtility.readFileContentToString(file);
+        assertEquals("", textFromFile);
+        file.delete();
+    }
+
+    @Test
     public void noErrorWhenReadingFileWhichCausesTheError() throws IOException {
 
         File file = new File(rootDir+File.separator+"testInputData"+File.separator+"fileWithReadError.java");

@@ -45,6 +45,8 @@ public class MultipleDetectionMain implements MultipleDetectionOutputBoundary {
             return;
         }
 
+        MPCContext.CONSOLE_PRINT = true;
+
         MultipleDetectionConfigReader configReader = new MultipleDetectionConfigReader();
         configuration = configReader.read(new File(args[0]));
 

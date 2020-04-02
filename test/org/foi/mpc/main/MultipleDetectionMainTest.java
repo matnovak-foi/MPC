@@ -1,8 +1,9 @@
 package org.foi.mpc.main;
 
-import org.foi.common.filesystem.directory.DirectoryFileUtility;
+
+import org.foi.mpc.MPCContext;
 import org.foi.mpc.TestContext;
-import org.foi.mpc.abstractfactories.ExecutionToolFactory;
+
 import org.foi.mpc.abstractfactories.FactoryProvider;
 import org.foi.mpc.executiontools.detectionTools.JPlag.JPlagJavaAdapter;
 import org.foi.mpc.executiontools.detectionTools.simgrune.SimGruneJavaAdapter;
@@ -12,15 +13,13 @@ import org.foi.mpc.executiontools.factories.PreprocessingTechniqueFactory;
 import org.foi.mpc.executiontools.factories.SimilarityDetectionToolFactory;
 import org.foi.mpc.executiontools.techniques.CommonCodeRemoveTechnique;
 import org.foi.mpc.executiontools.techniques.NoTechniqueOriginal;
-import org.foi.mpc.phases.executionphases.ExecutionTool;
+
 import org.foi.mpc.usecases.combotechnique.ComboTechniqueUseCase;
 import org.foi.mpc.usecases.multipleDetecion.MultipleDetectionInputBoundary;
 import org.foi.mpc.usecases.multipleDetecion.MultipleDetectionOutputBoundary;
 import org.foi.mpc.usecases.multipleDetecion.models.MultipleDetectionRequestModel;
 import org.foi.mpc.usecases.multipleDetecion.models.MultipleDetectionResponseModel;
-import org.foi.mpc.usecases.reports.pptestreport.PPTestReportUseCase;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,12 +30,11 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
-import static junit.framework.TestCase.assertSame;
+import static junit.framework.TestCase.*;
 import static org.foi.mpc.main.MultipleDetectionMain.creteRequestModel;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.endsWith;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+
 
 public class MultipleDetectionMainTest implements MultipleDetectionInputBoundary {
     MultipleDetectionMain main;
@@ -93,6 +91,13 @@ public class MultipleDetectionMainTest implements MultipleDetectionInputBoundary
 
         assertNotNull(useCaseRequestModel);
         assertEquals(creteRequestModel(configuration), useCaseRequestModel);
+    }
+
+    @Test
+    public void hasPrintEnalbed(){
+        main.run(args);
+
+        assertTrue(MPCContext.CONSOLE_PRINT);
     }
 
     @Test

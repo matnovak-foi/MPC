@@ -128,7 +128,6 @@ public class TextFileUtility {
     private String readFileContent(BufferedReader reader) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();
 
-            
         try {
             String line = reader.readLine();
             while (line != null) {
@@ -171,7 +170,10 @@ public class TextFileUtility {
     }
 
     private static String removeArtificalLineFeed(String content, String ls) {
-        return content.substring(0, content.length()-ls.length());
+        if(content.length() > 0)
+            return content.substring(0, content.length()-ls.length());
+        else
+            return  content;
     }
 
     public void closeBufferedReader(BufferedReader reader) {

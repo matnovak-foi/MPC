@@ -1,6 +1,8 @@
 package org.foi.mpc.executiontools.prepareTools;
 
 import org.foi.common.filesystem.file.TextFileUtility;
+import org.foi.mpc.MPCContext;
+import org.foi.mpc.phases.executionphases.ExecutionLogger;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -55,6 +57,9 @@ public class SubmissionFilesUnifier extends AssignementDirectoryIterator {
     }
 
     private void unifyFilesInDir(File directory) {
+        if(MPCContext.CONSOLE_PRINT){
+            System.out.println("MERGE FILES IN:"+directory.getPath());
+        }
         File[] directoryElementsForMerge = getElementsForMerge(directory);
         mergeElementsInDir(directoryElementsForMerge);
         deleteMergedElements(directoryElementsForMerge);
@@ -81,8 +86,19 @@ public class SubmissionFilesUnifier extends AssignementDirectoryIterator {
         File mergedFileExists = new File(directory.getPath()+File.separator+mergedFileName);
         if(directory.list().length==1 && mergedFileExists.exists()) {
             mergedFile = mergedFileExists;
+        } else if(mergedFileExists.exists()) {
+            try {
+                mergedFile = mergedFileExists;
+                tfu.appendTextToFile(mergedFile, tfu.getLineSeparator());
+            } catch (IOException e) {
+                throw new TextFileUtility.FileReadWriteException(e.getMessage());
+            }
         } else {
             try {
+                if(MPCContext.CONSOLE_PRINT){
+                    System.out.println("MERGE FILES IN:"+directory.getPath());
+                    System.out.println("FILE IN:"+mergedFileName);
+                }
                 mergedFile = tfu.createFileWithText(directory, mergedFileName, "");
             } catch (IOException e) {
                 throw new TextFileUtility.FileReadWriteException(e.getMessage());

@@ -6,6 +6,26 @@
         <option value="$PROJECT_DIR$/../tools/jPlag/jplag/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.chars/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.cpp/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.csharp-1.2/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.1exp/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.2/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.5/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.7/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.java-1.9/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.python-3/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.scheme/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.frontend.text/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.parent/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag.utils/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/jplag/pom.xml" />
+        <option value="$PROJECT_DIR$/../tools/jPlag/jplag/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

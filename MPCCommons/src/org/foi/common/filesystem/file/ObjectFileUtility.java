@@ -1,7 +1,6 @@
 package org.foi.common.filesystem.file;
 
-import sun.misc.IOUtils;
-import sun.plugin.util.UIUtil;
+
 
 import java.io.*;
 
